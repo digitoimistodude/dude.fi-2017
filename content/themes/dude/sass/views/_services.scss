@@ -191,17 +191,23 @@ body {
 
               .customer {
                 overflow: visible;
-                white-space: nowrap;
-                min-width: 300px;
                 margin-left: auto;
                 margin-right: auto;
                 text-align: left;
                 display: inline-block;
+                width: auto;
+                white-space: normal;
 
                 h4 {
                   font-size: 16px;
-                  margin: 20px 0 5px;
+                  margin: 20px 0 0;
+                  display: inline-block;
                   color: #fff;
+
+                  // iPhone SE
+                  @media(max-width: 320px) {
+                    font-size: 12px;
+                  }
                 }
 
                 h6 {
@@ -209,6 +215,16 @@ body {
                   color: #fff;
                   margin: 0;
                   opacity: .5;
+
+                  @media(min-width: $container-mobile) {
+                    white-space: nowrap;
+                    line-height: 1.1;
+                  }
+
+                  // iPhone SE
+                  @media(max-width: 320px) {
+                    font-size: 12px;
+                  }
                 }
 
                 .avatar {

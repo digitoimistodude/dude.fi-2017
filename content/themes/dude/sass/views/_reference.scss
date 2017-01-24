@@ -462,21 +462,17 @@ body {
 
           .customer {
             overflow: visible;
-            white-space: nowrap;
-            min-width: 320px;
             margin-left: auto;
             margin-right: auto;
             text-align: left;
             display: inline-block;
-
-            @media(max-width: $container-mobile) {
-              width: 280px;
-              overflow: hidden;
-            }
+            width: auto;
 
             h4 {
               font-size: 16px;
-              margin: 20px 0 5px;
+              margin: 20px 0 2px;
+              display: block;
+              float: left;
 
               // iPhone SE
               @media(max-width: 320px) {
@@ -488,6 +484,8 @@ body {
               font-size: 16px;
               color: $color-lightergrey;
               margin: 0;
+              line-height: 1.5;
+              display: block;
 
               // iPhone SE
               @media(max-width: 320px) {
