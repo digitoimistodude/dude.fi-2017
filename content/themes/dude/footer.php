@@ -172,7 +172,7 @@ $coffee = dude_get_coffee_drunk(); ?>
 <div class="cookie-notification-wrapper">
   <div class="content">
     <div class="content-text">
-      <p><b>Me seurataan sua!</b> ...eli sivusto käyttää evästeitä. <a href="#">Mitä ihmettä?</a></p>
+      <p><b>Me seurataan sua!</b> ...eli sivusto käyttää evästeitä. <a href="https://www.dude.fi/evasteet">Mitä ihmettä?</a></p>
     </div>
 
     <p class="button-wrapper"><a href="#" class="button">Asia kunnossa</a></p>

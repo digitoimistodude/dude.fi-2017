@@ -1,4 +1,19 @@
 body {
+  &.page {
+    #page {
+      .site-content {
+        .slide {
+
+          // Default hero slide on empty page
+          &.slide-hero {
+            height: 80vh;
+            max-height: 700px;
+          }
+        }
+      }
+    }
+  }
+
   #page {
 
     .site-content {

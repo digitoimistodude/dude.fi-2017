@@ -245,6 +245,10 @@ body {
             margin-right: auto !important;
           }
 
+          .general-description {
+            max-width: 820px;
+          }
+
           .container {
             overflow: visible;
           }
@@ -427,7 +431,7 @@ body {
             margin-right: auto;
             position: relative;
             padding-left: 60px;
-            padding-right: 0;
+            padding-right: 60px;
 
             @media(max-width: $container-mobile) {
               padding-left: 0;
@@ -467,6 +471,7 @@ body {
             text-align: left;
             display: inline-block;
             width: auto;
+            min-width: 232px;
 
             h4 {
               font-size: 16px;
@@ -548,7 +553,7 @@ body {
           padding-top: 50px;
           overflow: hidden;
 
-          @media(max-width: $container-ipad) {
+          @media(max-width: 960px) {
             @include background-cover();
           }
 
@@ -559,12 +564,10 @@ body {
             overflow: hidden;
             top: 80px;
 
-            @media(max-width: $container-ipad) {
-              text-align: center;
-            }
-
             .col {
-              @media(min-width: $container-ipad) {
+              width: 65%;
+
+              @media(min-width: 960px) {
                 @include column(1/2);
               }
             }

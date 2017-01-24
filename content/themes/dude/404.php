@@ -22,7 +22,7 @@ get_header(); ?>
 
         <div class="container container-not-found">
           <h1><?php _e( 'Voi prkl! 404! 666!', 'dude'); ?></h1>
-          <p><?php _e( 'Nyt meni perseelleen! Sivua ei löydy, eikä täällä ei ole mitään nähtävää, sori!', 'dude' ); ?></p>
+          <p><?php _e( 'Nyt meni perseelleen! Sivua tai tiedostoa ei löydy, eikä täällä ei ole mitään nähtävää, sori!', 'dude' ); ?></p>
 
           <p><a href="/" class="button button-white"><?php _e( 'Siirry etusivulle', 'dude' ); ?></a></p>
         </div>
