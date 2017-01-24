@@ -300,7 +300,23 @@ body {
               }
             }
           }
-        }
+
+          &.steps-verkkokaupat {
+            ol {
+              li {
+                &:before {
+                  color: $color-woocommerce;
+                }
+
+                &:hover {
+                  &:before {
+                    color: $color-woocommerce;
+                  }
+                }
+              }
+            }
+          }
+        } // .steps
       } // .slide
     } // .site-content
   } // #page
