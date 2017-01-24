@@ -13,7 +13,7 @@
     fitvids();
 
     var position = $('.wplf-success').offset();
-    $('html, body').animate({ scrollTop: position.top-150 }, 500);
+    $('html, body').animate({ scrollTop: position.top-250 }, 500);
   } );
 
   // Events for input typing
