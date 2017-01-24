@@ -160,15 +160,19 @@ add_filter( 'the_seo_framework_use_archive_title_prefix', 'dude_use_archive_pref
 /**
  * Set better description on reference archive
  */
-function dude_meta_output() {
-  if( is_post_type_archive( 'reference' ) ) {
-    $description = get_post_meta( get_option( 'page_for_reference' ), '_genesis_description', true );
+function dude_meta_output( $description ) {
+ if( is_post_type_archive( 'reference' ) ) {
+   $description = get_post_meta( get_option( 'page_for_reference' ), '_genesis_description', true );
 
-    if( empty( $description ) )
-      $description = get_post_field( 'post_content', get_option( 'page_for_reference' ) );
+   if( empty( $description ) )
+     $description = get_post_field( 'post_content', get_option( 'page_for_reference' ) );
+ }
 
-    return esc_html( $description );
-  }
+ if( is_home() ) {
+   $description = get_post_meta( get_option( 'page_for_posts' ), '_genesis_description', true );
+ }
+
+ return esc_html( $description );
 }
 add_filter( 'the_seo_framework_description_output', 'dude_meta_output' );
 add_filter( 'the_seo_framework_ogdescription_output', 'dude_meta_output' );
