@@ -47,7 +47,7 @@ $opacity-default: .2;
   top: 0;
   display: block;
   zoom: 1;
-  z-index: 9999;
+  z-index: 60;
 
   &:before,
   &:after {
@@ -175,7 +175,7 @@ body {
             width: 100%;
             text-align: center;
             position: absolute;
-            z-index: 9999;
+            z-index: 60;
 
             @media(max-width: 600px) {
               position: relative;
