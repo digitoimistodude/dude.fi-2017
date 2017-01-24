@@ -16,7 +16,7 @@ This is a working copy of the website for [Digitoimisto Dude Oy](https://github.
 
 ## Background story
 
-Dude build their first website when the company was formed in 2013. It was quite simple, but we needed it fast. Next, careful design we released after one year. And it was awesome. However, when things changed and there were suddendly 4 dudes instead of 2 in late 2015, we started to plan redesigning our website in early 2016.
+Dude built their first website when the company was formed in 2013. It was quite simple, but we needed it fast. Next, careful design we released after one year. And it was awesome. However, when things changed and there were suddendly 4 dudes instead of 2 in late 2015, we started to plan redesigning our website in early 2016.
 
 We made quite a lot of planning in the spring and during the summer we started to work on the redesign. Summer died fast, so obviously got a bit stuck in the fall. When christmas holidays finally came, we continued with the site. Full blast in January, and boom! - the site was finally ready for the public to see.
 
