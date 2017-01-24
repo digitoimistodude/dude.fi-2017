@@ -86,11 +86,10 @@ $coffee = dude_get_coffee_drunk(); ?>
               echo $social_title.' ';
 
               foreach( $social_links as $link ): ?>
-                <a href="<?php echo $link['url'] ?>" target="_blank"><?php echo $link['content'] ?></a>
-                <?php if( $i < $links_total-2 ): ?>
-                  ,
-                <?php elseif( $i < $links_total-1 ):
-                  _e( 'ja', 'dude' );
+                <a href="<?php echo $link['url'] ?>" target="_blank"><?php echo $link['content'] ?></a><?php if( $i < $links_total-2 ):
+                  echo ',';
+                elseif( $i < $links_total-1 ):
+                  _e( ' ja', 'dude' );
                 elseif( $i < $links_total ):
                   echo '.';
                 endif;
