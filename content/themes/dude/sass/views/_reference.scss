@@ -245,6 +245,10 @@ body {
             margin-right: auto !important;
           }
 
+          .general-description {
+            max-width: 820px;
+          }
+
           .container {
             overflow: visible;
           }
@@ -427,7 +431,7 @@ body {
             margin-right: auto;
             position: relative;
             padding-left: 60px;
-            padding-right: 0;
+            padding-right: 60px;
 
             @media(max-width: $container-mobile) {
               padding-left: 0;
