@@ -16,6 +16,12 @@ body {
             }
           }
 
+          .wplf-success {
+            p:first-child {
+              margin-bottom: 30px;
+            }
+          }
+
           h1,
           p {
             color: #fff;
@@ -134,6 +140,10 @@ body {
               opacity: .15;
               margin-top: -50px;
 
+              @media(max-width: 800px) {
+                right: 30px;
+              }
+
               &.second {
                 opacity: 0;
 
@@ -237,6 +247,10 @@ body {
               transition: all .55s;
               line-height: 0;
               height: 0;
+
+              @media(max-width: 800px) {
+                display: none;
+              }
 
               &.hidden {
                 height: 0;
