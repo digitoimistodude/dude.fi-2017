@@ -32,6 +32,12 @@ body {
           background-color: $color-woocommerce;
         }
 
+        &.slide-service-info {
+          .container {
+            max-width: 1100px;
+          }
+        }
+
         &.slide-service-info,
         &.slide-hosting-info {
           text-align: center;
@@ -259,7 +265,7 @@ body {
                 position: relative;
                 z-index: 4;
                 color: $color-servicedescriptions;
-                font-size: 16px;
+                font-size: 17px;
               }
 
               h4 {
