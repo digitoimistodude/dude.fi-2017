@@ -885,6 +885,16 @@ body {
         object,
         video {
           max-width: 100%;
+
+          @media(min-width: 1330px) {
+            width: 700px;
+            height: 394px;
+          }
+
+          @media(min-width: 720px) {
+            width: 100%;
+            height: 369px;
+          }
         }
       }
 
