@@ -1,0 +1,79 @@
+body.error404 {
+  height: 100vh;
+  overflow: hidden;
+
+  #page {
+    .site-content {
+
+      .content-area {
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        filter: grayscale(100%);
+
+        .shade {
+          @include background-cover();
+          background-color: transparent;
+          background-image: url('../images/shade-gradient.png');
+          opacity: 1;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: 0;
+        }
+
+        .slide.slide-notfound {
+          background: transparent;
+          height: 100vh;
+          position: relative;
+          z-index: 3;
+        }
+
+        .container {
+          @include vertical-align();
+          width: 100%;
+          text-align: center;
+          max-width: 900px;
+          z-index: 10;
+
+          h1 {
+            @include responsive-font(5vw, 38px, 100px);
+            color: #fff;
+            margin-bottom: 30px;
+          }
+
+          p {
+            color: #fff;
+          }
+        }
+
+        .shade-extra {
+          background-color: #151515;
+          opacity: .6;
+          transition: all .7s;
+        }
+
+        .error-404 {
+          top: 250px;
+          position: absolute;
+          max-width: 750px;
+
+          h1 {
+            color: #fff;
+            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 25px;
+          }
+
+          p {
+            @extend .h3;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

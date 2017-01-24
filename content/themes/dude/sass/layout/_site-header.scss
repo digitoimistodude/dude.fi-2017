@@ -1,0 +1,193 @@
+body {
+  #page {
+    // Site header
+    .site-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      overflow: hidden;
+      white-space: nowrap;
+
+      @media(max-width: $responsivenav) {
+        overflow: visible;
+        height: auto;
+      }
+
+      // Expanding background
+      &:after {
+        position: absolute;
+        content: '';
+        height: 50px;
+        z-index: -1;
+        background: #222;
+        top: 0;
+        left: 0;
+        width: 0;
+      }
+
+      &.deactivated {
+        &:after {
+          animation: collapse ease 1.25s;
+        }
+      }
+
+      &.inverted:not(.fixed) {
+
+        @media(max-width: $responsivenav) {
+          .site-title {
+            a {
+              background-image: url('../svg/logo-dark.svg');
+            }
+          }
+        }
+
+        button.nav-trigger[aria-expanded="false"] {
+          .burger-icon {
+            background-color: #444;
+
+            &:after,
+            &:before {
+              background-color: #444;
+            }
+          }
+        }
+
+        @media(min-width: $responsivenav) {
+          #nav {
+            ul {
+              li {
+                a {
+                  color: #444;
+                  border-color: #444;
+                }
+
+                svg {
+                  fill: #444;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // Fixed navigation
+      &.fixed,
+      &.sticky {
+        position: fixed;
+
+        &:after {
+          animation: expand ease 1.25s;
+          width: 100%;
+        }
+
+        .container {
+          padding-top: 0;
+          padding-bottom: 0;
+
+          #nav {
+            padding-top: 0;
+
+            ul {
+              margin-top: 0;
+
+              li {
+                height: 50px;
+                line-height: 50px;
+
+                .button {
+                  margin-top: 8.5px;
+                }
+              }
+            }
+          }
+
+          .site-branding {
+            .site-title {
+              margin-top: 0;
+              margin-bottom: 0;
+
+              a {
+                position: relative;
+                height: 50px;
+                background-color: transparent;
+
+                // Alternative neckbeard logo
+                background-image: url('../svg/neckbeard-fullback.svg');
+                background-position: 7px 7px;
+                background-size: auto;
+
+                @media(max-width: $responsivenav) {
+                  background-position: center;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .container {
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .site-branding {
+        overflow: hidden;
+        position: relative;
+        z-index: 99999999999;
+
+        @media(min-width: $responsivenav) {
+          @include column(2/8);
+        }
+
+        .site-title {
+          overflow: hidden;
+          font-size: 2rem;
+          margin: 0;
+          position: relative;
+          z-index: 22;
+          width: 110px;
+
+          @media(max-width: $responsivenav) {
+            margin: 0 auto;
+          }
+
+          a {
+            @include hiddentext();
+            background-image: url('../svg/logo-white.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #222;
+            margin-right: 30px;
+            transition: .8s ease;
+
+            @media(max-width: $responsivenav) {
+              background-color: transparent;
+            }
+
+            // Logo size
+            width: 110px;
+            height: 50px;
+            background-size: 58px 16px;
+          }
+        }
+      }
+
+      .nav-collapse {
+        padding: 0;
+        margin: 0;
+        white-space: nowrap;
+
+        @media(min-width: $responsivenav) {
+          @include column(6/8);
+
+          ul {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}

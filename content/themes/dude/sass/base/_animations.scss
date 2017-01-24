@@ -1,0 +1,82 @@
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes fadeOutUpScroll {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translate3d(0, -100%, 0);
+  }
+}
+
+// Navigation expand animation
+@keyframes expand {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+// Navigation collapse animation
+@keyframes collapse {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+// Footer coffee stuff
+@mixin moveAndFadeAnimation($distance, $duration, $delay) {
+  animation: move-and-fade $duration linear infinite;
+  animation-delay: $delay;
+
+  @keyframes move-and-fade {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    75% {
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(- $distance);
+      opacity: 0;
+    }
+  }
+}
+
+// Typing for interactive form
+@keyframes type {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  to {
+    opacity: .0;
+  }
+}

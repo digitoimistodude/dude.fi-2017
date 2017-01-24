@@ -1,0 +1,94 @@
+// --------------------------------------------------------------
+// Theme options
+//
+// Start here!
+// This is the core file where most of the theme magic happens.
+// --------------------------------------------------------------
+
+// Colors
+$color-links: #cfb053;
+$color-hover: #606c76;
+$color-body: #434343;
+$color-servicedescriptions: #565656;
+$color-headings: #232426;
+$color-body-darker: #444;
+$color-grey: #dadfe1;
+$color-darkgrey: #6c7a89;
+$color-lightgrey: #8e8e8e;
+$color-lightergrey: #a8a8a8;
+$color-lightgrey-alt: #a1a1a1;
+$color-githubgrey: #ddd;
+$color-dark: #1a1a1a;
+$color-almostblack: #020202;
+$color-dark-blueish: #16202a;
+$color-fog: #b0b0b0;
+$color-alt: #cfb053;
+$color-wordpress: #21759b;
+$color-woocommerce: #a46497;
+
+// Main navigation settings
+$color-navigation-bg: transparent;
+$color-navigation-text: rgba(#fff, .8);
+$color-navigation-hover: #3e4853;
+$color-navigation-first-level-text-hover: #fff;
+$color-navigation-toggle: $color-navigation-text;
+$color-navigation-toggle-hover: $color-navigation-first-level-text-hover;
+$list-padding: 1em 1.5em;
+$font-size-navigation: .8rem;
+
+// Drop down settings
+$dropdown-width: 200px;
+$color-dropdown-bg: #222;
+$color-dropdown-text: #fff;
+$color-dropdown-hover-bg: #3e4853;
+$color-dropdown-hover-text: #fff;
+$dropdown-border-radius: 5px;
+
+// Font settings
+// You can use these font stacks normally with `font-family: $font-sans;` for instance.`
+$font-base: 'Neuzeit Grotesk', 'Helvetica Neue', Helvetica, sans-serif;
+$font-headings: 'Futura', 'Helvetica Neue', Helvetica, sans-serif;
+$font-monospace: 'Menlo', 'Courier', monospace;
+
+// Font sizes
+$font-min-size: 16px; // Minimum font size, on mobile (default: 16px)
+$font-max-size: 21px; // Maximum font size, on desktop (default: 21px)
+$font-base-line-height: 1.5; // Line height for paragraphs
+$font-base-line-height-elements: 1.5; // Line height for other elements like table cells and spans
+$headings-line-height-setup: force; // Force: all headings have same line height. Flexible: values are set separately in _typography.scss
+$headings-line-height-forced: 1.22; // This is effective only if force is chosen in $headings-line-height-setup
+$headings-weight: 700; // Default title weight. Usually 700 or 900 works pretty well
+$headings-scale: medium; // Change this as a base for your project or create your own in _typography.scss.
+
+// Form settings
+$color-button-bg: #262626;
+$color-button-text: #fff;
+$color-forms: #cfd9db;
+$color-forms-text: #666;
+$color-forms-bg: #fff;
+$forms-border-radius: 0;
+$forms-border-focus: darken(#cfd9db, 25%);
+
+// Form settings
+$color-button-bg: #262626;
+$color-button-text: #fff;
+$color-forms: #cfd9db;
+$color-forms-text: #666;
+$color-forms-bg: #fff;
+$forms-border-radius: 3px;
+$forms-border-focus: darken(#cfd9db, 25%);
+
+// Breakpoints
+$grid-type: fluid; // 'fluid' or 'snappy'
+$layout-max-width: 100%;
+
+// Container settings
+$container-default-pad: 8rem; // Default padding between containers, mostly vertically. Tweak _containers.scss.
+$grid-base-size: 1028px; // Layout max width on desktop. This is default .container size
+$container-mobile: 480px;
+$container-desktop: 1270px;
+$container-ipad: 770px;
+$container-ipad-landscape: 1024px;
+
+// Where navigation transforms into responsive
+$responsivenav: 960px;

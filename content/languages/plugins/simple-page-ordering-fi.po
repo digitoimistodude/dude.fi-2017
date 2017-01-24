@@ -1,0 +1,42 @@
+# Translation of Stable (latest release) in Finnish
+# This file is distributed under the same license as the Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-06-26 13:48:11+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.1.0-alpha\n"
+"Project-Id-Version: Stable (latest release)\n"
+
+#: simple-page-ordering.php:99
+msgid "To reposition an item, simply drag and drop the row by \"clicking and holding\" it anywhere (outside of the links and form controls) and moving it to its new position."
+msgstr "Vaihtaaksesi sisältöjen järjestystä, voit raahata ja pudottaa sisällön uuteen sijaintiin painamalla hiiren vasemmalla painikkeella sen kohdalla (ei kuitenkaan sisällön hallintaa koskevien linkkien kohdalla) ja siirtämällä sen haluamaasi kohtaan."
+
+#: simple-page-ordering.php:289
+msgid "Sort by Order"
+msgstr "Näytä järjestyksen mukaan"
+
+#. #-#-#-#-#  tmp-simple-page-ordering.pot (Simple Page Ordering 2.2.4) 
+#. #-#-#-#-#
+#. Description of the plugin/theme
+#: simple-page-ordering.php:314
+msgid "Order your pages and hierarchical post types using drag and drop on the built in page list. For further instructions, open the \"Help\" tab on the Pages screen."
+msgstr "Järjestä sivujasi sekä muita hierarkisia sisältötyyppejä raahamalla ja pudottamalla niitä sisältötyyppien listaus-sivulla. Katso lisää ohjeita \"Ohje\" välilehden alta."
+
+#. Plugin Name of the plugin/theme
+msgid "Simple Page Ordering"
+msgstr "Simple Page Ordering"
+
+#. Plugin URI of the plugin/theme
+msgid "http://10up.com/plugins/simple-page-ordering-wordpress/"
+msgstr "http://10up.com/plugins/simple-page-ordering-wordpress/"
+
+#. Author of the plugin/theme
+msgid "Jake Goldman, 10up"
+msgstr "Jake Goldman, 10up"
+
+#. Author URI of the plugin/theme
+msgid "http://10up.com"
+msgstr "http://10up.com"

@@ -1,0 +1,445 @@
+body {
+  #page {
+    .site-content {
+      .slide {
+        &.slide-dude {
+          height: 100vh;
+          max-height: 1600px;
+          background-image: url('../images/dudet-2016.jpg');
+
+          .shade-extra {
+            background: linear-gradient(to bottom, rgba(#111, 0) 0%, rgba(#363f49, .3) 60%, rgba(#363f49, .4) 100%);
+            opacity: 1;
+          }
+
+          .container {
+            @include vertical-align();
+            max-width: $container-desktop;
+            transform: translateY(-10%);
+
+            @media(max-width: $container-mobile) {
+              transform: translateY(-30%);
+            }
+
+            h1 {
+              @include responsive-font(5vw, 30px, 60px);
+              color: #fff;
+              text-transform: uppercase;
+              line-height: 1.1;
+              font-weight: 700;
+              width: 70%;
+              margin-bottom: 0;
+
+              @media(max-width: $container-ipad) {
+                @include responsive-font(7vw, 30px, 90px);
+                width: 80%;
+              }
+
+              @media(max-width: $container-mobile) {
+                @include responsive-font(5vw, 30px, 60px);
+                width: 80%;
+              }
+            }
+
+            p {
+              color: #fff;
+              width: 50%;
+
+              @media(max-width: $container-ipad) {
+                width: 70%;
+              }
+
+              @media(max-width: $container-mobile) {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        &.slide-dude-content {
+
+          .container {
+            max-width: $container-desktop;
+            padding-bottom: 0;
+          }
+
+          h2 {
+            text-align: center;
+          }
+
+          .cols {
+            overflow: hidden;
+            padding: 80px;
+
+            @media(max-width: 760px) {
+              padding: 80px 0;
+            }
+
+            .col {
+              @include column(1/2);
+
+              @media(max-width: 1000px) {
+                @include stack();
+                margin-bottom: 30px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
+
+              &.numbers {
+                padding: 80px 40px;
+
+                @media(max-width: 1000px) {
+                  padding-right: 0;
+                  padding-left: 0;
+                }
+
+                .number {
+                  @include span(1/2, $cycle: 2);
+                  text-align: center;
+                  padding: 30px;
+                  position: relative;
+
+                  &:before,
+                  &:after {
+                    position: absolute;
+                    content: '';
+                    background: #efefef;
+                  }
+
+                  &:nth-child(1) {
+                    &:before {
+                      right: 0;
+                      bottom: 0;
+                      width: 1px;
+                      height: 80%;
+                    }
+
+                    &:after {
+                      right: 0;
+                      bottom: 0;
+                      height: 1px;
+                      width: 70%;
+                    }
+                  }
+
+                  &:nth-child(2) {
+                    &:before {
+                      left: 0;
+                      bottom: 0;
+                      width: 1px;
+                      height: 80%;
+                    }
+
+                    &:after {
+                      left: 0;
+                      bottom: 0;
+                      height: 1px;
+                      width: 70%;
+                    }
+                  }
+
+                  &:nth-child(3) {
+                    &:before {
+                      right: 0;
+                      top: 0;
+                      width: 1px;
+                      height: 80%;
+                    }
+
+                    &:after {
+                      right: 0;
+                      top: 0;
+                      height: 1px;
+                      width: 70%;
+                    }
+                  }
+
+                  &:nth-child(4) {
+                    &:before {
+                      left: 0;
+                      top: 0;
+                      width: 1px;
+                      height: 80%;
+                    }
+
+                    &:after {
+                      left: 0;
+                      top: 0;
+                      height: 1px;
+                      width: 70%;
+                    }
+                  }
+
+                  .value {
+                    @include responsive-font(5vw, 30px, 50px);
+                    color: $color-links;
+                    font-weight: 700;
+                    display: block;
+                    font-family: $font-headings;
+
+                    @media(max-width: 1400px) {
+                      @include responsive-font(4vw, 30px, 40px);
+                    }
+
+                    @media(max-width: 1040px) {
+                      @include responsive-font(5vw, 30px, 50px);
+                    }
+                  }
+
+                  .label {
+                    text-transform: uppercase;
+                    color: $color-lightgrey;
+                    display: block;
+                    font-weight: 700;
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.slide-staff {
+          overflow: hidden;
+          white-space: nowrap;
+
+          // It hurts, but it has to be done, because it makes the thing wrap
+          * {
+            outline: 0;
+          }
+
+          .shade {
+            opacity: 0;
+            background: #333;
+          }
+
+          h2 {
+            text-align: center;
+            margin-bottom: 8rem;
+          }
+
+          a.permalink {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: transparent;
+            z-index: 9;
+          }
+
+          .container {
+            max-width: $container-desktop;
+            padding-top: 2rem;
+          }
+
+          .col {
+            @include span(1/4);
+            @include background-cover();
+            background-color: #ccc;
+            height: 600px;
+            cursor: pointer;
+            position: relative;
+            transition: .75s width;
+
+            @media(max-width: 1200px) {
+              @include span(1/2);
+              height: 400px;
+            }
+
+            @media(max-width: 580px) {
+              @include stack();
+            }
+
+            .shade {
+              transition: .5s opacity;
+            }
+
+            blockquote,
+            p,
+            cite {
+              position: relative;
+              z-index: 1;
+              word-wrap: normal;
+            }
+
+            h4 {
+              font-size: 16px;
+              color: #fff;
+              margin-bottom: 5px;
+            }
+
+            .content {
+              position: absolute;
+              left: 40px;
+              right: 20px;
+              bottom: 40px;
+              opacity: 0;
+              transition: .15s bottom, .15s opacity;
+            }
+
+            blockquote {
+              position: relative;
+              padding-bottom: 10px;
+              margin-bottom: 10px;
+
+              &:before {
+                content: '“';
+                top: -20px;
+                left: -30px;
+                color: #fff;
+                z-index: 1;
+                position: absolute;
+                font-size: 220px;
+                line-height: 220px;
+                opacity: .3;
+              }
+
+              p {
+                @include responsive-font(3vw, $font-min-size, $font-max-size, $font-max-size);
+                color: #fff;
+                opacity: 1;
+                line-height: 1.5;
+                margin-top: 10rem;
+                width: 90%;
+                padding-left: 10px;
+                word-wrap: normal;
+                white-space: normal;
+              }
+            }
+
+            cite {
+              font-style: normal;
+              color: #fff;
+              margin-left: 10px;
+              line-height: 1.5em;
+            }
+
+            &:hover {
+              .content {
+                transition: .25s bottom, .5s opacity;
+                transition-delay: .55s;
+              }
+            }
+
+            &.col-open {
+              @media(min-width: 1200px) {
+                width: 39%; // @include span(2/5); -1%
+              }
+
+              .shade {
+                opacity: .7;
+              }
+
+              .content {
+                bottom: 20px;
+                opacity: 1;
+              }
+            }
+
+            &.col-set-smaller {
+              @media(min-width: 1200px) {
+                width: 19%; // @include span(1/5) is 20%, so playing safe by substracting 1%.
+              }
+            }
+
+            &.col-roni {
+              background-image: url('../images/roni.jpg');
+            }
+
+            &.col-juha {
+              background-image: url('../images/juha.jpg');
+            }
+
+            &.col-kristian {
+              background-image: url('../images/kristian.jpg');
+            }
+
+            &.col-timi {
+              background-image: url('../images/timi.jpg');
+            }
+          }
+        } // .slide-staff
+
+        &.slide-values {
+          background: #252525;
+
+          .container {
+            max-width: $container-desktop;
+          }
+
+          h2,
+          h3,
+          p {
+            color: #fff;
+          }
+
+          h3 {
+            color: $color-alt;
+            text-transform: uppercase;
+
+            svg {
+              width: 30px;
+              height: 50px;
+              position: absolute;
+              margin-left: -50px;
+              margin-top: -15px;
+
+              path {
+                stroke: $color-alt;
+                stroke-width: 12;
+              }
+            }
+          }
+
+          p {
+            font-size: 16px;
+          }
+
+          .column-title {
+            @include column(1/4);
+            padding-top: 30px;
+
+            @media(max-width: $container-ipad-landscape) {
+              @include stack();
+              text-align: center;
+              padding-top: 0;
+
+              h2 {
+                margin-bottom: 6rem;
+              }
+            }
+          }
+
+          .column-values {
+            @include column(3/4);
+
+            @media(max-width: $container-ipad-landscape) {
+              @include stack();
+            }
+          }
+
+          .dude-columns {
+            overflow: hidden;
+
+            .column {
+              @include column(1/2, $cycle: 2);
+              padding: 40px;
+
+              @media(max-width: $container-ipad-landscape) {
+                padding: 40px 40px 40px 80px;
+              }
+
+              @media(max-width: 700px) {
+                @include stack();
+                padding: 20px 20px 20px 50px;
+              }
+            }
+          }
+        }
+      } // .slide
+    }
+  }
+}

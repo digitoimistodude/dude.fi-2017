@@ -1,0 +1,110 @@
+{
+  "name": "digitoimistodude/dudestack",
+  "type": "project",
+  "license": "MIT",
+  "description": "A modern WordPress stack",
+  "homepage": "https://github.com/digitoimistodude/dudestack",
+  "authors": [
+    {
+      "name": "Roni Laukkarinen",
+      "email": "roni@dude.fi",
+      "homepage": "https://github.com/ronilaukkarinen"
+    }
+  ],
+  "keywords": [
+    "bedrock", "roots", "wordpress", "stack", "composer", "vagrant", "wp"
+  ],
+  "support": {
+    "issues": "https://github.com/digitoimistodude/dudestack/issues"
+  },
+   "config": {
+    "preferred-install": "dist",
+    "generate-salts": true,
+    "secure-http": true
+  },
+  "autoload": {
+    "psr-4": {"Roots\\Bedrock\\": "scripts/Roots/Bedrock"}
+  },
+  "scripts": {
+    "post-root-package-install": ["Roots\\Bedrock\\Installer::addSalts"]
+   },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "minimum-stability": "dev"
+    },
+    {
+      "type": "composer",
+      "url": "https://wp-languages.github.io"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/Koodimonni/Composer-Dropin-Installer.git"
+    },
+		{
+      "type": "vcs",
+      "url": "https://github.com/digitoimistodude/dude-github-feed.git"
+    },
+		{
+      "type": "vcs",
+      "url": "https://github.com/digitoimistodude/dude-insta-feed.git"
+    },
+		{
+      "type": "vcs",
+      "url": "https://github.com/digitoimistodude/dude-lastfm-feed.git"
+    },
+		{
+      "type": "vcs",
+      "url": "https://github.com/digitoimistodude/dude-twitter-feed.git"
+    }
+  ],
+  "require": {
+    "koodimonni/composer-dropin-installer": "*",
+    "php": ">=5.3.10",
+    "johnpbloch/wordpress": "4.7.1",
+    "koodimonni-language/fi": "*",
+    "koodimonni-language/en_gb": "*",
+    "composer/installers": "~1.0.12",
+    "wp-cli/wp-cli": "*",
+    "vlucas/phpdotenv": "^2.0.1",
+    "wpackagist-plugin/google-analyticator": "*",
+    "wpackagist-plugin/worker": "*",
+    "wpackagist-plugin/imagify": "*",
+    "wpackagist-plugin/autodescription": "*",
+    "wpackagist-plugin/simple-history": "*",
+    "wpackagist-plugin/sendgrid-email-delivery-simplified": "*",
+    "wpackagist-plugin/jetpack-markdown": "*",
+    "digitoimistodude/dude-github-feed":"dev-master",
+    "digitoimistodude/dude-insta-feed":"dev-master",
+    "digitoimistodude/dude-lastfm-feed":"dev-master",
+    "digitoimistodude/dude-twitter-feed":"dev-master",
+    "wpackagist-plugin/wp-libre-form": "*",
+    "wpackagist-plugin/simple-page-ordering": "*",
+    "wpackagist-plugin/yet-another-related-posts-plugin": "*"
+  },
+  "extra": {
+    "dropin-paths": {
+      "content/languages/": ["vendor:koodimonni-language"],
+      "content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
+      "content/languages/themes/": ["vendor:koodimonni-theme-language"]
+    },
+    "installer-paths": {
+      "content/mu-plugins/{$name}/": ["type:wordpress-muplugin",
+        "wpackagist-plugin/google-analyticator",
+        "wpackagist-plugin/imagify",
+        "wpackagist-plugin/simple-history",
+        "wpackagist-plugin/sendgrid-email-delivery-simplified",
+        "wpackagist-plugin/autodescription",
+        "digitoimistodude/dude-github-feed",
+	      "digitoimistodude/dude-insta-feed",
+        "digitoimistodude/dude-lastfm-feed",
+        "digitoimistodude/dude-twitter-feed",
+        "wpackagist-plugin/wp-libre-form"
+      ],
+      "content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "wp"
+  }
+}

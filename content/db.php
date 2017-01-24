@@ -1,0 +1,1 @@
+/var/www/dude2016/content/plugins/query-monitor/wp-content/db.php

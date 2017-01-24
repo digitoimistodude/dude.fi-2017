@@ -1,0 +1,318 @@
+// If you are using Disqus or similar, you can uncomment this in global.scss
+
+// Comments
+body {
+  #page {
+    .site-content {
+
+      .slide {
+        &.slide-comments {
+          background: #f2f2f2;
+          margin-top: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+
+          .container {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+
+            .comment-reply-link {
+              white-space: nowrap;
+              overflow: hidden;
+              display: block;
+              position: relative;
+
+              .reply-icon {
+                width: 13px;
+                height: 13px;
+                fill: #333;
+                opacity: .5;
+                transition: .55s all;
+                position: relative;
+                top: 2px;
+                margin-right: 0;
+              }
+
+              .reply-text {
+                color: $color-body;
+                opacity: .5;
+                font-size: 15px;
+                width: 0;
+                overflow: hidden;
+                display: inline-block;
+                transition: .55s all;
+                white-space: nowrap;
+                position: absolute;
+                top: 2px;
+                left: 21px;
+              }
+
+              &:hover {
+                .reply-icon {
+                  opacity: 1;
+                }
+
+                .reply-text {
+                  width: 100%;
+                }
+              }
+            }
+
+
+            // Comment form
+            .comment-respond {
+              margin-bottom: 0;
+              overflow: hidden;
+
+              p {
+                &.comment-form-author {
+                  @include column(1/3);
+                  margin-bottom: 20px;
+                  margin-top: 0;
+
+                  @media(max-width: $container-mobile) {
+                    @include stack();
+                  }
+
+                  input#author {
+                    font-size: 16px;
+                    padding: 15px 0;
+                    border-width: 1px;
+                  }
+                }
+
+                &.comment-form-email {
+                  @include column(2/3);
+                  margin-right: 0;
+                  clear: right;
+                  margin-bottom: 20px;
+                  margin-top: 0;
+
+                  @media(max-width: $container-mobile) {
+                    @include stack();
+                  }
+
+                  input#email {
+                    font-size: 16px;
+                    padding: 15px 0;
+                    border-width: 1px;
+                  }
+                }
+
+                &.comment-form-url {
+                  @include stack();
+                  position: relative;
+                  margin-top: 0;
+                  margin-bottom: 30px;
+
+                  input#url {
+                    font-size: 16px;
+                    padding: 15px 0;
+                    border-width: 1px;
+                  }
+
+                  &:after {
+                    content: 'Jos haluat, voit mainostaa sivujasi tässä';
+                    position: absolute;
+                    font-family: $font-base;
+                    font-size: 16px;
+                    padding: 15px;
+                    color: #434343;
+                    opacity: .2;
+                    top: 0;
+                    right: 0;
+
+                    @media(max-width: $container-mobile) {
+                      display: none;
+                    }
+                  }
+                }
+
+                &.form-submit {
+                  display: block;
+                  clear: both;
+                  margin-bottom: 0;
+                  margin-top: 0;
+
+                  input {
+                    color: rgba(#434343, .4);
+                    border-color: rgba(#434343, .4);
+
+                    &.active {
+                      color: #434343;
+                      border-color: #434343;
+                    }
+
+                    &:hover,
+                    &:focus {
+                      color: #fff;
+                    }
+                  }
+                }
+
+                &.comment-form-comment {
+                  margin-bottom: 20px;
+                }
+              }
+
+              input {
+                @media (max-width: $container-mobile) {
+                  width: 100%;
+                }
+              }
+
+              input#author,
+              input#email,
+              input#url,
+              textarea {
+                @extend .default;
+                font-family: $font-base;
+                background: #f2f2f2;
+                width: 100%;
+                border-top: 0;
+                border-left: 0;
+                border-right: 0;
+                border-bottom: 3px solid rgba(#434343, .2);
+                padding: 25px 0 20px;
+                line-height: 24px;
+                transition: all .55s;
+
+                &::placeholder {
+                  color: #434343;
+                  opacity: .4;
+                }
+
+                &:focus {
+                  border-color: rgba(#222, 1);
+                  outline: 0;
+
+                  &::placeholder {
+                    color: #222;
+                    opacity: .8;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .container {
+        .container#kommentoi {
+          padding: 0;
+        }
+
+        .comments-area {
+          margin-top: 0;
+          margin-bottom: 0;
+          margin-left: 0;
+          margin-right: 0;
+
+          // Form stuff
+          .comment-respond {
+            @media (min-width: 1000px) {
+              width: 710px;
+            }
+
+            padding: 0;
+            margin: 0 auto;
+          }
+
+          .comment-list {
+            padding: 0;
+            margin: 0 auto;
+            list-style: none;
+            max-width: 700px;
+            width: 100%;
+
+            ol,
+            ul {
+              list-style: none;
+              margin-top: 40px;
+              padding-bottom: 0;
+              margin-bottom: 0;
+            }
+
+            li {
+              @include responsive-font(1.2vw, 14px, 17px);
+              padding: 0;
+              margin-top: 0;
+              margin-bottom: 50px;
+
+              p {
+                @include responsive-font(1.2vw, 14px, 17px);
+                color: $color-darkgrey;
+              }
+
+              .avatar {
+                float: right;
+                border-radius: 50%;
+              }
+
+              .comment-author {
+                font-size: 18px;
+                color: $color-body;
+                margin-top: 0;
+                margin-bottom: 10px;
+                padding: 0;
+
+                a,
+                a:link,
+                a:visited {
+                  color: $color-body;
+                }
+              }
+
+              .comment-time {
+                font-size: 16px;
+                padding: 0;
+                margin: 0;
+                opacity: .5;
+
+                svg {
+                  fill: $color-darkgrey;
+                  position: relative;
+                  top: 2px;
+                  margin-right: 5px;
+                }
+
+                a {
+                  color: $color-darkgrey;
+                }
+
+                &:hover {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+
+        #postmatic-social-comment-wrapper {
+          float: none;
+          margin: 0;
+
+          &:before {
+            content: 'Kommentoi käyttämällä:';
+            color: $color-body;
+            margin-bottom: 5px;
+            position: relative;
+            display: block;
+            font-size: 14px;
+
+            opacity: .8;
+          }
+
+          .fa {
+            margin-right: 5px;
+            font-size: 22px;
+            line-height: 27px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

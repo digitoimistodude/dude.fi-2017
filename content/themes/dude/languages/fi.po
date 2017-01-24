@@ -1,0 +1,455 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: dude\n"
+"POT-Creation-Date: 2016-07-07 23:23+0200\n"
+"PO-Revision-Date: 2016-07-07 23:26+0200\n"
+"Last-Translator: Roni Laukkarinen <roni@dude.fi>\n"
+"Language-Team: Roni Laukkarinen <roni@dude.fi>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:20
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oho! Nyt kurahti! Sivua ei löydykään."
+
+#: 404.php:24 template-parts/content-none.php:33
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Kävi niin ohraisesti, että sivua ei jostain kumman syystä löytynyt."
+
+#: comments.php:33
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Yksi kommentti &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s kommenttia &ldquo;%2$s&rdquo;"
+
+#: comments.php:42 comments.php:63
+msgid "Comment navigation"
+msgstr "Kommenttivalikko"
+
+#: comments.php:45 comments.php:66
+msgid "Older Comments"
+msgstr "Vanhemmat kommentit"
+
+#: comments.php:46 comments.php:67
+msgid "Newer Comments"
+msgstr "Uudemmat kommentit"
+
+#: comments.php:80
+msgid "Comments are closed."
+msgstr "Kommentointi on suljettu."
+
+#: footer.php:24
+msgid "Back to top"
+msgstr "Takaisin ylös"
+
+#: functions.php:64 header.php:69
+msgid "Primary Menu"
+msgstr "Valikko"
+
+#: functions.php:112 functions.php:118
+msgid ", "
+msgstr ","
+
+#: functions.php:114
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Julkaistu: %s"
+
+#: functions.php:120
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Merkitty avainsanoilla %1$s"
+
+#: functions.php:126
+#, php-format
+msgid "Leave a comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Kommentoi<span class=\"screen-reader-text\">kirjoitusta %s</span>"
+
+#: functions.php:133 template-parts/content-page.php:38
+#, php-format
+msgid "Edit %s"
+msgstr "Muokkaa %s"
+
+#: functions.php:150
+msgid "Open menu"
+msgstr "Avaa valikko"
+
+#: functions.php:151
+msgid "Close menu"
+msgstr "Sulje valikko"
+
+#: functions.php:152
+msgid "Open sub menu"
+msgstr "Avaa alavalikko"
+
+#: functions.php:153
+msgid "Close sub menu"
+msgstr "Sulje alavalikko"
+
+#: header.php:47
+msgid "Skip to content"
+msgstr "Hyppää sisältöön"
+
+#: inc/cpt/contributions.php:4
+msgctxt "post type general name"
+msgid "Kontribuutiot"
+msgstr ""
+
+#: inc/cpt/contributions.php:5
+msgctxt "post type singular name"
+msgid "Kontribuutio"
+msgstr ""
+
+#: inc/cpt/contributions.php:6
+msgctxt "admin menu"
+msgid "Kontribuutiot"
+msgstr ""
+
+#: inc/cpt/contributions.php:7
+msgctxt "add new on admin bar"
+msgid "Kontribuutio"
+msgstr ""
+
+#: inc/cpt/contributions.php:8 inc/cpt/reference.php:8 inc/cpt/service.php:8
+msgctxt "example"
+msgid "Lisää uusi"
+msgstr ""
+
+#: inc/cpt/contributions.php:9
+msgid "Lisää uusi kontribuutio"
+msgstr ""
+
+#: inc/cpt/contributions.php:10
+msgid "Uusi kontribuutio"
+msgstr ""
+
+#: inc/cpt/contributions.php:11
+msgid "Muokkaa kontribuutiota"
+msgstr ""
+
+#: inc/cpt/contributions.php:12
+msgid "Katsele kontribuutiota"
+msgstr ""
+
+#: inc/cpt/contributions.php:13
+msgid "Kaikki kontribuutiot"
+msgstr ""
+
+#: inc/cpt/contributions.php:14
+msgid "Etsi kontribuutioita"
+msgstr ""
+
+#: inc/cpt/contributions.php:15
+msgid "Kontribuution isäntä:"
+msgstr ""
+
+#: inc/cpt/contributions.php:16
+msgid "Kontribuutioita ei löytynyt."
+msgstr ""
+
+#: inc/cpt/contributions.php:17
+msgid "Kontribuutioita ei löytynyt roskista."
+msgstr ""
+
+#: inc/cpt/contributions.php:27
+msgid "kontribuutiot"
+msgstr ""
+
+#: inc/cpt/person.php:4
+msgctxt "post type general name"
+msgid "Tyypit"
+msgstr ""
+
+#: inc/cpt/person.php:5
+msgctxt "post type singular name"
+msgid "Tyyppi"
+msgstr ""
+
+#: inc/cpt/person.php:6
+msgctxt "admin menu"
+msgid "Tyypit"
+msgstr ""
+
+#: inc/cpt/person.php:7
+msgctxt "add new on admin bar"
+msgid "Tyyppi"
+msgstr ""
+
+#: inc/cpt/person.php:8
+msgctxt "example"
+msgid "Lisää tyyppi"
+msgstr ""
+
+#: inc/cpt/person.php:9
+msgid "Lisää uusi tyyppi"
+msgstr ""
+
+#: inc/cpt/person.php:10
+msgid "Uusi tyyppi"
+msgstr ""
+
+#: inc/cpt/person.php:11
+msgid "Muokkaa tyyppiä"
+msgstr ""
+
+#: inc/cpt/person.php:12
+msgid "Katsele tyyppiä"
+msgstr ""
+
+#: inc/cpt/person.php:13
+msgid "Kaikki tyypit"
+msgstr ""
+
+#: inc/cpt/person.php:14
+msgid "Etsi tyyppejä"
+msgstr ""
+
+#: inc/cpt/person.php:15
+msgid "Tyypin isäntä:"
+msgstr ""
+
+#: inc/cpt/person.php:16
+msgid "Tyyppejä ei löytynyt."
+msgstr ""
+
+#: inc/cpt/person.php:17
+msgid "Tyyppejä ei löytynyt roskista."
+msgstr ""
+
+#: inc/cpt/person.php:27
+msgid "tyypit"
+msgstr ""
+
+#: inc/cpt/reference.php:4
+msgctxt "post type general name"
+msgid "Työt"
+msgstr ""
+
+#: inc/cpt/reference.php:5
+msgctxt "post type singular name"
+msgid "Työ"
+msgstr ""
+
+#: inc/cpt/reference.php:6
+msgctxt "admin menu"
+msgid "Työt"
+msgstr ""
+
+#: inc/cpt/reference.php:7
+msgctxt "add new on admin bar"
+msgid "Työ"
+msgstr ""
+
+#: inc/cpt/reference.php:9
+msgid "Lisää uusi työ"
+msgstr ""
+
+#: inc/cpt/reference.php:10
+msgid "Uusi työ"
+msgstr ""
+
+#: inc/cpt/reference.php:11
+msgid "Muokkaa työa"
+msgstr ""
+
+#: inc/cpt/reference.php:12
+msgid "Katsele työa"
+msgstr ""
+
+#: inc/cpt/reference.php:13
+msgid "Kaikki työt"
+msgstr ""
+
+#: inc/cpt/reference.php:14
+msgid "Etsi duuneja"
+msgstr ""
+
+#: inc/cpt/reference.php:15
+msgid "Työn isäntä:"
+msgstr ""
+
+#: inc/cpt/reference.php:16
+msgid "Duuneja ei löytynyt."
+msgstr ""
+
+#: inc/cpt/reference.php:17
+msgid "Duuneja ei löytynyt roskista."
+msgstr ""
+
+#: inc/cpt/reference.php:27 inc/cpt/reference.php:29
+msgid "työt"
+msgstr ""
+
+#: inc/cpt/service.php:4
+msgctxt "post type general name"
+msgid "Palvelut"
+msgstr ""
+
+#: inc/cpt/service.php:5
+msgctxt "post type singular name"
+msgid "Palvelu"
+msgstr ""
+
+#: inc/cpt/service.php:6
+msgctxt "admin menu"
+msgid "Palvelut"
+msgstr ""
+
+#: inc/cpt/service.php:7
+msgctxt "add new on admin bar"
+msgid "Palvelu"
+msgstr ""
+
+#: inc/cpt/service.php:9
+msgid "Lisää uusi palvelu"
+msgstr ""
+
+#: inc/cpt/service.php:10
+msgid "Uusi palvelu"
+msgstr ""
+
+#: inc/cpt/service.php:11
+msgid "Muokkaa palvelua"
+msgstr ""
+
+#: inc/cpt/service.php:12
+msgid "Katsele palvelua"
+msgstr ""
+
+#: inc/cpt/service.php:13
+msgid "Kaikki palvelut"
+msgstr ""
+
+#: inc/cpt/service.php:14
+msgid "Etsi palveluita"
+msgstr ""
+
+#: inc/cpt/service.php:15
+msgid "Palvelun isäntä:"
+msgstr ""
+
+#: inc/cpt/service.php:16
+msgid "Palveluita ei löytynyt."
+msgstr ""
+
+#: inc/cpt/service.php:17
+msgid "Palveluita ei löytynyt roskista."
+msgstr ""
+
+#: inc/cpt/service.php:27
+msgid "palvelut"
+msgstr ""
+
+#: inc/metabox/front-page.php:10
+msgid "Herokuvan sisältö"
+msgstr ""
+
+#: inc/metabox/front-page.php:19 inc/metabox/front-page.php:42
+msgid "Otsikko"
+msgstr ""
+
+#: inc/metabox/front-page.php:25 inc/metabox/front-page.php:48
+msgid "Teksti"
+msgstr ""
+
+#: inc/metabox/front-page.php:33
+msgid "Intron sisältö"
+msgstr ""
+
+#: inc/metabox/person.php:9
+msgid "Henkilötiedot"
+msgstr ""
+
+#: inc/metabox/person.php:17
+msgid "Titteli"
+msgstr ""
+
+#: inc/metabox/person.php:23
+msgid "Sähköpostiosoite"
+msgstr ""
+
+#: inc/metabox/person.php:29
+msgid "Puhelinnumero"
+msgstr ""
+
+#: inc/metabox/person.php:36
+msgid "Sosiaaliset integraatiot"
+msgstr ""
+
+#: inc/metabox/person.php:44
+msgid "Instagram käyttäjä ID"
+msgstr ""
+
+#: inc/metabox/person.php:50
+msgid "Twitter nimimerkki"
+msgstr ""
+
+#: inc/metabox/person.php:51
+msgid "Ilman @-merkkiä"
+msgstr ""
+
+#: inc/metabox/person.php:57
+msgid "Last.fm nimimerkki"
+msgstr ""
+
+#: inc/metabox/person.php:63
+msgid "GitHub nimimerkki"
+msgstr ""
+
+#: inc/metabox/person.php:70
+msgid "Misc"
+msgstr ""
+
+#: inc/metabox/person.php:78
+msgid "Lainaus"
+msgstr ""
+
+#: search.php:22
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Hakutulokset haulle: %s"
+
+#: template-parts/content-none.php:16
+msgid "Nothing Found"
+msgstr "Mitään ei löytynyt"
+
+#: template-parts/content-none.php:23
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Valmiina julkaisemaan ensimmäisen kirjoituksen? <a href=\"%1$s\">Aloita "
+"tästä</a>."
+
+#: template-parts/content-none.php:27
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Olemme pahoillamme, mutta mitään ei löytynyt. Yritä uudelleen eri "
+"hakusanoilla."
+
+#: template-parts/content-page.php:26 template-parts/content-single.php:40
+#: template-parts/content.php:40
+msgid "Pages:"
+msgstr "Sivut:"
+
+#: template-parts/content-single.php:35 template-parts/content.php:35
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Jatka artikkelin %s lukemista <span class=\"meta-nav\">&rarr;</span>"

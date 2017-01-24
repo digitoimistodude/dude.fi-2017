@@ -1,0 +1,322 @@
+@import 'burger';
+
+// General styles
+body {
+  &.main-navigation-open {
+    // Prevent body scrolling when navigation is open
+    overflow: hidden;
+
+    .site-wrapper {
+      transform: translate3d(0, 100vh, 0);
+
+      // Prevent body scrolling when navigation is open
+      overflow: hidden;
+    }
+  }
+
+  &.main-navigation-touched {
+    overflow-x: hidden;
+    z-index: 0;
+  }
+
+  #page {
+    button {
+      &.nav-trigger {
+        display: none;
+      }
+    }
+  }
+
+  @media(max-width: $responsivenav) {
+    #page {
+      button {
+        &.nav-trigger {
+          border: 0;
+          box-shadow: none;
+          text-decoration: none;
+          background: none;
+          z-index: 9999999999;
+          position: absolute;
+          top: 15px;
+          left: 10px;
+          padding: 0;
+          width: 28px;
+          height: 20px;
+          display: block;
+          margin: 0;
+          cursor: pointer;
+
+          &:hover {
+            box-shadow: none;
+            text-decoration: none;
+            background: none;
+          }
+
+          .burger-icon {
+            @include burger(28px, 4px, 4px, #fff);
+            margin: 0;
+            padding: 0;
+          }
+
+          &[aria-expanded="true"] .burger-icon {
+            @include burger-to-cross;
+            box-shadow: none;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+a {
+  &.button {
+    &.call-me-maybe {
+      display: none;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      border: 2px solid #2ecc71;
+      padding: 7px 15px;
+      margin: 0;
+      line-height: 1;
+      overflow: hidden;
+      color: #2ecc71;
+      box-shadow: none;
+      text-shadow: none;
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: all .5s;
+      z-index: 100000000;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: #fff;
+        border-color: #2ecc71;
+        box-shadow: 0 -35px 0 #2ecc71 inset;
+        background: #2ecc71;
+      }
+    }
+  }
+}
+
+// "Pushed" site wrapper
+.site-wrapper {
+  transition: all .5s;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+#nav {
+  ul {
+    list-style: none;
+
+    li {
+      overflow: hidden;
+
+      &.menu-item-button {
+        position: relative;
+        top: -1px;
+      }
+
+      a {
+        color: rgba(#fff, .9);
+        font-size: 13px;
+        font-weight: 700;
+        font-family: $font-headings;
+        text-transform: uppercase;
+        transition: .5s all;
+        bottom: 0;
+        margin: 0;
+        text-align: center;
+        display: inline-block;
+        padding: 0 16px;
+        position: relative;
+
+        &:hover {
+          opacity: .4;
+          bottom: 3px;
+        }
+
+        &.button-nav {
+          border: 2px solid #fff;
+          padding: 8px 14px;
+          margin: 0;
+          display: inline;
+          line-height: 1;
+          position: relative;
+          overflow: hidden;
+
+          span {
+            transition: .55s;
+          }
+
+          &:before {
+            content: attr(data-hover);
+            transform: translate(-150%, 0);
+            opacity: 0;
+          }
+
+          &:after {
+            content: attr(data-active);
+            transform: translate(150%, 0);
+          }
+
+          &:before,
+          &:after {
+            position: absolute;
+            top: 7px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            transition: .55s, opacity .55s;
+          }
+
+          &:hover {
+            bottom: 0;
+            opacity: 1;
+
+            span {
+              opacity: 0;
+            }
+
+            &:before {
+              opacity: 1;
+              transform: translate(0, 0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile styles
+@media(max-width: $responsivenav) {
+
+  a {
+    &.button {
+      &.call-me-maybe {
+        display: inline-block;
+      }
+    }
+  }
+
+  #nav {
+    right: 0;
+    top: 0;
+    width: 100%;
+    background-color: #16202a;
+    visibility: hidden;
+    overflow: auto;
+    transition: all .5s;
+    height: 100%;
+    outline: 0;
+    backface-visibility: hidden;
+    position: fixed;
+    transform: translate3d(0, -100%, 0);
+    margin: 0;
+    padding: 0;
+    z-index: 9999999;
+
+    &.open {
+      visibility: visible;
+      transition: transform .5s;
+      transform: translate3d(0, 0, 0);
+    }
+
+    ul {
+      @include centered();
+      padding: 70px 20px 20px;
+      list-style: none;
+      margin: 0;
+      visibility: visible;
+      opacity: 1;
+      overflow: visible;
+
+      &.is-fixed {
+        position: fixed;
+      }
+
+      li {
+        line-height: 2;
+
+        // Hide "open chat" menu item in mobile
+        &.menu-item-button {
+          display: none;
+        }
+
+        @media(max-height: 500px) {
+          line-height: 1.5;
+        }
+
+        a {
+          @include responsive-font(2.8vw, 25px, 68px);
+          display: block;
+          padding: 2px 50px;
+          position: relative;
+          color: #fff;
+
+          @media(max-width: $container-mobile) {
+            @include responsive-font(2.5vw, 20px, 68px);
+            padding: 5px 20px;
+          }
+
+          svg {
+            width: 32px;
+            height: 32px;
+            opacity: .5;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Only in desktop
+@media(min-width: $responsivenav) {
+
+  #nav {
+    position: relative;
+    max-height: none;
+    overflow: visible;
+    clip: rect(0 0 0 0);
+    zoom: 1;
+    user-select: none;
+
+    ul {
+      padding: 0;
+      list-style: none;
+      margin: 0 10px 0;
+      display: block;
+      white-space: nowrap;
+
+      li {
+        height: 55px;
+        line-height: 55px;
+        position: relative;
+        display: inline-block;
+
+        &.menu-code {
+          margin-right: 20px;
+
+          svg {
+            position: relative;
+            top: 4px;
+            fill: rgba(#fff, .9);
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
