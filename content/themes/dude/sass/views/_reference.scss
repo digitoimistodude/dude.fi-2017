@@ -553,7 +553,7 @@ body {
           padding-top: 50px;
           overflow: hidden;
 
-          @media(max-width: $container-ipad) {
+          @media(max-width: 960px) {
             @include background-cover();
           }
 
@@ -564,12 +564,10 @@ body {
             overflow: hidden;
             top: 80px;
 
-            @media(max-width: $container-ipad) {
-              text-align: center;
-            }
-
             .col {
-              @media(min-width: $container-ipad) {
+              width: 65%;
+
+              @media(min-width: 960px) {
                 @include column(1/2);
               }
             }
