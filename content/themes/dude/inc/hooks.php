@@ -279,6 +279,9 @@ function dude_resource_hints( $hints, $relation_type ) {
 }
 add_filter( 'wp_resource_hints', 'dude_resource_hints', 10, 2 );
 
+/**
+ * Prevent Carbon Fields from saving empty rows on spesific meta keys
+ */
 function dude_no_empty_post_meta_rows( $meta_id, $object_id, $meta_key, $meta_value ) {
   if( !empty( $meta_value ) )
     return;
@@ -301,6 +304,14 @@ function dude_no_empty_post_meta_rows( $meta_id, $object_id, $meta_key, $meta_va
 }
 add_filter( 'updated_post_meta', 'dude_no_empty_post_meta_rows', 50, 4 );
 add_filter( 'added_post_meta', 'dude_no_empty_post_meta_rows', 50, 4 );
+
+function dude_wplf_nojs_submit() {
+  if( isset( $_POST['dude-name'] ) ) {
+    wplf_ajax_submit_handler( true );
+    $_POST['_wplf_success'] = true;
+  }
+}
+add_action( 'init', 'dude_wplf_nojs_submit' );
 
 // Disable srcset
 add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );

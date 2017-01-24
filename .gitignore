@@ -23,6 +23,7 @@ content/mu-plugins/*
 !content/mu-plugins/bedrock-autoloader.php
 !content/mu-plugins/page-for-post-type.php
 !content/mu-plugins/carbon-fields
+!content/mu-plugins/wp-libre-form
 vendor/*
 !vendor/.gitkeep
 node_modules
