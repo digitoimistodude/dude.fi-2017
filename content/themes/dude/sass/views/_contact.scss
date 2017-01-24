@@ -51,28 +51,13 @@ body {
             margin-top: 30px;
             text-align: left;
 
-            .cols {
-              @include clearfix;
-
-              .col {
-                @include column(1/3);
-
-                &:first-of-type {
-                  @include column(2/3);
-                }
-              }
-            }
-
-            textarea,
-            textarea#message,
-            textarea.message-field {
+            // Field styles
+            textarea {
               min-height: 100px;
             }
 
             input,
-            textarea,
-            textarea#message,
-            textarea.message-field {
+            textarea {
               background: transparent;
               border-top: 0;
               border-left: 0;
@@ -86,36 +71,10 @@ body {
               text-align: left;
               outline: 0;
               color: rgba(#fff, .3);
-              transition: all .55s;
-
-              @media(max-width: $container-mobile) {
-                padding-left: 0;
-              }
-
-              &#phone {
-                transition: all .5s;
-
-                &.hidden {
-                  height: 0;
-                  opacity: 0;
-                  padding: 0;
-                  margin: 0;
-                }
-              }
 
               &::placeholder {
                 color: rgba(#fff, .3);
                 opacity: 1;
-                transition: .55s all;
-              }
-
-              &.propmt {
-                color: rgba(#fff, .3);
-
-                &::placeholder {
-                  color: rgba(#fff, .3);
-                  opacity: 1;
-                }
               }
 
               &:focus {
@@ -127,8 +86,18 @@ body {
                   opacity: 1;
                 }
               }
+
+              @media(max-width: $container-mobile) {
+                padding-left: 0;
+              }
             }
 
+            button {
+              overflow: hidden;
+              margin-top: 20px;
+            }
+
+            // Step styles
             .phase {
               position: absolute;
               right: 20px;
@@ -139,87 +108,9 @@ body {
               @media(max-width: 800px) {
                 right: 30px;
               }
-
-              &.second {
-                opacity: 0;
-
-                &.fadein {
-                  opacity: .15;
-                }
-              }
-
-              &.third {
-                opacity: 0;
-
-                &.fadein {
-                  opacity: .15;
-                }
-              }
             }
 
-            input {
-              &#email {
-                transition: all .5s;
-
-                &.hidden {
-                  height: 0;
-                  opacity: 0;
-                  padding: 0;
-                  margin: 0;
-                }
-
-                &.display {
-                  height: auto;
-
-                  &.fadein {
-                    opacity: 1;
-                  }
-                }
-              }
-            }
-
-            button {
-              margin-top: 20px;
-
-              &.hidden {
-                height: 0;
-                opacity: 0;
-                padding: 0;
-                margin: 0;
-              }
-
-              &.display {
-                height: auto;
-
-                &.fadein {
-                  opacity: 1;
-                }
-              }
-            }
-
-            textarea {
-              transition: all .5s;
-
-              &.hidden {
-                // Javascript forces inline height when determining auto expansing field, so that's why this abomination:
-                height: 0 !important;
-                padding: 0 !important;
-                min-height: 0 !important;
-                opacity: 0;
-                margin: 0;
-              }
-
-              &.display {
-                transition-delay: 1s;
-                height: auto;
-
-                &.fadein {
-                  transition-delay: 2s;
-                  opacity: 1;
-                }
-              }
-            }
-
+            // Typing animation
             .typer {
               position: relative;
               animation: blink 1s infinite;
@@ -240,19 +131,11 @@ body {
               white-space: nowrap;
               clear: both;
               display: block;
-              transition: all .55s;
               line-height: 0;
               height: 0;
 
               @media(max-width: 800px) {
                 display: none;
-              }
-
-              &.hidden {
-                height: 0;
-                opacity: 0;
-                padding: 0;
-                margin: 0;
               }
 
               &.visible {
@@ -277,6 +160,116 @@ body {
                 &.type {
                   animation: type 2s steps(60, end);
                   width: 100%;
+                }
+              }
+            }
+
+            // If js is activated
+            .form-wrapper:not(.no-js) {
+              transition: none;
+
+              input,
+              textarea,
+              button {
+                transition: none;
+
+                &::placeholder {
+                  transition: none;
+                }
+              }
+
+              .phase {
+                transition: none;
+
+                // Hidden by default
+                &.second,
+                &.third {
+                  opacity: 0;
+
+                  &.active {
+                    opacity: .15;
+                  }
+                }
+              }
+
+              &.animated {
+                input,
+                textarea,
+                button {
+                  transition: all .55s;
+
+                  &::placeholder {
+                    transition: all .55s;
+                  }
+                }
+
+                .phase {
+                  transition: all .55s;
+                }
+              }
+
+              .cols {
+                @include clearfix;
+
+                .col {
+                  @include column(1/3);
+
+                  &:first-of-type {
+                    @include column(2/3);
+                  }
+                }
+              }
+
+              // Fields
+              input,
+              textarea {
+                // Hidden by default
+                &#message,
+                &#email,
+                &#phone {
+                  height: 0;
+                  padding-top: 0;
+                  padding-bottom: 0;
+                  min-height: 0;
+                  border: 0;
+
+                  &.active {
+                    height: auto;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid rgba(#fff, .3);
+                  }
+                }
+              }
+
+              textarea {
+                // Because of auto-expanding js
+                &.force-hidden {
+                  height: 0 !important;
+                }
+
+                &.active {
+                  min-height: 100px;
+                }
+              }
+
+              button {
+                // Hidden by default
+                height: 0;
+                padding-top: 0;
+                padding-bottom: 0;
+                min-height: 0;
+                border-top-width: 0;
+                border-bottom-width: 0;
+                margin-top: 0;
+
+                &.active {
+                  height: inherit;
+                  border-top-width: 2px;
+                  border-bottom-width: 2px;
+                  padding-top: 10px;
+                  padding-bottom: 10px;
+                  margin-top: 20px;
                 }
               }
             }
