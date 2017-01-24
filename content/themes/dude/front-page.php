@@ -194,24 +194,24 @@ get_header(); ?>
 
                 <div class="row row-first">
 
-                  <div class="col">
+                  <div class="col logo-bauermedia">
                     <?php echo file_get_contents( get_theme_file_path( 'svg/logo-bauermedia.svg' ) ); ?>
                   </div>
 
-                  <div class="col">
+                  <div class="col logo-elonen">
                     <?php echo file_get_contents( get_theme_file_path( 'svg/logo-elonen.svg' ) ); ?>
                   </div>
 
-                  <div class="col">
-                    <?php echo file_get_contents( get_theme_file_path( 'svg/logo-paytrail.svg' ) ); ?>
+                  <div class="col logo-sohwi">
+                    <?php echo file_get_contents( get_theme_file_path( 'svg/logo-sohwi-original.svg' ) ); ?>
                   </div>
 
-                  <div class="col">
+                  <div class="col logo-jyvaskyla">
                     <?php echo file_get_contents( get_theme_file_path( 'svg/logo-jyvaskyla.svg' ) ); ?>
                   </div>
 
-                  <div class="col logo-sohwi">
-                    <?php echo file_get_contents( get_theme_file_path( 'svg/logo-sohwi-alt.svg' ) ); ?>
+                  <div class="col logo-paytrail">
+                    <?php echo file_get_contents( get_theme_file_path( 'svg/logo-paytrail.svg' ) ); ?>
                   </div>
 
                 </div><!-- .row -->
@@ -230,7 +230,7 @@ get_header(); ?>
                     <?php echo file_get_contents( get_theme_file_path( 'svg/logo-realsnacks.svg' ) ); ?>
                   </div>
 
-                  <div class="col logo-sohwi">
+                  <div class="col col-harmooni">
                     <?php echo file_get_contents( get_theme_file_path( 'svg/logo-harmooni.svg' ) ); ?>
                   </div>
 
