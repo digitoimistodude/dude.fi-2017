@@ -30,10 +30,9 @@
       }).done( function( response ) {
         if( response.length !== 0 && response.status === 'success' ) {
           $('.likes span').html( response.count )
+          localStorage.setItem( 'dude_liked_posts', JSON.stringify( user_likes ) );
         }
       });
-
-      localStorage.setItem( 'dude_liked_posts', JSON.stringify( user_likes ) );
     });
   });
 } )( jQuery );
