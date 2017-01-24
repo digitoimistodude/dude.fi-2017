@@ -14,19 +14,19 @@ This is a working copy of the website for [Digitoimisto Dude Oy](https://github.
 6. [Server stack](#server-stack)
 7. [Building instructions](#building-instructions)
 
-#### Background story
+## Background story
 
 Dude build their first website when the company was formed in 2013. It was quite simple, but we needed it fast. Next, careful design we released after one year. And it was awesome. However, when things changed and there were suddendly 4 dudes instead of 2 in late 2015, we started to plan redesigning our website in early 2016.
 
 We made quite a lot of planning in the spring and during the summer we started to work on the redesign. Summer died fast, so obviously got a bit stuck in the fall. When christmas holidays finally came, we continued with the site. Full blast in January, and boom! - the site was finally ready for the public to see.
 
-##### Before GitHub
+### Before GitHub
 
 Before releasing the dude.fi code in GitHub, we had a development version in Bitbucket's private repository. This is simply because we were just figuring out the content and all the other stuff so didn't want to have all that lorem ipsum to be viewed in public. Not that it would matter much, but for the cleaner outcome we decided to release the repository *as is*, as soon as the overall package would be ready.
 
 Themes and sites before this version are forever resting in Bitbucket.
 
-##### What's ignored?
+### What's ignored?
 
 We have some stuff in [`.gitignore`](https://github.com/digitoimistodude/dude.fi/blob/master/.gitignore), although most of the lines are directly from [dudestack](https://github.com/digitoimistodude/dudestack).
 
