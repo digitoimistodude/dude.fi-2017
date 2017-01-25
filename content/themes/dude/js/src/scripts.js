@@ -119,14 +119,12 @@
     // Auto expanding textarea
     autosize( $('textarea') );
 
-    // On click to contributions
-    $(".slide-hero-contributions .button").click(function(e) {
-    	e.preventDefault();
+    window.CRISP_READY_TRIGGER = function() {
+      $crisp.on('message:received', function(message) {
+        $crisp.do('chat:open');
+      });
+    };
 
-        $('html, body').animate({
-            scrollTop: $("#kontribuutiot").offset().top -50
-        }, 1000);
-    });
 
     // On click to scroll down arrow
     $(".scroll-down a").click(function(e) {
