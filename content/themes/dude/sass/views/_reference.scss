@@ -87,10 +87,9 @@ body {
             @media(max-width: $container-mobile) {
               padding-top: 4rem;
               padding-bottom: 4rem;
-              max-height: 520px;
 
               &:first-child {
-                padding-top: 170px;
+                padding-top: 140px;
                 padding-bottom: 0;
               }
             }
@@ -239,15 +238,15 @@ body {
         }
 
         &.slide-visit-site {
-          &.no-top-padding {
-            .container {
-              padding-top: 0;
-            }
-          }
-
           &.no-bottom-padding {
             .container {
               padding-bottom: 0;
+            }
+          }
+
+          &.no-top-padding {
+            .container {
+              padding-top: 0;
             }
           }
         }
