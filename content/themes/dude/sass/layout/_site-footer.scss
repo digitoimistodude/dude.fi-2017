@@ -421,16 +421,18 @@ body {
 
 .cookie-notification-wrapper {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 0;
+  right: 0;
   background: #fff;
-  width: 165px;
-  padding: 10px 15px 8px;
+  width: 100%;
+  padding: 10px;
   line-height: 1.5;
   z-index: 100;
   box-shadow: 0 0 40px rgba(85, 85, 85, .2);
   transition: all .55s;
   opacity: 1;
+  height: 50px;
+  overflow: hidden;
 
   @media(max-width: $container-mobile) {
     box-shadow: 0;
@@ -446,7 +448,21 @@ body {
 
   .content {
     padding: 0;
-    line-height: 1.5;
+    line-height: 1;
+    max-width: 590px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .content-text {
+      width: 80%;
+      float: left;
+    }
+
+    .button-wrapper {
+      width: 20%;
+      float: left;
+      text-align: right;
+    }
 
     @media(max-width: $container-mobile) {
       .content-text {
@@ -459,9 +475,9 @@ body {
     }
 
     p {
-      font-size: 13px;
+      font-size: 15px;
       line-height: 1.5;
-      padding: 0;
+      padding: 4px;
       margin: 0;
 
       b {
@@ -498,7 +514,7 @@ body {
           color: $color-body;
           font-size: 11px;
           padding: 5px 15px;
-          margin-top: 8px;
+          margin-top: -4px;
           text-shadow: none;
           box-shadow: none;
           white-space: nowrap;
