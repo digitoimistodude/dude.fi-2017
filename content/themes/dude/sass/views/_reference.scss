@@ -87,6 +87,7 @@ body {
             @media(max-width: $container-mobile) {
               padding-top: 4rem;
               padding-bottom: 4rem;
+              max-height: 520px;
 
               &:first-child {
                 padding-top: 170px;
