@@ -83,7 +83,7 @@
     var ua = navigator.userAgent,
     event = (ua.match(/iPad/i) || ua.match(/iPhone/)) ? 'touchstart' : 'click';
 
-    $('body').on(event, '.cookie-notification-wrapper a', function(e) {
+    $('body').on(event, '.cookie-notification-wrapper a.button', function(e) {
       $('.cookie-notification-wrapper').addClass('fadeout');
 
       Cookies.set( 'dude_cookie_status', 'dismiss', { expires: 3650 } );
