@@ -242,7 +242,7 @@ body {
                 }
               }
 
-              textarea {
+              textarea#message {
                 // Because of auto-expanding js
                 &.force-hidden {
                   height: 0 !important;

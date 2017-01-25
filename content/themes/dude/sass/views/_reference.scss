@@ -89,7 +89,7 @@ body {
               padding-bottom: 4rem;
 
               &:first-child {
-                padding-top: 170px;
+                padding-top: 140px;
                 padding-bottom: 0;
               }
             }
@@ -233,6 +233,20 @@ body {
               &:last-child {
                 margin-bottom: 0;
               }
+            }
+          }
+        }
+
+        &.slide-visit-site {
+          &.no-bottom-padding {
+            .container {
+              padding-bottom: 0;
+            }
+          }
+
+          &.no-top-padding {
+            .container {
+              padding-top: 0;
             }
           }
         }
