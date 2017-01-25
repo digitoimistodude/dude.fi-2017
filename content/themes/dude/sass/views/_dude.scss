@@ -6,6 +6,7 @@ body {
           height: 100vh;
           max-height: 1600px;
           background-image: url('../images/dudet-2016.jpg');
+          background-position: bottom center;
 
           .shade-extra {
             background: linear-gradient(to bottom, rgba(#111, 0) 0%, rgba(#363f49, .3) 60%, rgba(#363f49, .4) 100%);
@@ -21,8 +22,12 @@ body {
               transform: translateY(-30%);
             }
 
+            @media(max-height: 700px) {
+              transform: translateY(-20%);
+            }
+
             h1 {
-              @include responsive-font(5vw, 30px, 60px);
+              @include responsive-font(4.5vw, 30px, 50px);
               color: #fff;
               text-transform: uppercase;
               line-height: 1.1;
@@ -43,7 +48,7 @@ body {
 
             p {
               color: #fff;
-              width: 50%;
+              width: 48%;
 
               @media(max-width: $container-ipad) {
                 width: 70%;
@@ -74,7 +79,7 @@ body {
                 color: #000;
                 box-shadow: inset 0 -1px 0 0 #fff, inset 0 -4px 0 0 $color-links;
               }
-            }            
+            }
           }
 
           h2 {
