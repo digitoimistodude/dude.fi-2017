@@ -238,6 +238,20 @@ body {
           }
         }
 
+        &.slide-visit-site {
+          &.no-top-padding {
+            .container {
+              padding-top: 0;
+            }
+          }
+
+          &.no-bottom-padding {
+            .container {
+              padding-bottom: 0;
+            }
+          }
+        }
+
         &.slide-customer-story {
           background-color: #fff;
 
