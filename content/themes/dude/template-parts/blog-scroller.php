@@ -91,7 +91,7 @@ endif; ?>
     <div class="blogpost last-card">
       <div class="content">
         <?php echo file_get_contents( get_theme_file_path( 'svg/neckbeard.svg' ) ) ?>
-        <h3><?php _e( 'Meillä ei ole enää anettavaa', 'dude' ) ?></h3>
+        <h3><?php _e( 'Meillä ei ole enää annettavaa', 'dude' ) ?></h3>
         <p><?php _e( 'Selasit puljun historian loppuun, sori :S', 'dude' ) ?></p>
       </div>
     </div>
