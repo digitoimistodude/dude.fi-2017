@@ -5,6 +5,7 @@
     // If js is activated, remove no-js class
     $('form .form-wrapper').removeClass('no-js');
     $('form .form-wrapper textarea').addClass('force-hidden');
+    $('form #nojs').remove();
 
     // If it's Safari
     if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {

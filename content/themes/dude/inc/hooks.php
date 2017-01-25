@@ -306,7 +306,7 @@ add_filter( 'updated_post_meta', 'dude_no_empty_post_meta_rows', 50, 4 );
 add_filter( 'added_post_meta', 'dude_no_empty_post_meta_rows', 50, 4 );
 
 function dude_wplf_nojs_submit() {
-  if( isset( $_POST['dude-name'] ) ) {
+  if( isset( $_POST['dude-nojs'] ) ) {
     wplf_ajax_submit_handler( true );
     $_POST['_wplf_success'] = true;
   }
