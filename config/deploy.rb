@@ -3,7 +3,7 @@ set :repo_url,  "git@github.com:digitoimistodude/dude.fi.git"
 set :branch, :master
 set :log_level, :debug
 set :linked_files, %w{.env}
-set :linked_dirs, %w{content/media}
+set :linked_dirs, %w{media}
 set :composer_install_flags, '--no-dev --prefer-dist --no-scripts --optimize-autoloader'
 set :composer_roles, :all
 
