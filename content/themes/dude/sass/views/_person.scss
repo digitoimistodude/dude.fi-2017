@@ -217,6 +217,17 @@ body {
                   }
                 }
 
+                &.telegram {
+                  a {
+                    &:hover {
+                      svg,
+                      path {
+                        fill: darken(#38aeeb, 0%);
+                      }
+                    }
+                  }
+                }
+
                 &.skype {
                   a {
                     &:hover {

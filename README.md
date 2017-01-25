@@ -14,6 +14,8 @@ This is a working copy of the website for [Digitoimisto Dude Oy](https://github.
 6. [Server stack](#server-stack)
 7. [Building instructions](#building-instructions)
 
+![Screenshot](https://dl.dropboxusercontent.com/u/18447700/dude.fi-2017.png "Screenshot")
+
 ## Background story
 
 Dude built their first website when the company was formed in 2013. It was quite simple, but we needed it fast. Next, careful design we released after one year. And it was awesome. However, when things changed and there were suddendly 4 dudes instead of 2 in late 2015, we started to plan redesigning our website in early 2016.
