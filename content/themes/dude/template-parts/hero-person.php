@@ -32,7 +32,7 @@ $social = carbon_get_post_meta( get_the_id(), '_social', 'complex' );
       <?php endif;
 
       if( !empty( $phone ) ): ?>
-        <li><a href="tel:<?php echo $phone ?>"><?php echo $phone ?></a></li>
+        <li><a href="tel:<?php echo str_replace( ' ', '', $phone ) ?>"><?php echo $phone ?></a></li>
       <?php endif; ?>
     </ul>
 

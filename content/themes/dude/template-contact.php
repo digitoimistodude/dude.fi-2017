@@ -64,7 +64,7 @@ get_header(); ?>
                   <h5><?php echo $job_title ?></h5>
 
                   <p class="contact-info"><a href="mailto:<?php echo $email ?>"><?php echo $email ?></a><br />
-                    <a href="tel:<?php echo $phone ?>"><?php echo $phone ?></a></p>
+                    <a href="tel:<?php echo str_replace( ' ', '', $phone ) ?>"><?php echo $phone ?></a></p>
                 </div>
               </div>
             <?php endwhile;
@@ -82,7 +82,7 @@ get_header(); ?>
             <?php endif; ?>
             <p>
               <a href="mailto:<?php echo $contact_email ?>"><?php echo $contact_email ?></a><br>
-              <a href="tel:<?php echo $contact_phone ?>"><?php echo $contact_phone ?></a>
+              <a href="tel:<?php echo str_replace( ' ', '', $contact_phone ) ?>"><?php echo $contact_phone ?></a>
             </p>
 
           </div>

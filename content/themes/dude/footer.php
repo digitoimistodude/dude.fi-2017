@@ -42,7 +42,7 @@ $coffee = dude_get_coffee_drunk(); ?>
                 <a href="mailto:<?php echo $contact_person_email ?>"><?php echo $contact_person_email ?></a><br />
               <?php endif;
               if( !empty( $contact_person_phone ) ): ?>
-                <a href="tel:<?php echo $contact_person_phone; ?>"><?php echo $contact_person_phone; ?></a>
+                <a href="tel:<?php echo str_replace( ' ', '', $contact_person_phone ); ?>"><?php echo $contact_person_phone; ?></a>
               <?php endif; ?></p>
           </div><!-- .col -->
         <?php endif;
@@ -55,7 +55,7 @@ $coffee = dude_get_coffee_drunk(); ?>
             <?php endif; ?>
             <a href="mail:<?php echo $support_email ?>"><?php echo $support_email ?></a><br />
             <?php if( !empty( $support_phone ) ): ?>
-              <a href="tel:<?php echo $support_phone; ?>"><?php echo $support_phone; ?></a>
+              <a href="tel:<?php echo str_replace( ' ', '', $support_phone ); ?>"><?php echo $support_phone; ?></a>
             <?php endif; ?></p>
           </div><!-- .col -->
         <?php endif;

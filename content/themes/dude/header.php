@@ -61,7 +61,7 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 
-      <a href="tel:<?php echo get_option( 'dude_contact_person_phone' ) ?>" title="<?php _e( 'Soita meille', 'dude' ) ?>" class="button call-me-maybe"><?php _e( 'Soita', 'dude' ) ?></a>
+      <a href="tel:<?php echo str_replace( ' ', '', get_option( 'dude_contact_person_phone' ) ) ?>" title="<?php _e( 'Soita meille', 'dude' ) ?>" class="button call-me-maybe"><?php _e( 'Soita', 'dude' ) ?></a>
 
       <button id="nav-trigger" class="nav-trigger" aria-controls="nav"><span class="burger-icon"></span><span class="nav-toggle-label screen-reader-text"><?php esc_html_e( 'Valikko', 'dude' ); ?></span></button>
 
