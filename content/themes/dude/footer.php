@@ -108,7 +108,7 @@ $coffee = dude_get_coffee_drunk(); ?>
                   <div class="steam-container">
                     <div class="squiggle-container squiggle-container-1">
                     <div class="squiggle">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 28.1 80.6" style="enable-background:new 0 0 28.1 80.6;" xml:space="preserve">
                       <path class="" fill="none" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M22.6,75.1c-8-5.6-15.2-10.5-15.2-19.9c0-12.1,14.1-17.2,14.1-29.6c0-9.1-6.7-15.7-16-20.1"/>
                       </svg>
@@ -116,7 +116,7 @@ $coffee = dude_get_coffee_drunk(); ?>
                   </div>
                     <div class="squiggle-container squiggle-container-2">
                     <div class="squiggle">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 28.1 80.6" style="enable-background:new 0 0 28.1 80.6;" xml:space="preserve">
                       <path class="" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M22.6,75.1c-8-5.6-15.2-10.5-15.2-19.9c0-12.1,14.1-17.2,14.1-29.6c0-9.1-6.7-15.7-16-20.1"/>
                       </svg>
@@ -124,7 +124,7 @@ $coffee = dude_get_coffee_drunk(); ?>
                   </div>
                     <div class="squiggle-container squiggle-container-3">
                     <div class="squiggle">
-                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 28.1 80.6" style="enable-background:new 0 0 28.1 80.6;" xml:space="preserve">
                       <path class="" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M22.6,75.1c-8-5.6-15.2-10.5-15.2-19.9c0-12.1,14.1-17.2,14.1-29.6c0-9.1-6.7-15.7-16-20.1"/>
                       </svg>
@@ -141,7 +141,7 @@ $coffee = dude_get_coffee_drunk(); ?>
                 </div><!-- end coffee-container -->
 
               <p class="coffee-text">
-                <span><?php echo $coffee['details']['count'] ?></span> <?php _e( 'kuppia kahvia juotu tällä viikolla.', 'dude' ) ?> <time class="coffee-time" data-time="<?php echo $coffee['details']['latest_entry'] ?>"><?php _e( 'Viimeksi', 'dude' ); ?> <span><?php if( $coffee['details']['count'] > 0 ): echo date_i18n( ' d.m.Y H:i:s', strtotime( $coffee['details']['latest_entry'] ) ); else: _e ( 'viime viikolla', 'dude' ); endif; ?></span></time></p>
+                <span><?php echo $coffee['details']['count'] ?></span> <?php _e( 'kuppia kahvia juotu tällä viikolla.', 'dude' ) ?> <em class="coffee-time" data-time="<?php echo $coffee['details']['latest_entry'] ?>"><?php _e( 'Viimeksi', 'dude' ); ?> <span><?php if( $coffee['details']['count'] > 0 ): echo date_i18n( ' d.m.Y H:i:s', strtotime( $coffee['details']['latest_entry'] ) ); else: _e ( 'viime viikolla', 'dude' ); endif; ?></span></em></p>
             </div>
           <?php endif; ?>
 

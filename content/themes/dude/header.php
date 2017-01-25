@@ -22,7 +22,6 @@
 <link rel="icon" type="image/png" href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/favicons/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/favicons/favicon-16x16.png" sizes="16x16">
 <link rel="manifest" href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/favicons/manifest.json">
-<link rel="mask-icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/images/favicons/safari-pinned-tab.svg" color="#111">
 
 <script>
   (function(h,o,t,j,a,r){
