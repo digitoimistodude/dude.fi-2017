@@ -238,16 +238,16 @@ body {
         }
 
         &.slide-visit-site {
-          &.no-bottom-padding {
-            .container {
-              padding-bottom: 0;
-            }
-          }
+          margin-top: -6rem;
+          margin-bottom: 0;
+          padding-bottom: 0;
+          padding-top: 0;
 
-          &.no-top-padding {
-            .container {
-              padding-top: 0;
-            }
+          .container {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-top: 0;
+            margin-bottom: 0;
           }
         }
 

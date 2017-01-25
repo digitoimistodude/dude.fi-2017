@@ -34,6 +34,7 @@ We have some stuff in [`.gitignore`](https://github.com/digitoimistodude/dude.fi
 - Fonts. We have purchased fonts for about 500 EUR so obviously those and lisences are ignored
 - NPM building blocks. Dependencies should not be in upstream so those are ignored.
 - Composer dependencies. WordPress and plugin installation files as well as custom-plugin dependencies are ignored in therepository.
+- Paid plugins that do not have a composer repo (at least [WP-Rocket](https://wp-rocket.me))
 
 ## Features overview
 
