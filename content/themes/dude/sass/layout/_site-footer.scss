@@ -335,10 +335,12 @@ body {
                 color: #777;
               }
 
-              .coffee-time {
+              em.coffee-time {
                 font-size: 13px;
                 opacity: .75;
                 margin-left: 10px;
+                font-weight: 400;
+                font-style: normal;
 
                 span {
                   font-size: 13px;

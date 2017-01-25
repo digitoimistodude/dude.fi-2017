@@ -50,7 +50,7 @@ endif; ?>
 
           <div class="blogpost-meta">
 
-              <h5 class="time"><time class="entry-time" datetime="<?php get_the_time('c'); ?>" pubdate="pubdate"><?php echo ucfirst(get_the_time('d.n.Y')) ?></time></h5>
+              <h5 class="time"><time class="entry-time" datetime="<?php get_the_time('c'); ?>"><?php echo ucfirst(get_the_time('d.n.Y')) ?></time></h5>
 
               <div class="avatar" style="background-image: url('<?php if ( function_exists('get_avatar_url') ) : echo get_avatar_url( get_the_author_meta('email'), '42' ); endif; ?>');"></div>
 
@@ -74,7 +74,7 @@ endif; ?>
             <p v-if="post.excerpt">{{ post.excerpt }}</p>
           </div>
           <div class="blogpost-meta">
-              <h5 class="time"><time class="entry-time" v-bind:datetime="post.datetime" pubdate="pubdate">{{ post.time }}</time></h5>
+              <h5 class="time"><time class="entry-time" v-bind:datetime="post.datetime">{{ post.time }}</time></h5>
               <div class="avatar" v-bind:style="{ backgroundImage: 'url(' + post.author.avatar + ')' }"></div>
               <h4>{{ post.author.name }}</h4>
           </div>
