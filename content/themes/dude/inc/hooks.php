@@ -305,6 +305,9 @@ function dude_no_empty_post_meta_rows( $meta_id, $object_id, $meta_key, $meta_va
 add_filter( 'updated_post_meta', 'dude_no_empty_post_meta_rows', 50, 4 );
 add_filter( 'added_post_meta', 'dude_no_empty_post_meta_rows', 50, 4 );
 
+/**
+ * Part of wplf no jos submission fallback solution
+ */
 function dude_wplf_nojs_submit() {
   if( isset( $_POST['dude-nojs'] ) ) {
     wplf_ajax_submit_handler( true );
@@ -312,6 +315,19 @@ function dude_wplf_nojs_submit() {
   }
 }
 add_action( 'init', 'dude_wplf_nojs_submit' );
+
+/**
+ * If user hits empty paginated blog, redirect to blog base
+ */
+function dude_redirect_empty_blog_page() {
+  global $wp_query;
+
+  if( is_main_query() && strpos( $_SERVER['REQUEST_URI'], 'blogi' ) !== false && !$wp_query->have_posts() ) {
+    wp_safe_redirect( get_permalink( get_option( 'page_for_posts' ) ), 302 );
+    exit();
+  }
+}
+add_action( 'wp', 'dude_redirect_empty_blog_page' );
 
 // Disable srcset
 add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
