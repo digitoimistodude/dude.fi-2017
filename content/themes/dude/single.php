@@ -84,7 +84,7 @@ get_template_part( 'template-parts/hero', 'blog' ); ?>
 
                 <div class="dude-beerbox">
                   <h4><?php _e( 'Jos rakastit, tee hyvä teko:', 'dude' ) ?></h4>
-                  <p><?php printf( __( 'Kaljarahan antamisen sijaan voit <a href="%s">lahjoittaa mielenterveystyöhön', 'dude' ), 'https://donation.securycast.com/mieli?p=10' ) ?></a>.</p>
+                  <p><?php printf( __( 'Kaljarahan antamisen sijaan voit <a href="%s" target="_blank">lahjoittaa mielenterveystyöhön', 'dude' ), 'https://donation.securycast.com/mieli?p=10' ) ?></a>.</p>
                 </div>
 
               </div><!-- .entry-actions -->
