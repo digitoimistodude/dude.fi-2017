@@ -431,10 +431,13 @@ body {
   box-shadow: 0 0 40px rgba(85, 85, 85, .2);
   transition: all .55s;
   opacity: 1;
-  height: 50px;
-  overflow: hidden;
 
-  @media(max-width: $container-mobile) {
+  @media(min-width: 620px) {
+    height: 50px;
+    overflow: hidden;
+  }
+
+  @media(max-width: 620px) {
     box-shadow: 0;
     width: 100%;
     bottom: 0;
@@ -453,6 +456,11 @@ body {
     margin-left: auto;
     margin-right: auto;
 
+    @media(max-width: 620px) {
+      max-width: 100%;
+      margin: 0;
+    }
+
     .content-text {
       width: 80%;
       float: left;
@@ -464,7 +472,7 @@ body {
       text-align: right;
     }
 
-    @media(max-width: $container-mobile) {
+    @media(max-width: 620px) {
       .content-text {
         @include column(4/7);
       }
@@ -479,6 +487,11 @@ body {
       line-height: 1.5;
       padding: 4px;
       margin: 0;
+
+      @media(max-width: 620px) {
+        font-size: 13px;
+        padding: 0;
+      }
 
       b {
         font-family: $font-headings;
@@ -514,13 +527,16 @@ body {
           color: $color-body;
           font-size: 11px;
           padding: 5px 15px;
-          margin-top: -4px;
           text-shadow: none;
           box-shadow: none;
           white-space: nowrap;
           overflow: hidden;
 
-          @media(max-width: $container-mobile) {
+          @media(min-width: 620px) {
+            margin-top: -4px;
+          }
+
+          @media(max-width: 620px) {
             float: right;
             text-align: center;
             top: -5px;
