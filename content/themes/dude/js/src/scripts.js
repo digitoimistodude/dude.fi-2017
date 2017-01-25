@@ -95,7 +95,7 @@
       }, 1000 );
     });
 
-    $('.cookie-notification-wrapper a').on('click', function(e) {
+    $('.cookie-notification-wrapper a.button').on('click', function(e) {
       e.preventDefault();
 
       Cookies.set( 'dude_cookie_status', 'dismiss', { expires: 3650 } );
