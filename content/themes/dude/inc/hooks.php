@@ -177,7 +177,7 @@ function dude_meta_output( $description ) {
     }
   }
 
-  if( is_home() ) {
+  if( is_home() || ( is_archive() && !is_post_type_archive( 'reference' ) ) ) {
     $description = get_post_meta( get_option( 'page_for_posts' ), '_genesis_description', true );
   }
 
