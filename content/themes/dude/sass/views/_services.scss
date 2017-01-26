@@ -31,6 +31,14 @@ body {
               }
             }
           }
+
+          &.slide-verkkokaupat {
+            @media(min-width: 1600px) {
+              .shade-extra {
+                background: linear-gradient(to bottom, rgba(#111, .2) 0%, rgba(#363f49, .5) 70%, rgba(#363f49, .4) 100%);
+              }
+            }
+          }
         }
 
         &.slide-wordpress,
