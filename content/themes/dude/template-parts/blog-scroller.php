@@ -31,7 +31,7 @@ endif; ?>
       while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
       <div id="post-<?php echo get_the_id() ?>" class="blogpost" data-background="<?php echo esc_url( wp_get_attachment_image_src( get_post_thumbnail_id(), 'blog-scroller-bg' )[0] ); ?>">
-        <header class="blogpost-featured-image"<?php if ( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url(wp_get_attachment_url( get_post_thumbnail_id() ) ); ?>');"<?php endif; ?>>
+        <header class="blogpost-featured-image"<?php if ( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url( wp_get_attachment_image_src( get_post_thumbnail_id(), 'blog-scroller-bg' )[0] ); ?>');"<?php endif; ?>>
           <div class="shade-small"></div>
           <a class="link-to-post" href="<?php echo get_the_permalink(); ?>"></a>
           <p class="likes"><?php echo file_get_contents( get_theme_file_path( 'svg/likes.svg' ) ); echo dude_get_post_likes( get_the_id() ); ?></p>
