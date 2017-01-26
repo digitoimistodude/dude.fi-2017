@@ -68,7 +68,7 @@
     "composer/installers": "~1.0.12",
     "wp-cli/wp-cli": "*",
     "vlucas/phpdotenv": "^2.0.1",
-    "wpackagist-plugin/plugins/google-analytics-dashboard-for-wp": "*",
+    "wpackagist-plugin/google-analytics-dashboard-for-wp": "*",
     "wpackagist-plugin/worker": "*",
     "wpackagist-plugin/imagify": "*",
     "wpackagist-plugin/autodescription": "*",
@@ -91,7 +91,7 @@
     },
     "installer-paths": {
       "content/mu-plugins/{$name}/": ["type:wordpress-muplugin",
-        "wpackagist-plugin/plugins/google-analytics-dashboard-for-wp",
+        "wpackagist-plugin/google-analytics-dashboard-for-wp",
         "wpackagist-plugin/imagify",
         "wpackagist-plugin/simple-history",
         "wpackagist-plugin/sendgrid-email-delivery-simplified",
