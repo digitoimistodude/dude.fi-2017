@@ -407,7 +407,7 @@ body {
               span {
 
                 &.value {
-                  @extend .h1;
+                  @include responsive-font(3vw, 45px, 70px);
                   font-family: $font-headings;
                   color: $color-links;
                   font-weight: 700;
