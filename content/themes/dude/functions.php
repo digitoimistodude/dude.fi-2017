@@ -62,6 +62,24 @@ function dude_deregister_plugin_assets_footer() {
 add_action( 'wp_footer', 'dude_deregister_plugin_assets_footer' );
 
 /**
+ * Wrap every image in post with a div
+ */
+function wrapimageswithdiv( $content ) {
+
+   // A regular expression of what to look for.
+   $pattern = '/(<img .*?class="(.*?photoblog.*?)"([^>]*)>)/i';
+   // What to replace it with. $1 refers to the content in the first 'capture group', in parentheses above
+   $replacement = '<div class="entry-photo">$1</div>';
+
+   // run preg_replace() on the $content
+   $content = preg_replace( $pattern, $replacement, $content );
+
+   // return the processed content
+   return $content;
+}
+add_filter( 'the_content', 'wrapimageswithdiv' );
+
+/**
  * Allow Gravity Forms to hide labels to add placeholders
  */
 add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
