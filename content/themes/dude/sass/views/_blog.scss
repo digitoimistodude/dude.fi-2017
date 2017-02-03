@@ -360,6 +360,26 @@ body {
 
         &.slide-single-blog-post {
 
+          // Support for larger images in single blog post
+          .entry-photo {
+            margin-left: -150px;
+            margin-right: -150px;
+
+            @media (max-width: 975px) {
+              margin-left: -100px;
+              margin-right: -100px;
+            }
+
+            @media (max-width: 870px) {
+              margin: 0;
+            }
+
+            .photoblog {
+              width: 100%;
+              height: auto;
+            }
+          }
+
           .entry-actions {
             overflow: hidden;
             margin-bottom: 20px;
