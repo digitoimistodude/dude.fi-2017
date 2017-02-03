@@ -83,7 +83,7 @@ get_template_part( 'template-parts/hero', 'blog-main' ); ?>
             <div class="shade shade-extra"></div>
             <div class="blog-excerpt-content">
               <header class="entry-header">
-                <p class="cat"><?php echo get_the_category_list( _x( ' ', 'Used between list items, there is a space after the comma.', 'dude' ) ); ?></p>
+                <p class="cat" v-html="post.categories">{{ post.categories }}</p>
                 <h2 class="entry-title"><a v-bind:href="post.permalink" v-html="post.title">{{ post.title }}</a></h2>
                 <div class="entry-meta">
                   <p class="entry-time"><time v-bind:datetime="post.datetime">{{ post.text_time }}</time></p>

@@ -83,6 +83,7 @@ function dude_blog_scroller_callback( $data ) {
         'excerpt'   => $excerpt,
         'likes'     => dude_get_post_likes( get_the_id() ),
         'class'     => implode( ' ', get_post_class( $class ) ),
+        'categories'=> get_the_category_list( _x( ' ', 'Used between list items, there is a space after the comma.', 'dude' ) ),
         'author'    => array(
           'avatar'    => $author_avatar,
           'name'      => get_the_author_meta( 'first_name' ).' '.get_the_author_meta( 'last_name' )
