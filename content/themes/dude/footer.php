@@ -178,9 +178,5 @@ $coffee = dude_get_coffee_drunk(); ?>
     <p class="button-wrapper"><a href="#" class="button">Asia kunnossa</a></p>
   </div>
 </div>
-
-<div id="awwwards" class="nominee black left">
-  <a href="http://www.awwwards.com" target="_blank">Awwwards</a>
-</div>
 </body>
 </html>
