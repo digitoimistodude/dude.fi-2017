@@ -91,6 +91,22 @@ get_header(); ?>
             </div>
           </a>
         </div>
+      <?php else:
+        $newest_reference = get_posts( array(
+          'post_type'       => 'reference',
+          'posts_per_page'  => 1,
+          'fields'          => 'ids'
+        ) ); ?>
+        <div class="slide slide-next-reference" style="background-image: url('<?php echo get_the_post_thumbnail_url( $newest_reference[0], 'large' ) ?>');">
+          <a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">
+            <div class="shade"></div>
+
+            <div class="container">
+              <h4><?php _e( 'Tää oli viimeinen, mene tsekkaamaan', 'dude' ) ?></h4>
+              <h2><?php _e( 'Kaikki työnäytteet' ) ?></h2>
+            </div>
+          </a>
+        </div>
       <?php endif; ?>
 
 		</main><!-- #main -->
