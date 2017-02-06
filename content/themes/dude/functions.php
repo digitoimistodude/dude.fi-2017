@@ -62,7 +62,7 @@ function dude_deregister_plugin_assets_footer() {
 add_action( 'wp_footer', 'dude_deregister_plugin_assets_footer' );
 
 /**
- * Wrap every image in post with a div
+ * Wrap every image with a div in a post with certain pattern
  */
 function wrapimageswithdiv( $content ) {
 
@@ -71,10 +71,10 @@ function wrapimageswithdiv( $content ) {
    // What to replace it with. $1 refers to the content in the first 'capture group', in parentheses above
    $replacement = '<div class="entry-photo">$1</div>';
 
-   // run preg_replace() on the $content
+   // Run preg_replace() on the $content
    $content = preg_replace( $pattern, $replacement, $content );
 
-   // return the processed content
+   // Return the processed content
    return $content;
 }
 add_filter( 'the_content', 'wrapimageswithdiv' );
