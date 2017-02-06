@@ -8,6 +8,11 @@ body {
           &.slide-hero {
             height: 80vh;
             max-height: 700px;
+
+            @media(max-height: 830px) {
+              height: 100vh;
+              max-height: 1000px;
+            }
           }
         }
       }
@@ -20,10 +25,17 @@ body {
       .slide {
         &.slide-hero {
           position: relative;
-
-          // Temp:
           background-color: #333;
           background-image: none;
+
+          @media(max-height: 830px) {
+            height: 100vh;
+            max-height: 1600px;
+          }
+
+          @media(max-height: 580px) {
+            height: auto;
+          }
 
           h1,
           h2,
@@ -43,6 +55,16 @@ body {
             padding-top: 300px;
             padding-bottom: 135px;
             max-width: $container-desktop;
+
+            @media(max-height: 830px) {
+              @include vertical-align();
+              max-width: $container-desktop;
+              transform: translateY(-40%);
+            }
+
+            @media(max-height: 580px) {
+              transform: none;
+            }
 
             @media(max-width: $container-ipad) {
               padding-top: 185px;
