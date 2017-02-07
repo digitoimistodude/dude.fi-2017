@@ -9,10 +9,8 @@ This is a working copy of the website for [Digitoimisto Dude Oy](https://github.
   1. [Before GitHub](#before-github)
   2. [What's ignored](#whats-ignored)
 2. [Features overview](#features-overview)
-4. [Tools and building blocks used](#tools-and-building-blocks-used)
-5. [Building blocks](#building-blocks)
-6. [Server stack](#server-stack)
-7. [Building instructions](#building-instructions)
+3. [Tools and building blocks used](#tools-and-building-blocks-used)
+4. [Building instructions](#building-instructions)
 
 ![Screenshot](https://dl.dropboxusercontent.com/u/18447700/dude16-optimized2.gif "Screenshot")
 
@@ -42,7 +40,7 @@ We have some stuff in [`.gitignore`](https://github.com/digitoimistodude/dude.fi
 
 * SASS, HTML, jQuery in the front end
 * PHP, WordPress, Vue.js and WP-REST API the in back end
-* Carefully selected fonts, responsive typography with viewport units with px f allback
+* Carefully selected fonts, responsive typography with viewport units with px fallback
 * Built accessibility in mind
 * All logos, icons and illustrations are SVGs + optimized with svgo
 
