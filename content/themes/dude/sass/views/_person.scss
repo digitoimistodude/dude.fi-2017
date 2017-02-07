@@ -23,7 +23,7 @@ body {
     .site-content {
       .slide {
 
-        &.slide-hero-person {
+        &.slide-hero.slide-hero-person {
           height: auto;
 
           .shade-extra {
@@ -35,6 +35,8 @@ body {
             padding-bottom: 200px;
             text-align: center;
             max-width: $container-desktop;
+            transform: none;
+            top: auto;
 
             h1,
             p {
