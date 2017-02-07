@@ -14,7 +14,7 @@ This is a working copy of the website for [Digitoimisto Dude Oy](https://github.
 6. [Server stack](#server-stack)
 7. [Building instructions](#building-instructions)
 
-![Screenshot](https://dl.dropboxusercontent.com/u/18447700/dude.fi-2017.png "Screenshot")
+![Screenshot](https://dl.dropboxusercontent.com/u/18447700/dude16.gif "Screenshot")
 
 ## Background story
 
@@ -48,7 +48,7 @@ We have some stuff in [`.gitignore`](https://github.com/digitoimistodude/dude.fi
 
 ## Tools and building blocks used
 
-Dude.fi is based on:
+**Dude.fi is based on:**
 
 * [air](https://github.com/digitoimistodude/air) (WordPress starter theme)
   * Sass (SCSS), vanilla JS, jQuery in front end
@@ -69,7 +69,7 @@ Dude.fi is based on:
   * Compiling JS
   * Syncing browsers and devices with BrowserSync
 
-On top of these, Dude.fi uses
+**On top of these, Dude.fi uses**
 
 * Vue.js
 * WP REST API
@@ -78,7 +78,7 @@ On top of these, Dude.fi uses
 
 ## Building instructions
 
-Dude.fi is a personal views of the digital agency Dude, but if for some reason you'd want to contribute, here's the building instructions:
+Dude.fi is a personal view of the digital agency Dude, but if for some reason you'd want to contribute, here's the building instructions:
 
 1. Clone/fork the repo
 2. Run `composer install`
