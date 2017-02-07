@@ -14,7 +14,7 @@ This is a working copy of the website for [Digitoimisto Dude Oy](https://github.
 6. [Server stack](#server-stack)
 7. [Building instructions](#building-instructions)
 
-![Screenshot](https://dl.dropboxusercontent.com/u/18447700/dude16.gif "Screenshot")
+![Screenshot](https://dl.dropboxusercontent.com/u/18447700/dude162.gif "Screenshot")
 
 ## Background story
 
