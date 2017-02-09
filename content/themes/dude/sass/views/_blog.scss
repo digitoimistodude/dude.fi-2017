@@ -670,9 +670,10 @@ body {
               }
 
               @media(min-width: 730px) {
-                twitterwidget::shadow .EmbeddedTweet {
-                  width: 720px;
-                  max-width: 720px;
+                twitterwidget::shadow .EmbeddedTweet,
+                .instagram-media.instagram-media-rendered {
+                  width: 720px !important;
+                  max-width: 720px !important;
                 }
               }
 
@@ -934,7 +935,7 @@ body {
       // Embeds
       .entry-content {
         embed,
-        iframe,
+        iframe:not(.instagram-media),
         object,
         video {
           max-width: 100%;
