@@ -234,6 +234,14 @@ body {
             min-height: 400px;
             height: 75vh;
 
+            @media(max-width: $container-ipad) {
+              height: 550px;
+            }
+
+            @media(max-width: $container-mobile) {
+              height: 500px;
+            }
+
             .button {
               border-color: $color-body;
             }
