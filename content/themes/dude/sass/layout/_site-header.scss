@@ -7,8 +7,12 @@ body {
       left: 0;
       width: 100%;
       z-index: 50;
-      overflow: hidden;
+      overflow: visible;
       white-space: nowrap;
+
+      .container {
+        overflow: visible;
+      }
 
       @media(max-width: $responsivenav) {
         overflow: visible;

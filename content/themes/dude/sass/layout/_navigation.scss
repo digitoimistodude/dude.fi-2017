@@ -114,11 +114,14 @@ a {
 }
 
 #nav {
+  overflow: visible;
+
   ul {
     list-style: none;
+    overflow: visible;
 
     li {
-      overflow: hidden;
+      overflow: visible;
 
       &.menu-item-button {
         position: relative;
@@ -138,9 +141,10 @@ a {
         display: inline-block;
         padding: 0 16px;
         position: relative;
+        overflow: visible;
 
         &:hover {
-          opacity: .4;
+          color: rgba(#fff, .4);
           bottom: 3px;
         }
 
@@ -218,7 +222,6 @@ a {
     overflow: auto;
     transition: all .5s;
     height: 100%;
-    outline: 0;
     backface-visibility: hidden;
     position: fixed;
     transform: translate3d(0, -100%, 0);
@@ -295,7 +298,7 @@ a {
     ul {
       padding: 0;
       list-style: none;
-      margin: 0 10px 0;
+      margin: 0 10px;
       display: block;
       white-space: nowrap;
 
