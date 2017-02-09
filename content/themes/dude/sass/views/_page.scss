@@ -13,6 +13,10 @@ body {
               height: 100vh;
               max-height: 1000px;
             }
+
+            @media(max-width: $container-ipad) {
+              height: 550px;
+            }
           }
         }
       }
@@ -35,6 +39,7 @@ body {
 
           @media(max-height: 580px) {
             height: auto;
+            min-height: 400px;
           }
 
           h1,
@@ -52,9 +57,13 @@ body {
           }
 
           .container {
-            padding-top: 300px;
+            padding-top: 170px;
             padding-bottom: 135px;
             max-width: $container-desktop;
+
+            @media(min-width: $container-ipad) {
+              padding-top: 300px;
+            }
 
             @media(max-height: 830px) {
               @include vertical-align();
@@ -63,11 +72,8 @@ body {
             }
 
             @media(max-height: 580px) {
+              padding-top: 100px;
               transform: none;
-            }
-
-            @media(max-width: $container-ipad) {
-              padding-top: 185px;
             }
 
             h1 {
