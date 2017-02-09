@@ -247,6 +247,10 @@ body {
             left: 0;
             background: transparent;
             z-index: 9;
+
+            &:focus {
+              box-shadow: inset 0 0 0 5px $color-links;
+            }
           }
 
           .container {
