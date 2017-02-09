@@ -18,7 +18,7 @@ $blog_title = get_post_meta( get_the_id(), '_fp_blog_title', true );
 // Start outputting the content
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div class="content-area">
 		<main id="main" class="site-main">
 
       <div class="slide slide-first slide-front-page" <?php if ( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url(wp_get_attachment_url( get_post_thumbnail_id() ) ); ?>');"<?php endif; ?>>
@@ -50,7 +50,7 @@ get_header(); ?>
       </div><!-- .slide -->
 
 
-      <div class="slide slide-content slide-content-services scroll-down-anchor">
+      <div id="primary" class="slide slide-content slide-content-services scroll-down-anchor">
 
         <div class="container">
 

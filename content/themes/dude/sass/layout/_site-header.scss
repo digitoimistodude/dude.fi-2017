@@ -12,6 +12,9 @@ body {
 
       .container {
         overflow: visible;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
       }
 
       @media(max-width: $responsivenav) {
@@ -108,14 +111,18 @@ body {
           }
 
           .site-branding {
+            overflow: visible;
+
             .site-title {
               margin-top: 0;
               margin-bottom: 0;
+              overflow: visible;
 
               a {
                 position: relative;
                 height: 50px;
                 background-color: transparent;
+                overflow: visible;
 
                 // Alternative neckbeard logo
                 background-image: url('../svg/neckbeard-fullback.svg');
@@ -131,14 +138,8 @@ body {
         }
       }
 
-      .container {
-        padding: 0;
-        width: 100%;
-        max-width: 100%;
-      }
-
       .site-branding {
-        overflow: hidden;
+        overflow: visible;
         position: relative;
         z-index: 80;
 
@@ -147,7 +148,7 @@ body {
         }
 
         .site-title {
-          overflow: hidden;
+          overflow: visible;
           font-size: 2rem;
           margin: 0;
           position: relative;

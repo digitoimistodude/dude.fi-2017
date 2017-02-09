@@ -132,7 +132,7 @@ body {
           }
 
           .cols {
-            overflow: hidden;
+            overflow: visible;
 
             .col {
               @media (max-width: $container-mobile) {

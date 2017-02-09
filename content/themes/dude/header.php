@@ -40,7 +40,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
   <?php if ( ! is_404() ) : ?>
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'dude' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dude' ); ?></a>
 
 	<header id="masthead" class="site-header <?php if( is_singular( 'reference' ) || get_post_type() == 'reference' ) : echo 'inverted'; endif; ?>">
 
