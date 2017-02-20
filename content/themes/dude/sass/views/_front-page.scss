@@ -67,6 +67,11 @@ body {
           .container {
             max-width: $container-desktop;
 
+            p {
+              // Safe padding for wrapping too long words
+              padding-right: 20px;
+            }
+
             // iPhone SE
             @media(max-width: 320px) {
               padding-top: 130px;
