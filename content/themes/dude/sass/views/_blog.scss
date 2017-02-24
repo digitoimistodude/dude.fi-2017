@@ -45,7 +45,7 @@ body {
             padding-bottom: 0;
 
           @media(max-width: $container-ipad) {
-            padding: 20px;
+            padding: 20px 20px 0;
           }
 
           article {
