@@ -103,7 +103,7 @@ get_template_part( 'template-parts/hero', 'blog' ); ?>
               </div>
 
               <div class="container container-related-posts">
-              <?php related_entries( array( 'use_template' => true, 'template_file' => 'yarpp-template-jylkkari.php' ) ); ?>
+              <?php related_entries( array( 'use_template' => true, 'template_file' => 'yarpp-template-dude.php' ) ); ?>
             </div>
           </div>
 
