@@ -100,6 +100,38 @@ body {
         &.slide-end {
           background: transparent;
 
+          .adminlabs-status {
+            text-decoration: none;
+            border-bottom: transparent;
+            position: relative;
+            display: inline-block;
+            clear: both;
+            font-size: 14px;
+            color: #888;
+            padding-bottom: 2px;
+            opacity: .7;
+
+            @media(min-width: $container-ipad) {
+              float: right;
+              top: -20px;
+            }
+
+            &:hover {
+              opacity: 1;
+            }
+
+            .status {
+              position: relative;
+              float: left;
+              width: 7px;
+              height: 7px;
+              border-radius: 50%;
+              background: #44e676;
+              margin-right: 8px;
+              top: 12px;
+            }
+          }
+
           .container {
             border-top: 5px solid #1c1c1c;
 
@@ -127,6 +159,13 @@ body {
                 @media(max-width: $container-ipad) {
                   @include stack();
                   text-align: center;
+                }
+
+                @media(min-width: $container-ipad) {
+                  .logos {
+                    top: -20px;
+                    position: relative;
+                  }
                 }
 
                 a {

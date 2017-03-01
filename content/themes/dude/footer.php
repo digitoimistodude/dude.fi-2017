@@ -149,9 +149,13 @@ $coffee = dude_get_coffee_drunk(); ?>
 
         <div class="col col-right">
 
-          <a href="http://koodiasuomesta.fi/" target="_blank" title="<?php _e( 'Teemme suomalaista koodia', 'dude' ) ?>" class="koodiasuomesta"><?php echo file_get_contents( get_theme_file_path( 'svg/koodiasuomesta.svg' ) ); ?></a>
-          <a href="https://www.viestintavirasto.fi/fiverkkotunnus/tietoavalittajalle.html" target="_blank" title="<?php _e( '.fi-verkkotunnusvälittäjä', 'dude' ) ?>" class="valittaja"><?php echo file_get_contents( get_theme_file_path( 'svg/valittaja-tunnus.svg' ) ); ?></a>
-          <a href="<?php echo get_page_link( 2446 ); ?>" title="<?php _e( 'Käytämme vihreää tuulienergiaa', 'dude' ) ?>" class="greenweb"><?php echo file_get_contents( get_theme_file_path( 'svg/green-web.svg' ) ); ?></a>
+          <div class="logos">
+            <a href="http://koodiasuomesta.fi/" target="_blank" title="<?php _e( 'Teemme suomalaista koodia', 'dude' ) ?>" class="koodiasuomesta"><?php echo file_get_contents( get_theme_file_path( 'svg/koodiasuomesta.svg' ) ); ?></a>
+            <a href="https://www.viestintavirasto.fi/fiverkkotunnus/tietoavalittajalle.html" target="_blank" title="<?php _e( '.fi-verkkotunnusvälittäjä', 'dude' ) ?>" class="valittaja"><?php echo file_get_contents( get_theme_file_path( 'svg/valittaja-tunnus.svg' ) ); ?></a>
+            <a href="<?php echo get_page_link( 2446 ); ?>" title="<?php _e( 'Käytämme vihreää tuulienergiaa', 'dude' ) ?>" class="greenweb"><?php echo file_get_contents( get_theme_file_path( 'svg/green-web.svg' ) ); ?></a>
+          </div><!-- .logos -->
+
+          <a href="https://status.dude.fi" target="_blank" class="adminlabs-status"><span class="status"></span> Palvelimen tila</a>
 
         </div><!-- .col -->
 
