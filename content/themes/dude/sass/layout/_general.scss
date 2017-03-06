@@ -4,6 +4,14 @@ body {
     background-color: $color-dark-blueish;
   }
 
+  &.page-template-template-contributions {
+    #page {
+      .site-content {
+        background: transparent;
+      }
+    }
+  }
+
   #page {
     .site-content {
       background: #fff;
