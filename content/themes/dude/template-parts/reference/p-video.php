@@ -1,7 +1,8 @@
 <?php if( !empty( $part['video'] ) ):
   $video = $part['video']; ?>
   <div class="slide slide-video">
-    <div class="container">
+    <div class="container browser">
+      <div class="browser-bar"></div>
       <video autoplay loop preload>
         <source src="<?php echo get_theme_file_uri( "videos/{$video}.mp4" ) ?>" type="video/mp4" />
         <source src="<?php echo get_theme_file_uri( "videos/{$video}.webm" ) ?>" type="video/webm" />
