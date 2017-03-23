@@ -75,6 +75,7 @@ function dude_metabox_reference() {
               'images'                  => __( 'Kuvagalleria', 'dude' ),
               'before-after'            => __( 'Ennen - jälkeen kuvat', 'dude' ),
               'image'                   => __( 'Kuva', 'dude' ),
+              'video'                   => __( 'Video', 'dude' ),
               'numbers'                 => __( 'Avainluvut', 'dude' ),
               'quote'                   => __( 'Lainaus', 'dude' ),
               'link'                    => __( 'Linkki toteutukseen', 'dude' )
@@ -218,6 +219,16 @@ function dude_metabox_reference() {
               array(
                 'field'   => 'template',
                 'value'   => 'image',
+              )
+            ) ),
+
+          // Fields for video
+          Field::make( 'text', 'video', __( 'Videotiedoston nimi', 'dude' ) )
+            ->help_text( __( 'Varmista että videoista on mp4, webm ja ogv formaatit.', 'dude' ) )
+            ->set_conditional_logic( array(
+              array(
+                'field'   => 'template',
+                'value'   => 'video',
               )
             ) ),
 
