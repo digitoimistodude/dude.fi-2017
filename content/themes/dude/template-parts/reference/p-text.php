@@ -1,5 +1,5 @@
 <?php if( !empty( $part['content'] ) ): ?>
-  <div class="slide slide-customer-story">
+  <div class="slide slide-customer-story slide-customer-story-text">
 
     <div class="container">
 
