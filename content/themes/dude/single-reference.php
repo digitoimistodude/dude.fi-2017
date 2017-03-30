@@ -13,8 +13,15 @@ $site_url = get_post_meta( get_the_id(), '_site_url', true );
 $parts = carbon_get_post_meta( get_the_id(), '_parts', 'complex' );
 $text_area_numbering = 1;
 
+// Dynamic css
+$css = get_post_meta( get_the_id(), '_custom_css', true );
+
 // Start outputting the page
-get_header(); ?>
+get_header();
+
+  if( !empty( $css ) ): ?>
+    <style><?php echo $css ?></style>
+  <?php endif; ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
