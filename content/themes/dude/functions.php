@@ -27,10 +27,14 @@ function dude_disable_wp_emojicons() {
   remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
   remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
   remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+  add_filter( 'emoji_svg_url', '__return_false' );
 
-  // Remove TinyMCE emojis
   add_filter( 'tiny_mce_plugins', 'dude_disable_emojicons_tinymce' );
+
+  // Disable classic smilies
+  add_filter( 'option_use_smilies', '__return_false' );
 }
+add_action( 'init', 'dude_disable_wp_emojicons' );
 
 // Disable TinyMCE emojicons
 function dude_disable_emojicons_tinymce( $plugins ) {
@@ -40,7 +44,6 @@ function dude_disable_emojicons_tinymce( $plugins ) {
     return array();
   }
 }
-add_action( 'init', 'dude_disable_wp_emojicons' );
 
 // Add image sizes
 add_image_size( 'blog-scroller-bg', '1500', '500', true );
