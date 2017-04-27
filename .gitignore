@@ -6,7 +6,7 @@ access.log
 error.log
 .sass-cache/
 .git/
-wp
+wp/
 .htaccess
 db-sync
 sql-dump-*.sql
@@ -28,7 +28,7 @@ content/mu-plugins/*
 !content/mu-plugins/wp-libre-form
 vendor/*
 !vendor/.gitkeep
-node_modules
+node_modules/
 bin
 .vagrant
 config/deploy/
