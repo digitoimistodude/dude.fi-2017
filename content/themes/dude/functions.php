@@ -13,6 +13,12 @@
 define( 'AIR_VERSION', '1.5.5' );
 
 /**
+ * Define SendGrid credentials
+ */
+define('SENDGRID_API_KEY', getenv('SENDGRID_API_KEY'));
+define('SENDGRID_STATS_CATEGORIES', 'dude');
+
+/**
  * Disable emojicons introduced with WP 4.2
  *
  * @link http://wordpress.stackexchange.com/questions/185577/disable-emojicons-introduced-with-wp-4-2
