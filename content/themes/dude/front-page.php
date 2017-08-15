@@ -250,4 +250,20 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_footer();
+<?php get_footer(); ?>
+
+<script>
+if( Cookies.get( 'crisp_greeting_sent' ) == null ) {
+	TimeMe.initialize({
+		currentPageName: '<?php the_title() ?>',
+		idleTimeoutInSeconds: 10
+	});
+
+	TimeMe.callAfterTimeElapsedInSeconds(45, function() {
+		if( ! $crisp.is("session:ongoing") ) {
+			$crisp.push(["do", "message:show", ["text", "Moro! Etsitkö vähän erilaista digitoimistoa seuraavaan projektiisi? Heitä viestiä jos voidaan auttaa :)"]]);
+			Cookies.set( 'crisp_greeting_sent', 'true', { expires: 3650 } );
+		}
+	});
+}
+</script>

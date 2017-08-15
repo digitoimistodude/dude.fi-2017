@@ -135,6 +135,7 @@ gulp.task('js', function() {
           themeDir + '/js/src/moment-locale-fi.js',
           themeDir + '/node_modules/autosize/dist/autosize.js',
           themeDir + '/node_modules/js-cookie/src/js.cookie.js',
+          themeDir + '/node_modules/timeme.js/timeme.js',
           themeDir + '/js/src/skip-link-focus-fix.js',
 					themeDir + '/js/src/frontpage-staff.js',
           themeDir + '/js/src/prism.js',

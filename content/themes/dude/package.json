@@ -29,6 +29,7 @@
     "normalize.css": "^5.0.0",
     "sass-web-fonts": "^2.0.2",
     "slick-carousel": "^1.6.0",
+    "timeme.js": "^2.0.3",
     "vue": "^2.1.6"
   }
 }

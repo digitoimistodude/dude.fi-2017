@@ -47,6 +47,15 @@
 
     }
 
+    if( $('body').hasClass('single-post') ) {
+    	if ( isScrolledIntoView('.entry-footer') && Cookies.get( 'crisp_greeting_sent' ) == null ) {
+    		if( ! $crisp.is("session:ongoing") ) {
+					$crisp.push(["do", "message:show", ["text", "Moro! Kiva että jaksoit lukea loppuun, toivottavasti tykkäsit :) Tutustu heppuihin blogin takana https://www.dude.fi/dude"]]);
+					Cookies.set( 'crisp_greeting_sent', 'true', { expires: 3650 } );
+				}
+    	}
+    }
+
 	});
 
   $(function() {
@@ -215,6 +224,16 @@ function check_user_likes( target_class ) {
       }
     }
   });
+}
+
+function isScrolledIntoView(elem) {
+	var docViewTop = jQuery(window).scrollTop();
+	var docViewBottom = docViewTop + jQuery(window).height();
+
+	var elemTop = jQuery(elem).offset().top;
+	var elemBottom = elemTop + jQuery(elem).height();
+
+	return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
 check_user_likes( 'article.post' );
