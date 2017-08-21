@@ -220,39 +220,3 @@ get_template_part( 'template-parts/hero', 'service' ); ?>
 	</div><!-- #primary -->
 
 <?php get_footer();
-
-if ( get_the_id() === 1989 ) : ?>
-	<script>
-	if( Cookies.get( 'crisp_greeting_sent' ) == null ) {
-		TimeMe.initialize({
-			currentPageName: '<?php the_title() ?>',
-			idleTimeoutInSeconds: 10
-		});
-
-		TimeMe.callAfterTimeElapsedInSeconds(30, function() {
-			if( ! $crisp.is("session:ongoing") ) {
-				$crisp.push(["do", "message:show", ["text", "Moro! Täällä olisi osaavat kädet valmiina vastaamaan, jos sulla on kysyttävää verkkosivuista tai WordPressistä."]]);
-				Cookies.set( 'crisp_greeting_sent', 'true', { expires: 3650 } );
-			}
-		});
-	}
-	</script>
-<?php endif;
-
-if ( get_the_id() === 1990 ) : ?>
-	<script>
-	if( Cookies.get( 'crisp_greeting_sent' ) == null ) {
-		TimeMe.initialize({
-			currentPageName: '<?php the_title() ?>',
-			idleTimeoutInSeconds: 10
-		});
-
-		TimeMe.callAfterTimeElapsedInSeconds(30, function() {
-			if( ! $crisp.is("session:ongoing") ) {
-				$crisp.push(["do", "message:show", ["text", "Moro! Tehtäiskö kummallekkin toimivaa kauppaa?"]]);
-				Cookies.set( 'crisp_greeting_sent', 'true', { expires: 3650 } );
-			}
-		});
-	}
-	</script>
-<?php endif; ?>

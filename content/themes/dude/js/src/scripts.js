@@ -47,10 +47,11 @@
 
     }
 
-    if( $('body').hasClass('single-post') ) {
+    if( $('body').hasClass('single-post')  && $(window).width() > 560 ) {
     	if ( isScrolledIntoView('.entry-footer') && Cookies.get( 'crisp_greeting_sent' ) == null ) {
     		if( ! $crisp.is("session:ongoing") ) {
 					$crisp.push(["do", "message:show", ["text", "Moro! Kiva että jaksoit lukea loppuun, toivottavasti tykkäsit :) Tutustu heppuihin blogin takana https://www.dude.fi/dude"]]);
+					$crisp.push(["do", "chat:open"])
 					Cookies.set( 'crisp_greeting_sent', 'true', { expires: 3650 } );
 				}
     	}
@@ -175,6 +176,31 @@
     var timeago = moment( time ).fromNow();
     $('.coffee-time span').html( timeago );
   }
+
+  // Crisp notifications
+  if( $('body').hasClass('home') || $('body').hasClass('single-service') ) {
+	  if( Cookies.get( 'crisp_greeting_sent' ) == null ) {
+			TimeMe.initialize({
+				currentPageName: '<?php the_title() ?>',
+				idleTimeoutInSeconds: 10
+			});
+
+			TimeMe.callAfterTimeElapsedInSeconds(30, function() {
+				if( ! $crisp.is("session:ongoing") && $(window).width() > 560 ) {
+					if( $('body').hasClass('home') ) {
+						$crisp.push(["do", "message:show", ["text", "Moro! Etsitkö vähän erilaista digitoimistoa seuraavaan projektiisi? Heitä viestiä jos voidaan auttaa :)"]]);
+					} else if ( $('body').hasClass('postid-1989') ) {
+						$crisp.push(["do", "message:show", ["text", "Moro! Täällä olisi osaavat kädet valmiina vastaamaan, jos sulla on kysyttävää verkkosivuista tai WordPressistä."]]);
+					} else if ( $('body').hasClass('postid-1990') ) {
+						$crisp.push(["do", "message:show", ["text", "Moro! Tehtäiskö kummallekkin toimivaa kauppaa?"]]);
+					}
+
+					$crisp.push(["do", "chat:open"])
+					Cookies.set( 'crisp_greeting_sent', 'true', { expires: 3650 } );
+				}
+			});
+		}
+	}
 
   // Poll if new coffee is being drunk while on page
   function askForCoffee() {
