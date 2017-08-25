@@ -47,15 +47,15 @@
 
     }
 
-    if( $('body').hasClass('single-post')  && $(window).width() > 560 ) {
-    	if ( isScrolledIntoView('.entry-footer') && Cookies.get( 'crisp_greeting_sent' ) == null ) {
-    		if( ! $crisp.is("session:ongoing") ) {
-					$crisp.push(["do", "message:show", ["text", "Moro! Kiva että jaksoit lukea loppuun, toivottavasti tykkäsit :) Tutustu heppuihin blogin takana https://www.dude.fi/dude"]]);
-					$crisp.push(["do", "chat:open"])
-					Cookies.set( 'crisp_greeting_sent', 'true', { expires: 3650 } );
-				}
-    	}
-    }
+    // if( $('body').hasClass('single-post')  && $(window).width() > 560 ) {
+    // 	if ( isScrolledIntoView('.entry-footer') && Cookies.get( 'crisp_greeting_sent' ) == null ) {
+    // 		if( ! $crisp.is("session:ongoing") ) {
+				// 	$crisp.push(["do", "message:show", ["text", "Moro! Kiva että jaksoit lukea loppuun, toivottavasti tykkäsit :) Tutustu heppuihin blogin takana https://www.dude.fi/dude"]]);
+				// 	$crisp.push(["do", "chat:open"])
+				// 	Cookies.set( 'crisp_greeting_sent', 'true', { expires: 3650 } );
+				// }
+    // 	}
+    // }
 
 	});
 
