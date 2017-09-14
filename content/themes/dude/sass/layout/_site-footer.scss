@@ -470,6 +470,7 @@ body {
   box-shadow: 0 0 40px rgba(85, 85, 85, .2);
   transition: all .55s;
   opacity: 1;
+  display: none;
 
   @media(min-width: 620px) {
     height: 50px;

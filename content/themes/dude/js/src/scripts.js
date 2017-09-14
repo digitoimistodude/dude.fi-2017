@@ -87,6 +87,8 @@
     var dude_cookie_status = Cookies.get( 'dude_cookie_status' );
     if( dude_cookie_status === 'dismiss' ) {
       $('.cookie-notification-wrapper').remove();
+    } else {
+      $('.cookie-notification-wrapper').show();
     }
 
     // Make cookie notification clickable on iOS/iPhone SE
