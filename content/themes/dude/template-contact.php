@@ -38,8 +38,9 @@ get_header(); ?>
       <div class="slide slide-contact-form">
 
         <div class="container">
-          <?php the_content();
-          echo do_shortcode( '[libre-form id="2048"]' ); ?>
+          <?php the_content(); ?>
+          <noscript><p style="margin-top: 2rem;color:orange;"><?php _e( 'Lomake vaatii valitettavasti javascriptin toimiakseen. Salli JavaScriptin käyttö ja kokeile uudestaan, tai <a href="mailto:moro@dude.fi">lähetä meille sähköpostia</a>.', 'dude' ); ?></p></noscript>
+          <?php echo do_shortcode( '[libre-form id="2048"]' ); ?>
         </div><!-- .container -->
 
       </div><!-- .slide -->

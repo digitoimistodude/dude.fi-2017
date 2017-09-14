@@ -164,8 +164,7 @@ body {
               }
             }
 
-            // If js is activated
-            .form-wrapper:not(.no-js) {
+            .form-wrapper {
               transition: none;
 
               input,
