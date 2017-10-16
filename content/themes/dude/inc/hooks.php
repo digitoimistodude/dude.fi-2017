@@ -339,3 +339,9 @@ add_filter( 'the_seo_framework_show_seo_column', '__return_false' );
 // Don't do wpautop for wplf
 remove_filter( 'wplf_form', 'wpautop' );
 remove_filter( 'wplf_form', 'wptexturize' );
+
+// Fix wplf success message video.
+function dude_wplf_success_the_content( $content ) {
+	return apply_filters( 'the_content', $content );
+}
+add_filter( 'wplf_success_message', 'dude_wplf_success_the_content' );
