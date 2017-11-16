@@ -61,7 +61,7 @@ get_header(); ?>
                 <div class="shade"></div>
 
                 <div class="dude-content">
-                  <h2 class="dude-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+                  <h2 class="dude-title"><?php the_title() ?></h2>
                   <p class="dude-title"><?php echo $job_title; ?></p>
 
                   <p class="contact-info"><a href="mailto:<?php echo $email ?>"><?php echo $email ?></a><br />
