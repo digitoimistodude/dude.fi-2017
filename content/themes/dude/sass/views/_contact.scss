@@ -320,7 +320,7 @@ body {
                 z-index: 22;
 
                 &:focus {
-                  box-shadow: inset 0 0 0 5px $color-links;
+                  box-shadow: inset 0 0 0 1px $color-links;
                 }
               }
 
@@ -373,7 +373,7 @@ body {
                   &.contact-info {
                     opacity: .7;
                   }
-                }                
+                }
               }
             }
           }
