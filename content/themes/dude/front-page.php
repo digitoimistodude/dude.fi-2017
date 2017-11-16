@@ -41,10 +41,9 @@ get_header(); ?>
         </div><!-- .container -->
 
         <div class="scroll-down">
-          <a href="#">
+          <a href="#"><span class="screen-reader-text"><?php _e( 'Linkki, jota klikkaamalla näyttö rullaa seuraavaan sisältöön', 'dude' ); ?></span></a>
             <p><?php _e( 'Alaspäinkin pääsee', 'dude' ); ?></p>
-            <p><?php echo file_get_contents( get_theme_file_path( 'svg/angle-down.svg' ) ); ?></p>
-          </a>
+            <p><?php echo file_get_contents( get_theme_file_path( 'svg/angle-down.svg' ) ); ?></p>          
         </div>
 
       </div><!-- .slide -->
