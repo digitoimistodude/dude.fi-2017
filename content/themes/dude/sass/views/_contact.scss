@@ -349,26 +349,31 @@ body {
                 }
 
                 h4,
-                h5 {
+                h5,
+                .dude-title {
                   @include responsive-font(1.6vw, 16px, 19px);
+                  font-family: $font-headings;
+                  font-weight: 700;
 
                   @media(max-width: $container-ipad-landscape) {
                     @include responsive-font(1.2vw, 16px, 18px);
                   }
                 }
 
-                h4 {
+                h2 {
                   margin-bottom: 10px;
                 }
 
-                h5 {
-                  margin-top: 0;
-                  opacity: .7;
-                }
+                p {
+                  &.dude-title {
+                    margin-top: 0;
+                    opacity: .7;
+                  }
 
-                p.contact-info {
-                  opacity: .7;
-                }
+                  &.contact-info {
+                    opacity: .7;
+                  }
+                }                
               }
             }
           }

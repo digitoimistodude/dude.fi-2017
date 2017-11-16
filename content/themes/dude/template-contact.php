@@ -61,8 +61,8 @@ get_header(); ?>
                 <div class="shade"></div>
 
                 <div class="dude-content">
-                  <h4><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h4>
-                  <h5><?php echo $job_title ?></h5>
+                  <h2 class="dude-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+                  <p class="dude-title"><?php echo $job_title; ?></p>
 
                   <p class="contact-info"><a href="mailto:<?php echo $email ?>"><?php echo $email ?></a><br />
                     <a href="tel:<?php echo str_replace( ' ', '', $phone ) ?>"><?php echo $phone ?></a></p>
