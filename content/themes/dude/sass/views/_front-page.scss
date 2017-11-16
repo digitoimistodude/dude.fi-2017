@@ -171,7 +171,8 @@ body {
                   @include stack();
                 }
 
-                h4 {
+                h4,
+                h3 {
                   font-size: 16px;
                   color: #8a8a8a;
                   text-align: center;

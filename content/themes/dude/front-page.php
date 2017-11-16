@@ -66,7 +66,7 @@ get_header(); ?>
 
                   <a href="<?php the_permalink( $wp_page_id ) ?>">
                     <?php echo file_get_contents( esc_url( get_stylesheet_directory().'/svg/wordpress-full.svg' ) ); ?>
-                    <h4><?php echo get_the_title( $wp_page_id ) ?></h4>
+                    <h3><?php echo get_the_title( $wp_page_id ) ?></h3>
                   </a>
 
                 </div><!-- .col-dawg -->
@@ -77,7 +77,7 @@ get_header(); ?>
 
                   <a href="<?php the_permalink( $wc_page_id) ?>">
                     <?php echo file_get_contents( esc_url( get_stylesheet_directory().'/svg/woocommerce-full.svg' ) ); ?>
-                    <h4><?php echo get_the_title( $wc_page_id ) ?></h4>
+                    <h3><?php echo get_the_title( $wc_page_id ) ?></h3>
                   </a>
 
                 </div><!-- .col-dawg -->
