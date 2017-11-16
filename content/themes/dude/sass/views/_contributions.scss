@@ -313,7 +313,7 @@ body.page-template-template-contributions {
               }
 
               h3 {
-                @extend .h4;
+                @extend %h4;
                 margin-bottom: 5px;
 
                 a {

@@ -54,7 +54,7 @@ endif; ?>
 
               <div class="avatar" style="background-image: url('<?php if ( function_exists('get_avatar_url') ) : echo get_avatar_url( get_the_author_meta('email'), '42' ); endif; ?>');"></div>
 
-              <h4><?php echo get_the_author_meta('first_name'); ?> <?php echo get_the_author_meta('last_name'); ?></h4>
+              <p class="author"><?php echo get_the_author_meta('first_name'); ?> <?php echo get_the_author_meta('last_name'); ?></p>
 
           </div>
         </div>

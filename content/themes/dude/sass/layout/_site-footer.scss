@@ -417,7 +417,7 @@ body {
       }
 
       h3 {
-        @extend .h5;
+        @extend %h5;
         margin-bottom: 10px;
       }
 

@@ -81,7 +81,7 @@ body {
               padding: 30px;
 
               .entry-title {
-                @extend .h3;
+                @extend %h3;
                 color: #fff;
 
                 a {

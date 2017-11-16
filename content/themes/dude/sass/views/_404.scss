@@ -69,7 +69,7 @@ body.error404 {
           }
 
           p {
-            @extend .h3;
+            @extend %h3;
             color: #fff;
           }
         }

@@ -67,13 +67,13 @@ body {
           }
 
           h2 {
-            @extend .h5;
+            @extend %h5;
             color: $color-lightgrey-alt;
             font-family: $font-headings;
             text-transform: uppercase;
 
             span {
-              @extend .h5;
+              @extend %h5;
               font-family: $font-headings;
 
               &.order-number {

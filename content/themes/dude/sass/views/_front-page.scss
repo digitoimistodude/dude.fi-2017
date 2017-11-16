@@ -684,7 +684,7 @@ body {
                 padding: 30px;
 
                 h3 {
-                  @extend .h5;
+                  @extend %h5;
                   line-height: 1.5;
 
                   a {
@@ -718,10 +718,13 @@ body {
                   top: 10px;
                 }
 
-                h4 {
+                p.author {
+                  @extend %h4;
+                  font-family: $font-headings;
                   font-size: 13px;
                   color: #626262;
                   margin: 15px 0 0;
+                  font-weight: 700;
                 }
 
                 .time {
@@ -829,7 +832,7 @@ body {
                   text-align: center;
 
                   h3 {
-                    @extend .h5;
+                    @extend %h5;
                   }
 
                   p {
