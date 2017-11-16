@@ -12,7 +12,7 @@ This is a working copy of the website for [Digitoimisto Dude Oy](https://github.
 3. [Tools and building blocks used](#tools-and-building-blocks-used)
 4. [Building instructions](#building-instructions)
 
-![Screenshot](https://dl.dropboxusercontent.com/u/18447700/dude16-optimized2.gif "Screenshot")
+![Screenshot](https://www.dude.fi/dude-website-2017-optimized.gif "Screenshot")
 
 ## Background story
 
