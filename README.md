@@ -43,6 +43,7 @@ We have some stuff in [`.gitignore`](https://github.com/digitoimistodude/dude.fi
 * Carefully selected fonts, responsive typography with viewport units with px fallback
 * Built accessibility in mind
 * All logos, icons and illustrations are SVGs + optimized with svgo
+* Should be fully [Accessible](https://github.com/digitoimistodude/dude.fi/issues/1#issuecomment-345000364)
 
 ## Tools and building blocks used
 
