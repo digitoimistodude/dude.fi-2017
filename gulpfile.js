@@ -153,7 +153,7 @@ gulp.task('blog-wheel-js', function() {
       gulp.src(
         [
           themeDir + '/node_modules/vue/dist/vue.min.js',
-          themeDir + '/node_modules/slick-carousel/slick/slick.js',
+          themeDir + '/js/src/slick-a11yfix.js',
           themeDir + '/js/src/blog-scroller.js'
         ])
         .pipe(concat('blog-scroller.js'))
