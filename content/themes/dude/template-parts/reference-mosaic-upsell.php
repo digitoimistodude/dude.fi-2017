@@ -2,7 +2,7 @@
 $image = wp_get_attachment_url( $image_id );
 $services = wp_get_post_terms( get_the_id(), 'service', array( 'fields' => 'id=>name' ) ); ?>
   <div class="mosaic mosaic-main" style="background-image: url('<?php echo $image ?>');">
-    <a href="<?php the_permalink() ?>" class="permalink"></a>
+    <a href="<?php the_permalink() ?>" class="permalink" aria-label="<?php echo esc_html_e('Linkki kohteeseen ', 'dude'); the_title(); ?>"></a>
     <div class="shade"></div>
 
     <div class="reference-meta">

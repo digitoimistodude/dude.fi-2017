@@ -3,7 +3,7 @@ $image = wp_get_attachment_url( $image_id );
 $services = wp_get_post_terms( get_the_id(), 'service', array( 'fields' => 'id=>name' ) ); ?>
 <div class="mosaic mosaic-secondary" style="background-image: url('<?php echo $image ?>');">
   <div class="shade"></div>
-  <a href="<?php the_permalink() ?>" class="permalink"></a>
+  <a href="<?php the_permalink() ?>" class="permalink" aria-label="<?php echo esc_html_e('Linkki kohteeseen ', 'dude'); the_title(); ?>"></a>
   <div class="reference-meta">
     <h2 class="reference-meta-title"><?php the_title(); ?></h2>
     <?php if( !is_wp_error( $services ) && !empty( $services ) ):

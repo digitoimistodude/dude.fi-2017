@@ -104,7 +104,7 @@ $coffee = dude_get_coffee_drunk(); ?>
           <?php if ( ! empty( $coffee ) ) : ?>
             <div class="coffee">
 
-              <div class="coffee-cup-animation">
+              <div class="coffee-cup-animation" aria-hidden="true">
                   <div class="steam-container">
                     <div class="squiggle-container squiggle-container-1">
                     <div class="squiggle">

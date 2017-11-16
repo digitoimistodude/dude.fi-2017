@@ -74,7 +74,7 @@ if( post_password_required() ) {
       $aria_req = ( $req ? " aria-required='true'" : '' );
 
       $args = array(
-        'title_reply'          => '<a name="kommentoi" id="kommentoi"></a>'.__( 'Kommentoi', 'dude' ).' ',
+        'title_reply'          => '<a name="kommentoi" id="kommentoi" aria-hidden="true"></a>'.__( 'Kommentoi', 'dude' ).' ',
         'label_submit'         => __( 'Anna palaa!', 'dude' ),
         'comment_notes_before' => ''.__( '', 'dude' ).'',
         'comment_field'        => '<p class="comment-form-comment"><label class="screen-reader-text" for="comment">'._x( 'Comment', 'noun' ).'</label><textarea id="comment" placeholder="'.__( 'Kirjoita kommenttisi tähän. Kenttä laajenee automaattisesti.', 'dude' ).'" name="comment" cols="45" rows="2" aria-required="true"></textarea></p>',

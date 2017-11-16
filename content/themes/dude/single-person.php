@@ -81,7 +81,7 @@ get_template_part( 'template-parts/hero', 'person' ); ?>
               <div class="slot" style="background-image: url('<?php echo esc_url( wp_get_attachment_url( get_post_thumbnail_id( $project_upsell ) ) ); ?>')">
                 <div class="shade"></div>
                 <div class="shade shade-extra"></div>
-                <a href="<?php echo get_the_permalink( $project_upsell ) ?>"></a>
+                <a href="<?php echo get_the_permalink( $project_upsell ); ?>" aria-label="<?php _e( 'Linkki projektiin', 'dude' ); ?> <?php echo get_the_title( $project_upsell ); ?>"></a>
 
                 <h3><?php echo get_the_title( $project_upsell ); ?></h3>
               </div>
@@ -95,9 +95,9 @@ get_template_part( 'template-parts/hero', 'person' ); ?>
                 <div class="slot" style="background-image: url('<?php echo the_post_thumbnail_url( 'large' ) ?>')">
                   <div class="shade"></div>
                   <div class="shade shade-extra"></div>
-                  <a href="<?php the_permalink() ?>"></a>
+                  <a href="<?php the_permalink(); ?>" aria-label="<?php _e( 'Linkki kirjoitukseen', 'dude' ); ?> <?php the_title(); ?>"></a>
 
-                  <h3><?php the_title() ?></h3>
+                  <h3><?php the_title(); ?></h3>
                 </div>
 
                 <h3><?php _e( 'Uusin kirjoitus', 'dude' ) ?></h3>
@@ -108,7 +108,7 @@ get_template_part( 'template-parts/hero', 'person' ); ?>
               <div class="slot" style="background-image: url('<?php echo $instagram['data'][0]['images']['standard_resolution']['url'] ?>')">
                 <div class="shade"></div>
                 <div class="shade shade-extra"></div>
-                <a href="<?php echo $instagram['data'][0]['link'] ?>" target="_blank"></a>
+                <a href="<?php echo $instagram['data'][0]['link'] ?>" aria-label="<?php _e( 'Linkki Instagramiin', 'dude' ); ?>"></a>
 
                 <h3>
                   <?php echo file_get_contents( get_theme_file_path('svg/heart.svg') );

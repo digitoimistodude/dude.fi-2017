@@ -19,12 +19,12 @@ if( $i % 2 != 0 ) {
 }
 
 $i++; ?>
-<div class="mosaic mosaic-secondary <?php echo $class ?>" style="background-image: url('<?php echo $image ?>');">
+<div class="mosaic mosaic-secondary <?php echo $class ?>" style="background-image: url('<?php echo $image; ?>');">
   <div class="shade"></div>
 
-  <a class="permalink" href="<?php the_permalink() ?>"></a>
+  <a class="permalink" href="<?php the_permalink(); ?>" aria-label="Linkki kohteeseen <?php the_title(); ?>"></a>
   <div class="reference-meta">
-    <h2 class="reference-meta-title"><?php the_title() ?></h2>
+    <h2 class="reference-meta-title"><?php the_title(); ?></h2>
     <?php if( !is_wp_error( $services ) && !empty( $services ) ):
       $services_count = count( $services );
       $x = 1; ?>

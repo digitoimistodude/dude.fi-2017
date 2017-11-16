@@ -14,7 +14,7 @@
             $job_title = get_post_meta( get_the_id(), '_job_title', true ); ?>
 
             <div class="col" style="background-image:url('<?php echo wp_get_attachment_url( $image_id ) ?>')">
-              <a href="<?php the_permalink() ?>" class="permalink"></a>
+              <a href="<?php the_permalink() ?>" class="permalink" aria-label="<?php echo esc_html_e('Linkki henkilön ', 'dude'); the_title(); esc_html_e('sivulle', 'dude'); ?>"></a>
               <div class="shade"></div>
               <div class="content">
                 <blockquote><?php echo wpautop( $quote ) ?></blockquote>
