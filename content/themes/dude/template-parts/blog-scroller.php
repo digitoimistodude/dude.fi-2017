@@ -31,14 +31,14 @@ endif; ?>
       while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
       <div id="post-<?php echo get_the_id() ?>" class="blogpost" data-background="<?php echo esc_url( wp_get_attachment_image_src( get_post_thumbnail_id(), 'blog-scroller-bg' )[0] ); ?>">
+        <a class="link-to-post" href="<?php echo get_the_permalink(); ?>" aria-label="<?php echo esc_html_e('Linkki artikkeliin ', 'dude'); the_title(); ?>"></a>
         <header class="blogpost-featured-image"<?php if ( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url( wp_get_attachment_image_src( get_post_thumbnail_id(), 'blog-scroller-bg' )[0] ); ?>');"<?php endif; ?>>
-          <div class="shade-small"></div>
-          <a class="link-to-post" href="<?php echo get_the_permalink(); ?>" aria-label="<?php echo esc_html_e('Linkki artikkeliin ', 'dude'); the_title(); ?>"></a>
+          <div class="shade-small"></div>          
           <p class="likes"><?php echo file_get_contents( get_theme_file_path( 'svg/likes.svg' ) ); echo dude_get_post_likes( get_the_id() ); ?></p>
         </header>
 
         <div class="blogpost-content">
-          <h3><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h3>
+          <h3><?php the_title(); ?></h3>
 
           <?php $excerpt = get_post_meta( get_the_id(), '_scroller_excerpt', true );
           if( empty( $excerpt ) ) {
@@ -64,17 +64,17 @@ endif; ?>
 
       <div style="display:none;" v-bind:id="'hiddenpost-' + post.post_id" v-for="(post, index) in posts">
         <div class="blogpost" v-bind:id="'post-' + post.post_id" v-bind:data-background="post.thumb_url">
+          <a class="link-to-post" v-bind:href="post.permalink" aria-label="<?php echo esc_html_e('Linkki artikkeliin', 'dude'); ?> {{ post.title }}"></a>
           <header class="blogpost-featured-image" v-bind:style="{ backgroundImage: 'url(' + post.thumb_url + ')' }">
-            <div class="shade-small"></div>
-            <a class="link-to-post" v-bind:href="post.permalink" aria-label="<?php echo esc_html_e('Linkki artikkeliin', 'dude'); ?> {{ post.title }}"></a>
+            <div class="shade-small"></div>            
             <p class="likes"><?php echo file_get_contents( get_theme_file_path( 'svg/likes.svg' ) ) ?> {{ post.likes }}</p>
           </header>
           <div class="blogpost-content">
-            <h3><a v-bind:href="post.permalink" v-html="post.title">{{ post.title }}</a></h3>
+            <h3>{{ post.title }}</h3>
             <p v-if="post.excerpt">{{ post.excerpt }}</p>
           </div>
           <div class="blogpost-meta">
-              <h5 class="time"><time class="entry-time" v-bind:datetime="post.datetime">{{ post.time }}</time></h5>
+              <h4 class="time"><time class="entry-time" v-bind:datetime="post.datetime">{{ post.time }}</time></h4>
               <div class="avatar" v-bind:style="{ backgroundImage: 'url(' + post.author.avatar + ')' }"></div>
               <p class="author">{{ post.author.name }}</p>
           </div>

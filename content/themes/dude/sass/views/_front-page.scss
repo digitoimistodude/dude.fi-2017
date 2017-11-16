@@ -679,6 +679,19 @@ body {
               position: relative;
               margin-bottom: 40px;
 
+              .link-to-post {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 3;
+
+                &:focus {
+                  box-shadow: inset 0 0 0 1px $color-links;
+                }
+              }
+
               // iPhone
               @media(max-width: 320px) {
                 width: 240px;
