@@ -76,8 +76,8 @@ get_header(); ?>
 
           <div class="company-content">
 
-            <h1><?php _e( 'Tokko ota yhteyttä', 'dude' ); ?></h1>
-            <h2><?php echo $contact_company_name; ?></h2>
+            <h2><?php _e( 'Tokko ota yhteyttä', 'dude' ); ?></h2>
+            <h3><?php echo $contact_company_name; ?></h3>
             <?php if( !empty( $contact_company_business_id ) ): ?>
               <p><?php _e( 'Y-tunnus', 'dude' ) ?>: <a href="https://www.asiakastieto.fi/yritykset/FI/digitoimisto-dude-oy/25480215/yleiskuva" target="_blank"><?php echo $contact_company_business_id ?></a></p>
             <?php endif; ?>

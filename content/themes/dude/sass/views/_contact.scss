@@ -395,12 +395,9 @@ body {
               @include vertical-align();
             }
 
-            h1 {
-              text-transform: uppercase;
-            }
-
             h2 {
-              @extend %h3;
+              @extend %h1;
+              text-transform: uppercase;
             }
 
             a {
