@@ -167,6 +167,10 @@ body {
             .form-wrapper {
               transition: none;
 
+              label {
+                @extend .screen-reader-text;
+              }
+
               input,
               textarea,
               button {
