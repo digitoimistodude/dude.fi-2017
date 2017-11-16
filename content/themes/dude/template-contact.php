@@ -56,12 +56,12 @@ get_header(); ?>
               $job_title = get_post_meta( get_the_id(), '_job_title', true );
               $email = get_post_meta( get_the_id(), '_email', true );
               $phone = get_post_meta( get_the_id(), '_phone', true ); ?>
-              <div class="dude" style="background-image:url('<?php echo wp_get_attachment_url( $image_id ) ?>')">
-                <a href="<?php the_permalink() ?>" class="permalink"></a>
+              <div class="dude" style="background-image: url('<?php echo wp_get_attachment_url( $image_id ) ?>')">
+                <a href="<?php the_permalink(); ?>" class="permalink" aria-label="<?php _e( 'Lue lisää henkilöstä ', 'dude' ); ?> <?php the_title(); ?>"></a>
                 <div class="shade"></div>
 
                 <div class="dude-content">
-                  <h2 class="dude-title"><?php the_title() ?></h2>
+                  <h2 class="dude-title"><?php the_title(); ?></h2>
                   <p class="dude-title"><?php echo $job_title; ?></p>
 
                   <p class="contact-info"><a href="mailto:<?php echo $email ?>"><?php echo $email ?></a><br />
