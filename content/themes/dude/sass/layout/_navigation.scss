@@ -53,6 +53,14 @@ body {
             background: none;
           }
 
+          &:focus {
+            outline: 0;
+
+            .burger-icon {
+              @include burger(28px, 4px, 4px, $color-links);
+            }
+          }
+
           .burger-icon {
             @include burger(28px, 4px, 4px, #fff);
             margin: 0;
