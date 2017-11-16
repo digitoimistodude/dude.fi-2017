@@ -153,6 +153,14 @@
       $crisp.do('chat:open');
     });
 
+    // Close chat when pressing esc and set focus to chat button to improve accessibility
+    $(document).keyup(function(e) {
+      if (e.keyCode === 27) {
+        $crisp.do('chat:close');
+        $('.button-nav.start-chat').focus();
+      }
+    });
+
     // Smooth scroll to top
   	$('.top').on('click', function(event) {
   		event.preventDefault();
