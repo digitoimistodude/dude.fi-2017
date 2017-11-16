@@ -21,7 +21,7 @@ $quote_image = get_post_meta( get_the_id(), '_quote_image', true ); ?>
       <div class="customer">
         <div class="avatar" style="background-image: url('<?php echo wp_get_attachment_image_src( $quote_image, 'large' )[0] ?>');"></div>
         <h4><?php echo $quote_name ?></h4>
-        <h6><?php echo $quote_title ?></h6>
+        <h5><?php echo $quote_title ?></h5>
       </div><!-- .customer -->
 
     </div><!-- .general-description -->

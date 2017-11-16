@@ -161,7 +161,7 @@ get_template_part( 'template-parts/hero', 'service' ); ?>
                 <div class="customer">
                   <div class="avatar" style="background-image: url('<?php echo wp_get_attachment_image_src( $quote_image, 'large' )[0] ?>');"></div>
                   <h4><?php echo $quote_name ?></h4>
-                  <h6><?php echo $quote_title ?>, <?php echo $quote_company ?></h6>
+                  <h5><?php echo $quote_title ?>, <?php echo $quote_company ?></h5>
                 </div><!-- .customer -->
 
               </div><!-- .general-description -->
