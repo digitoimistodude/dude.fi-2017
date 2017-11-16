@@ -24,7 +24,7 @@ $i++; ?>
 
   <a class="permalink" href="<?php the_permalink() ?>"></a>
   <div class="reference-meta">
-    <h3><?php the_title() ?></h3>
+    <h2 class="reference-meta-title"><?php the_title() ?></h2>
     <?php if( !is_wp_error( $services ) && !empty( $services ) ):
       $services_count = count( $services );
       $x = 1; ?>

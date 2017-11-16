@@ -5,7 +5,7 @@ $services = wp_get_post_terms( get_the_id(), 'service', array( 'fields' => 'id=>
   <div class="shade"></div>
   <a href="<?php the_permalink() ?>" class="permalink"></a>
   <div class="reference-meta">
-    <h3><?php the_title() ?></h3>
+    <h2 class="reference-meta-title"><?php the_title(); ?></h2>
     <?php if( !is_wp_error( $services ) && !empty( $services ) ):
       $services_count = count( $services );
       $i = 1; ?>

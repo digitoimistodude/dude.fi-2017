@@ -477,10 +477,14 @@ body {
             font-weight: 400;
           }
 
-          h3 {
+          h2,
+          h2.reference-meta-title {
             font-size: 25px;
             font-weight: 700;
             margin-bottom: 5px;
+            margin-left: 0;
+            margin-right: 0;
+            text-align: left;
           }
 
           p {

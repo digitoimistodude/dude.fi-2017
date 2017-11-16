@@ -19,7 +19,7 @@
               <div class="content">
                 <blockquote><?php echo wpautop( $quote ) ?></blockquote>
                 <cite>
-                  <h4><?php the_title() ?></h4>
+                  <h3><?php the_title() ?></h3>
                   <?php if( !empty( $job_title ) ): echo $job_title; endif; ?>
                 </cite>
               </div>
