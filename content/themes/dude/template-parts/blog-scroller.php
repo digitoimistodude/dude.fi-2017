@@ -33,7 +33,7 @@ endif; ?>
       <div id="post-<?php echo get_the_id() ?>" class="blogpost" data-background="<?php echo esc_url( wp_get_attachment_image_src( get_post_thumbnail_id(), 'blog-scroller-bg' )[0] ); ?>">
         <a class="link-to-post" href="<?php echo get_the_permalink(); ?>" aria-label="<?php echo esc_html_e('Linkki artikkeliin ', 'dude'); the_title(); ?>"></a>
         <header class="blogpost-featured-image"<?php if ( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url( wp_get_attachment_image_src( get_post_thumbnail_id(), 'blog-scroller-bg' )[0] ); ?>');"<?php endif; ?>>
-          <div class="shade-small"></div>          
+          <div class="shade-small"></div>
           <p class="likes"><?php echo file_get_contents( get_theme_file_path( 'svg/likes.svg' ) ); echo dude_get_post_likes( get_the_id() ); ?></p>
         </header>
 
@@ -66,11 +66,11 @@ endif; ?>
         <div class="blogpost" v-bind:id="'post-' + post.post_id" v-bind:data-background="post.thumb_url">
           <a class="link-to-post" v-bind:href="post.permalink" aria-label="<?php echo esc_html_e('Linkki artikkeliin', 'dude'); ?> {{ post.title }}"></a>
           <header class="blogpost-featured-image" v-bind:style="{ backgroundImage: 'url(' + post.thumb_url + ')' }">
-            <div class="shade-small"></div>            
+            <div class="shade-small"></div>
             <p class="likes"><?php echo file_get_contents( get_theme_file_path( 'svg/likes.svg' ) ) ?> {{ post.likes }}</p>
           </header>
           <div class="blogpost-content">
-            <h3>{{ post.title }}</h3>
+            <h3 v-html="post.title">{{ post.title }}</h3>
             <p v-if="post.excerpt">{{ post.excerpt }}</p>
           </div>
           <div class="blogpost-meta">
