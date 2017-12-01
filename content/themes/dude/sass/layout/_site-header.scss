@@ -9,12 +9,14 @@ body {
       z-index: 50;
       overflow: visible;
       white-space: nowrap;
+      outline: 0;
 
       .container {
         overflow: visible;
         padding: 0;
         width: 100%;
         max-width: 100%;
+        outline: 0;
       }
 
       @media(max-width: $responsivenav) {
