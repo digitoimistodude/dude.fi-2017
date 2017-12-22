@@ -81,7 +81,6 @@ Class Dude_WakaTime_Feed {
     $parameters = http_build_query( $parameters );
     $response = wp_remote_get( 'https://wakatime.com/api/v1/users/'.$endpoint.'/?'.$parameters );
 
-    var_dump( $response );
 		if( $response['response']['code'] !== 200 ) {
 			self::_write_log( 'response status code not 200 OK, endpoint: '.$url );
 			return false;
