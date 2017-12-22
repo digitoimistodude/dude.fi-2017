@@ -1,5 +1,14 @@
 body {
   &.single-person {
+    &.postid-3504,
+    &.postid-3505 {
+      .slide-person-introduction {
+        .container {
+          padding-bottom: 0;
+        }
+      }
+    }
+
     .slide-person-introduction,
     .slide-person-more {
       p {
