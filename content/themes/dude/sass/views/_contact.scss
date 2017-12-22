@@ -415,9 +415,21 @@ body {
           }
         }
 
-        &.slide-map {
+        &.slide-location {
           background-color: #ccc;
-          height: 100vh;
+          height: 50vh;
+
+          .col-map {
+            @include span(4/7);
+            height: 50vh;
+          }
+
+          .col-office {
+            @include span(3/7);
+            @include background-cover();
+            height: 50vh;
+            background-image: url('../images/dude-paja.jpg');
+          }
         }
       } // .slide
     } // .site-content

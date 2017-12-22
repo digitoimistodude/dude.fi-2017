@@ -109,7 +109,7 @@ get_header(); ?>
 function initMap() {
   var dude = {lat: 62.239363, lng: 25.744733};
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 16,
+    zoom: 15,
     center: dude,
     scrollwheel: false,
     navigationControl: false,
@@ -119,7 +119,7 @@ function initMap() {
   });
   var marker = new google.maps.Marker({
     position: dude,
-    icon: '<?php echo get_theme_file_uri( 'images/dude-map-marker-100px.png' ) ?>',
+    icon: '<?php echo get_theme_file_uri( 'images/dude-map-marker-50px.png' ) ?>',
     map: map
   });
 }
