@@ -13,7 +13,7 @@
 $persons_query = new WP_Query( array(
  'post_type'               => 'person',
  'post_status'             => 'publish',
- 'posts_per_page'          => 4,
+ 'posts_per_page'          => 6,
  'order'						       => 'ASC',
  'orderby'					       => 'menu_order title',
  'no_found_rows'           => true,
@@ -51,6 +51,11 @@ get_header(); ?>
           <?php if( $persons_query->have_posts() ):
             while( $persons_query->have_posts() ):
               $persons_query->the_post();
+
+              // exclude emmi and arto
+              if ( 3505 === get_the_id() || 3504 === get_the_id() ) {
+                continue;
+              }
 
               $image_id = get_post_meta( get_the_id(), '_quote_image', true );
               $job_title = get_post_meta( get_the_id(), '_job_title', true );
@@ -92,7 +97,10 @@ get_header(); ?>
 
       </div><!-- .slide -->
 
-      <div class="slide slide-map" id="map"></div>
+      <div class="slide slide-location">
+        <div class="col col-map" id="map"></div>
+        <div class="col col-office"></div>
+      </div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
