@@ -488,6 +488,10 @@ body {
               padding-bottom: 8rem;
             }
 
+            .wrap-preventer {
+              overflow: hidden;
+            }
+
             .staff {
               height: 100%;
               overflow: hidden;
@@ -495,26 +499,19 @@ body {
 
               @media(min-width: 1200px) {
                 height: 490px;
-
-                // Hack to prevent element items from wrapping to emptiness
-                .wrap-preventer {
-                  min-width: 1000px;
-                }
               }
             }
 
             .col {
-              @include span(1/3);
+              @include span(1/4);
+              float: left !important;
+              clear: none !important;
               height: 490px;
               white-space: nowrap;
 
-              @media(min-width: 820px) {
-                &.col-open {
-                  width: 49%; // @include span(1/2) - 1%, to play safe
-                }
-
-                &.col-set-smaller {
-                  width: 24%; // @include span(1/4) - 1%, to play safe
+              blockquote {
+                p {
+                  font-size: 17px;
                 }
               }
 

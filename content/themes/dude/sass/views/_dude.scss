@@ -263,13 +263,6 @@ body {
             overflow: hidden;
             white-space: nowrap;
 
-            @media(min-width: 1200px) {
-              // Hack to prevent element items from wrapping to emptiness
-              .wrap-preventer {
-                min-width: $container-desktop;
-              }
-            }
-
             .col {
               @include background-cover();
               @include span(1/3, $cycle: 3);
