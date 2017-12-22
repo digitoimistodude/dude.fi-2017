@@ -478,7 +478,7 @@ body {
 
         &.slide-staff {
           &.slide-staff-single-person {
-            max-width: 1000px;
+            max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
             white-space: nowrap;
@@ -503,7 +503,7 @@ body {
             }
 
             .col {
-              @include span(1/4);
+              @include span(1/5);
               float: left !important;
               clear: none !important;
               height: 490px;
@@ -515,7 +515,11 @@ body {
                 }
               }
 
-              @media(max-width: 819px) {
+              @media(max-width: 1200px) {
+                @include span(1/2, $cycle: 2);
+              }
+
+              @media(max-width: $container-mobile) {
                 @include stack();
               }
             }
