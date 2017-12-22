@@ -264,8 +264,6 @@ body {
             white-space: nowrap;
 
             @media(min-width: 1200px) {
-              height: 600px;
-
               // Hack to prevent element items from wrapping to emptiness
               .wrap-preventer {
                 min-width: $container-desktop;
@@ -274,16 +272,16 @@ body {
 
             .col {
               @include background-cover();
-              @include span(1/4);
+              @include span(1/3, $cycle: 3);
               white-space: normal;
               background-color: #ccc;
-              height: 600px;
+              height: 400px;
               cursor: pointer;
               position: relative;
               transition: .75s width;
 
               @media(max-width: 1200px) {
-                @include span(1/2);
+                @include span(1/2, $cycle: 2);
                 height: 400px;
               }
 
@@ -358,15 +356,11 @@ body {
               &:hover {
                 .content {
                   transition: .25s bottom, .5s opacity;
-                  transition-delay: .55s;
+                  transition-delay: 0;
                 }
               }
 
               &.col-open {
-                @media(min-width: 1200px) {
-                  width: 39%; // @include span(2/5); -1%
-                }
-
                 .shade {
                   opacity: .7;
                 }
@@ -374,12 +368,6 @@ body {
                 .content {
                   bottom: 20px;
                   opacity: 1;
-                }
-              }
-
-              &.col-set-smaller {
-                @media(min-width: 1200px) {
-                  width: 19%; // @include span(1/5) is 20%, so playing safe by substracting 1%.
                 }
               }
 
