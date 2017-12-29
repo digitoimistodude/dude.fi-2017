@@ -39,7 +39,7 @@ $coffee = dude_get_coffee_drunk(); ?>
             <h3><?php echo $contact_person_title ?></h3>
             <p><?php echo $contact_person_name ?><br />
               <?php if( !empty( $contact_person_email ) ): ?>
-                <a href="mailto:<?php echo $contact_person_email ?>"><?php echo $contact_person_email ?></a><br />
+                <a href="mailto:<?php echo antispambot( $contact_person_email ) ?>"><?php echo antispambot( $contact_person_email ) ?></a><br />
               <?php endif;
               if( !empty( $contact_person_phone ) ): ?>
                 <a href="tel:<?php echo str_replace( ' ', '', $contact_person_phone ); ?>"><?php echo $contact_person_phone; ?></a>

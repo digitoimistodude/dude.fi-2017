@@ -28,7 +28,7 @@ $social = carbon_get_post_meta( get_the_id(), '_social', 'complex' );
 
     <ul class="contact-information">
       <?php if( !empty( $email ) ): ?>
-        <li><a href="mailto:<?php echo $email ?>"><?php echo $email ?></a></li>
+        <li><a href="mailto:<?php echo antispambot( $email ) ?>"><?php echo antispambot( $email ) ?></a></li>
       <?php endif;
 
       if( !empty( $phone ) ): ?>
