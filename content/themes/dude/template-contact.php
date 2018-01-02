@@ -69,7 +69,7 @@ get_header(); ?>
                   <h2 class="dude-title"><?php the_title(); ?></h2>
                   <p class="dude-title"><?php echo $job_title; ?></p>
 
-                  <p class="contact-info"><a href="mailto:<?php echo $email ?>"><?php echo $email ?></a><br />
+                  <p class="contact-info"><a href="mailto:<?php echo antispambot( $email ) ?>"><?php echo antispambot( $email ) ?></a><br />
                     <a href="tel:<?php echo str_replace( ' ', '', $phone ) ?>"><?php echo $phone ?></a></p>
                 </div>
               </div>
@@ -87,7 +87,7 @@ get_header(); ?>
               <p><?php _e( 'Y-tunnus', 'dude' ) ?>: <a href="https://www.asiakastieto.fi/yritykset/FI/digitoimisto-dude-oy/25480215/yleiskuva" target="_blank"><?php echo $contact_company_business_id ?></a></p>
             <?php endif; ?>
             <p>
-              <a href="mailto:<?php echo $contact_email ?>"><?php echo $contact_email ?></a><br>
+              <a href="mailto:<?php echo antispambot( $contact_email ) ?>"><?php echo antispambot( $contact_email ) ?></a><br>
               <a href="tel:<?php echo str_replace( ' ', '', $contact_phone ) ?>"><?php echo $contact_phone ?></a>
             </p>
 
