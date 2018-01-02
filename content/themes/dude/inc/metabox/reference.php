@@ -306,6 +306,6 @@ function dude_metabox_reference() {
             ) ),
       ) ),
 
-      Field::make( 'textarea', 'custom_css', __( 'Kustamoitu CSS', 'dude' ) ),
+      Field::make( 'textarea', 'custom_css', __( 'Kustomoitu CSS', 'dude' ) ),
     ) );
 }
