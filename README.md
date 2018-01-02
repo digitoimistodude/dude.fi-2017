@@ -20,6 +20,8 @@ Dude built their first website when the company was formed in 2013. It was quite
 
 We made quite a lot of planning in the spring and during the summer we started to work on the redesign. Summer died fast, so obviously got a bit stuck in the fall. When christmas holidays finally came, we continued with the site. Full blast in January, and boom! * the site was finally ready for the public to see.
 
+[Read the blog post about redesign (in Finnish)](https://www.dude.fi/nain-duden-sivustouudistus-tapahtui-vaihe-vaiheelta)
+
 ### Before GitHub
 
 Before releasing the dude.fi code in GitHub, we had a development version in Bitbucket's private repository. This is simply because we were just figuring out the content and all the other stuff so didn't want to have all that lorem ipsum to be viewed in public. Not that it would matter much, but for the cleaner outcome we decided to release the repository *as is*, as soon as the overall package would be ready.
