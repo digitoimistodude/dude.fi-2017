@@ -215,7 +215,7 @@ gulp.task('archive-js', function() {
 
       gulp.src(
         [
-          themeDir + '/node_modules/vue/dist/vue.js',
+          themeDir + '/node_modules/vue/dist/vue.min.js',
           themeDir + '/js/src/archive.js'
         ])
         .pipe(concat('archive.js'))
