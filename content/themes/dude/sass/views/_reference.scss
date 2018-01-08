@@ -94,6 +94,12 @@ body {
               background: $color-links;
               border-color: $color-links;
             }
+
+            &.button-white {
+              &:hover {
+                border-color: #fff;
+              }
+            }
           }
         }
 
