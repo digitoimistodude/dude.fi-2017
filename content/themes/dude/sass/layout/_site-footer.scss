@@ -157,7 +157,7 @@ body {
             text-decoration: none;
             border-bottom: transparent;
             position: relative;
-            display: block;
+            display: inline-block;
             clear: both;
             font-size: 14px;
             color: #888;
@@ -165,7 +165,8 @@ body {
             opacity: .7;
 
             @media(min-width: $container-ipad) {
-              top: 80px;
+              float: right;
+              top: -20px;
             }
 
             &:hover {
@@ -181,61 +182,6 @@ body {
               background: #44e676;
               margin-right: 8px;
               top: 12px;
-            }
-          }
-
-          .logos {
-            top: 60px;
-            position: relative;
-
-            a {
-              border: 0;
-              margin-right: 10px;
-              white-space: nowrap;
-
-              &:last-child {
-                margin-right: 0;
-              }
-
-              &:hover {
-                border: 0;
-              }
-
-              &.greenweb {
-                path {
-                  transition: none;
-                }
-
-                &:hover {
-                  svg {
-                    fill: #70ba2b;
-                  }
-                }
-              }
-
-              &.valittaja {
-                &:hover {
-                  .colored {
-                    fill: #094983;
-                  }
-
-                  .colored-stroke {
-                    stroke: #094983;
-                  }
-                }
-              }
-
-              &.koodiasuomesta {
-                &:hover {
-                  svg {
-                    fill: #2eafd7;
-
-                    path {
-                      fill: #2eafd7;
-                    }
-                  }
-                }
-              }
             }
           }
 
@@ -261,134 +207,97 @@ body {
 
               &.col-right {
                 @include column(1/3);
+                text-align: right;
 
-                p {
-                  line-height: 1.4;
+                @media(max-width: $container-ipad) {
+                  @include stack();
+                  text-align: center;
                 }
 
-                input {
-                  display: block;
-                  width: 100%;
-                  opacity: .8;
+                @media(min-width: $container-ipad) {
+                  .logos {
+                    top: -20px;
+                    position: relative;
+                  }
+                }
+
+                a {
+                  border: 0;
+                  margin-right: 10px;
+                  white-space: nowrap;
+
+                  &:last-child {
+                    margin-right: 0;
+                  }
 
                   &:hover {
-                    opacity: 1;
+                    border: 0;
                   }
 
-                  &.email {
-                    margin-top: 28px;
-                    margin-bottom: 14px;
-                    background: transparent;
-                    color: #fff;
-                    border: 2px solid #fff;
-                    padding: 12px 6px;
+                  &.greenweb {
+                    path {
+                      transition: none;
+                    }
+
+                    &:hover {
+                      svg {
+                        fill: #70ba2b;
+                      }
+                    }
+                  }
+
+                  &.valittaja {
+                    &:hover {
+                      .colored {
+                        fill: #094983;
+                      }
+
+                      .colored-stroke {
+                        stroke: #094983;
+                      }
+                    }
+                  }
+
+                  &.koodiasuomesta {
+                    &:hover {
+                      svg {
+                        fill: #2eafd7;
+
+                        path {
+                          fill: #2eafd7;
+                        }
+                      }
+                    }
                   }
                 }
 
-                input.button {
-                  @extend .button-white;
-                  color: #777;
-                  border-color: #777;
-                  text-transform: none;
-                  font-size: 13px;
-                  font-weight: 300;
-                  font-weight: 500;
+                svg {
+                  fill: #6d6e70;
+                  width: 64px;
+                  height: 64px;
+                  margin-right: 0;
+                  margin-top: 16px;
+                  transition: .55s all;
 
-                  &:hover {
-                    color: #fff;
-                    border-color: #fff;
+                  path {
+                    transition: .55s all;
+                  }
+
+                  &:last-child {
+                    margin-right: 0;
+                  }
+
+                  &.valittajatunnus {
+                    fill: #111;
+                  }
+
+                  &.greenweb,
+                  &.koodiasuomesta {
+                    path {
+                      fill: #6d6e70;
+                    }
                   }
                 }
-
-              //   @media(max-width: $container-ipad) {
-              //     @include stack();
-              //     text-align: center;
-              //   }
-
-              //   @media(min-width: $container-ipad) {
-              //     .logos {
-              //       top: -20px;
-              //       position: relative;
-              //     }
-              //   }
-
-              //   a {
-              //     border: 0;
-              //     margin-right: 10px;
-              //     white-space: nowrap;
-
-              //     &:last-child {
-              //       margin-right: 0;
-              //     }
-
-              //     &:hover {
-              //       border: 0;
-              //     }
-
-              //     &.greenweb {
-              //       path {
-              //         transition: none;
-              //       }
-
-              //       &:hover {
-              //         svg {
-              //           fill: #70ba2b;
-              //         }
-              //       }
-              //     }
-
-              //     &.valittaja {
-              //       &:hover {
-              //         .colored {
-              //           fill: #094983;
-              //         }
-
-              //         .colored-stroke {
-              //           stroke: #094983;
-              //         }
-              //       }
-              //     }
-
-              //     &.koodiasuomesta {
-              //       &:hover {
-              //         svg {
-              //           fill: #2eafd7;
-
-              //           path {
-              //             fill: #2eafd7;
-              //           }
-              //         }
-              //       }
-              //     }
-              //   }
-
-              //   svg {
-              //     fill: #6d6e70;
-              //     width: 64px;
-              //     height: 64px;
-              //     margin-right: 0;
-              //     margin-top: 16px;
-              //     transition: .55s all;
-
-              //     path {
-              //       transition: .55s all;
-              //     }
-
-              //     &:last-child {
-              //       margin-right: 0;
-              //     }
-
-              //     &.valittajatunnus {
-              //       fill: #111;
-              //     }
-
-              //     &.greenweb,
-              //     &.koodiasuomesta {
-              //       path {
-              //         fill: #6d6e70;
-              //       }
-              //     }
-              //   }
               }
             }
 

@@ -122,68 +122,58 @@ $coffee = dude_get_coffee_drunk(); ?>
             <div class="coffee">
 
               <div class="coffee-cup-animation" aria-hidden="true">
-                <div class="steam-container">
-                  <div class="squiggle-container squiggle-container-1">
-                  <div class="squiggle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                       viewBox="0 0 28.1 80.6" style="enable-background:new 0 0 28.1 80.6;" xml:space="preserve">
-                    <path class="" fill="none" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M22.6,75.1c-8-5.6-15.2-10.5-15.2-19.9c0-12.1,14.1-17.2,14.1-29.6c0-9.1-6.7-15.7-16-20.1"/>
+                  <div class="steam-container">
+                    <div class="squiggle-container squiggle-container-1">
+                    <div class="squiggle">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 28.1 80.6" style="enable-background:new 0 0 28.1 80.6;" xml:space="preserve">
+                      <path class="" fill="none" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M22.6,75.1c-8-5.6-15.2-10.5-15.2-19.9c0-12.1,14.1-17.2,14.1-29.6c0-9.1-6.7-15.7-16-20.1"/>
+                      </svg>
+                    </div> <!-- end .squiggle-->
+                  </div>
+                    <div class="squiggle-container squiggle-container-2">
+                    <div class="squiggle">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 28.1 80.6" style="enable-background:new 0 0 28.1 80.6;" xml:space="preserve">
+                      <path class="" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M22.6,75.1c-8-5.6-15.2-10.5-15.2-19.9c0-12.1,14.1-17.2,14.1-29.6c0-9.1-6.7-15.7-16-20.1"/>
+                      </svg>
+                    </div> <!-- end .squiggle-->
+                  </div>
+                    <div class="squiggle-container squiggle-container-3">
+                    <div class="squiggle">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 28.1 80.6" style="enable-background:new 0 0 28.1 80.6;" xml:space="preserve">
+                      <path class="" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M22.6,75.1c-8-5.6-15.2-10.5-15.2-19.9c0-12.1,14.1-17.2,14.1-29.6c0-9.1-6.7-15.7-16-20.1"/>
+                      </svg>
+                    </div> <!-- end .squiggle-->
+                  </div>
+                  </div>
+                  <div class="coffee-cup-container">
+                    <svg class="coffee-cup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.15 31">
+                      <path class="a" d="M30.06,2V23.75c0,2.63-.87,5.13-5.12,5.13H7.06A4.86,4.86,0,0,1,2,23.81V2H30.06Z" transform="translate(0 -0.06)"/>
+                      <path class="b" d="M40.64,9.52a10.2,10.2,0,0,0-8.64-5V0.06H0V23.81a7,7,0,0,0,7.06,7.24H24.94c2.34,0,6.06-.81,6.93-5.18a10.6,10.6,0,0,0,8.89-5.29A11.29,11.29,0,0,0,40.64,9.52ZM28,23.75c0,2.07-.42,3.31-3.06,3.31H7.06A3,3,0,0,1,4,23.81V4.06H28V23.75Zm9.26-5.17A7.13,7.13,0,0,1,32,21.78V8.45a7,7,0,0,1,5.18,3.1A7.24,7.24,0,0,1,37.26,18.58Z" transform="translate(0 -0.06)"/>
                     </svg>
-                  </div> <!-- end .squiggle-->
-                </div>
-                  <div class="squiggle-container squiggle-container-2">
-                  <div class="squiggle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                       viewBox="0 0 28.1 80.6" style="enable-background:new 0 0 28.1 80.6;" xml:space="preserve">
-                    <path class="" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M22.6,75.1c-8-5.6-15.2-10.5-15.2-19.9c0-12.1,14.1-17.2,14.1-29.6c0-9.1-6.7-15.7-16-20.1"/>
-                    </svg>
-                  </div> <!-- end .squiggle-->
-                </div>
-                  <div class="squiggle-container squiggle-container-3">
-                  <div class="squiggle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                       viewBox="0 0 28.1 80.6" style="enable-background:new 0 0 28.1 80.6;" xml:space="preserve">
-                    <path class="" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M22.6,75.1c-8-5.6-15.2-10.5-15.2-19.9c0-12.1,14.1-17.2,14.1-29.6c0-9.1-6.7-15.7-16-20.1"/>
-                    </svg>
-                  </div> <!-- end .squiggle-->
-                </div>
-                </div>
-                <div class="coffee-cup-container">
-                  <svg class="coffee-cup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.15 31">
-                    <path class="a" d="M30.06,2V23.75c0,2.63-.87,5.13-5.12,5.13H7.06A4.86,4.86,0,0,1,2,23.81V2H30.06Z" transform="translate(0 -0.06)"/>
-                    <path class="b" d="M40.64,9.52a10.2,10.2,0,0,0-8.64-5V0.06H0V23.81a7,7,0,0,0,7.06,7.24H24.94c2.34,0,6.06-.81,6.93-5.18a10.6,10.6,0,0,0,8.89-5.29A11.29,11.29,0,0,0,40.64,9.52ZM28,23.75c0,2.07-.42,3.31-3.06,3.31H7.06A3,3,0,0,1,4,23.81V4.06H28V23.75Zm9.26-5.17A7.13,7.13,0,0,1,32,21.78V8.45a7,7,0,0,1,5.18,3.1A7.24,7.24,0,0,1,37.26,18.58Z" transform="translate(0 -0.06)"/>
-                  </svg>
 
-                </div>
-              </div><!-- end coffee-container -->
+                  </div>
+                </div><!-- end coffee-container -->
 
               <p class="coffee-text">
-                <span><?php echo $coffee['details']['count'] ?></span> <?php _e( 'kuppia kahvia juotu tällä viikolla.', 'dude' ) ?> <em class="coffee-time" data-time="<?php echo $coffee['details']['latest_entry'] ?>"><?php _e( 'Viimeksi', 'dude' ); ?> <span><?php if( $coffee['details']['count'] > 0 ): echo date_i18n( ' d.m.Y H:i:s', strtotime( $coffee['details']['latest_entry'] ) ); else: _e ( 'viime viikolla', 'dude' ); endif; ?></span></em>
-              </p>
-            </div><!-- end coffee -->
-
-            <div class="logos">
-              <a href="http://koodiasuomesta.fi/" target="_blank" title="<?php _e( 'Teemme suomalaista koodia', 'dude' ) ?>" class="koodiasuomesta"><?php echo file_get_contents( get_theme_file_path( 'svg/koodiasuomesta.svg' ) ); ?></a>
-              <a href="https://www.viestintavirasto.fi/fiverkkotunnus/tietoavalittajalle.html" target="_blank" title="<?php _e( '.fi-verkkotunnusvälittäjä', 'dude' ) ?>" class="valittaja"><?php echo file_get_contents( get_theme_file_path( 'svg/valittaja-tunnus.svg' ) ); ?></a>
-              <a href="<?php echo get_page_link( 2446 ); ?>" title="<?php _e( 'Käytämme vihreää tuulienergiaa', 'dude' ) ?>" class="greenweb"><?php echo file_get_contents( get_theme_file_path( 'svg/green-web.svg' ) ); ?></a>
-            </div><!-- .logos -->
-
-            <a href="https://status.dude.fi" target="_blank" class="adminlabs-status"><span class="status"></span> Palvelimen tila</a>
+                <span><?php echo $coffee['details']['count'] ?></span> <?php _e( 'kuppia kahvia juotu tällä viikolla.', 'dude' ) ?> <em class="coffee-time" data-time="<?php echo $coffee['details']['latest_entry'] ?>"><?php _e( 'Viimeksi', 'dude' ); ?> <span><?php if( $coffee['details']['count'] > 0 ): echo date_i18n( ' d.m.Y H:i:s', strtotime( $coffee['details']['latest_entry'] ) ); else: _e ( 'viime viikolla', 'dude' ); endif; ?></span></em></p>
+            </div>
           <?php endif; ?>
 
         </div><!-- .col -->
 
         <div class="col col-right">
-          <form action="https://dude.us8.list-manage.com/subscribe/post?u=bda4635b58bba8d9716eb90a6&amp;id=efe9db80e6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <h3><?php esc_attr_e( 'Pullopostia rantaasi?', 'dude' ) ?></h3>
-            <p><?php esc_attr_e( 'Koottuja kuulumisia sisältävä bittivirtojen pulloposti saapuu rantaasi noin kolmen kuukauden välein.', 'dude' ) ?></p>
 
-            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Sähköpostiosoitteesi">
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bda4635b58bba8d9716eb90a6_efe9db80e6" tabindex="-1" value=""></div>
+          <div class="logos">
+            <a href="http://koodiasuomesta.fi/" target="_blank" title="<?php _e( 'Teemme suomalaista koodia', 'dude' ) ?>" class="koodiasuomesta"><?php echo file_get_contents( get_theme_file_path( 'svg/koodiasuomesta.svg' ) ); ?></a>
+            <a href="https://www.viestintavirasto.fi/fiverkkotunnus/tietoavalittajalle.html" target="_blank" title="<?php _e( '.fi-verkkotunnusvälittäjä', 'dude' ) ?>" class="valittaja"><?php echo file_get_contents( get_theme_file_path( 'svg/valittaja-tunnus.svg' ) ); ?></a>
+            <a href="<?php echo get_page_link( 2446 ); ?>" title="<?php _e( 'Käytämme vihreää tuulienergiaa', 'dude' ) ?>" class="greenweb"><?php echo file_get_contents( get_theme_file_path( 'svg/green-web.svg' ) ); ?></a>
+          </div><!-- .logos -->
 
-            <input type="submit" value="Kyllä kiitos!" name="subscribe" id="mc-embedded-subscribe" class="button">
-          </form>
+          <a href="https://status.dude.fi" target="_blank" class="adminlabs-status"><span class="status"></span> Palvelimen tila</a>
+
         </div><!-- .col -->
 
       </div><!-- .container -->
