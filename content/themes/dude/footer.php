@@ -31,22 +31,24 @@ $coffee = dude_get_coffee_drunk(); ?>
 
 	<footer id="colophon" class="site-footer">
 
-    <div class="newsletter">
-      <div class="container">
-        <form action="https://dude.us8.list-manage.com/subscribe/post?u=bda4635b58bba8d9716eb90a6&amp;id=efe9db80e6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <h2><?php esc_attr_e( 'Pullopostia rantaasi?', 'dude' ) ?></h2>
-          <p><?php esc_attr_e( 'Koottuja kuulumisia sisältävä bittivirtojen pulloposti saapuu rantaasi noin kolmen kuukauden välein.', 'dude' ) ?></p>
+    <?php if ( ! is_singular( 'reference' ) && ! is_post_type_archive( 'reference' ) && ! is_page_template( 'template-contact.php' ) ) : ?>
+      <div class="newsletter">
+        <div class="container">
+          <form action="https://dude.us8.list-manage.com/subscribe/post?u=bda4635b58bba8d9716eb90a6&amp;id=efe9db80e6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <h2><?php esc_attr_e( 'Pullopostia rantaasi?', 'dude' ) ?></h2>
+            <p><?php esc_attr_e( 'Koottuja kuulumisia sisältävä bittivirtojen pulloposti saapuu rantaasi noin kolmen kuukauden välein.', 'dude' ) ?></p>
 
-          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Sähköpostiosoitteesi">
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bda4635b58bba8d9716eb90a6_efe9db80e6" tabindex="-1" value=""></div>
+            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Sähköpostiosoitteesi">
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bda4635b58bba8d9716eb90a6_efe9db80e6" tabindex="-1" value=""></div>
 
-          <input type="submit" value="Kyllä kiitos!" name="subscribe" id="mc-embedded-subscribe" class="button">
+            <input type="submit" value="Kyllä kiitos!" name="subscribe" id="mc-embedded-subscribe" class="button">
 
-          <p class="note"><?php esc_attr_e( 'Spämmätään vaan 3kk välein. Myö luvataan.', 'dude' ) ?></p>
-        </form>
+            <p class="note"><?php esc_attr_e( 'Spämmätään vaan 3kk välein. Myö luvataan.', 'dude' ) ?></p>
+          </form>
+        </div>
       </div>
-    </div>
+    <?php endif; ?>
 
     <div class="slide slide-footer">
       <div class="container">
