@@ -38,6 +38,7 @@ $coffee = dude_get_coffee_drunk(); ?>
             <h2><?php esc_attr_e( 'Pullopostia rantaasi?', 'dude' ) ?></h2>
             <p><?php esc_attr_e( 'Koottuja kuulumisia sisältävä bittivirtojen pulloposti saapuu rantaasi noin kolmen kuukauden välein.', 'dude' ) ?></p>
 
+            <label for="mce-EMAIL" class="screen-reader-text">Sähköpostiosoitteesi:</label>
             <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Sähköpostiosoitteesi">
             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bda4635b58bba8d9716eb90a6_efe9db80e6" tabindex="-1" value=""></div>
