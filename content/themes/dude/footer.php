@@ -45,7 +45,7 @@ $coffee = dude_get_coffee_drunk(); ?>
 
             <input type="submit" value="Kyllä kiitos!" name="subscribe" id="mc-embedded-subscribe" class="button">
 
-            <p class="note"><?php esc_attr_e( 'Spämmätään vaan 3kk välein. Myö luvataan.', 'dude' ) ?></p>
+            <p class="note"><?php esc_attr_e( 'Spämmätään vain 3kk välein. Myö luvataan.', 'dude' ); ?></p>
           </form>
         </div>
       </div>
