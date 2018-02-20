@@ -650,9 +650,8 @@ body {
                 @include column(1/2);
               }
 
-              @media(max-width: 888px) {
-                @include stack();
-                width: 100% !important;
+              @media(max-width: $container-mobile) {
+                width: 75%;
               }
             }
           }
