@@ -4,9 +4,10 @@ body {
 
       .slide {
 
+        // Reference links
         &.slide-reference p:not(.button-wrapper) a,
         &.slide-reference p:not(.button-wrapper) a:link,
-        &.slide-reference p:not(.button-wrapper) a:visited
+        &.slide-reference p:not(.button-wrapper) a:visited,
         &.slide-customer-story p:not(.button-wrapper) a,
         &.slide-customer-story p:not(.button-wrapper) a:link,
         &.slide-customer-story p:not(.button-wrapper) a:visited,
