@@ -393,16 +393,21 @@ body {
                 max-width: 100%;
 
                 .column {
-                  @include column(1/2);
+                  @include column(1/2, $gutter: 5);
+
+                  @media(max-width: 860px) {
+                    @include stack();
+                  }
 
                   &.column-image {
                     text-align: right;
 
                     img {
-                      max-height: 500px;
-                      height: 100%;
-                      width: auto;
+                      width: 100%;
+                      height: auto;
                       float: right;
+                      position: relative;
+                      top: 55px;
                     }
                   }
                 }
@@ -620,6 +625,11 @@ body {
 
               @media(min-width: 960px) {
                 @include column(1/2);
+              }
+
+              @media(max-width: 888px) {
+                @include stack();
+                width: 100% !important;
               }
             }
           }
