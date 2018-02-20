@@ -3,6 +3,28 @@ body {
     .site-content {
 
       .slide {
+
+        &.slide-reference p:not(.button-wrapper) a,
+        &.slide-reference p:not(.button-wrapper) a:link,
+        &.slide-reference p:not(.button-wrapper) a:visited
+        &.slide-customer-story p:not(.button-wrapper) a,
+        &.slide-customer-story p:not(.button-wrapper) a:link,
+        &.slide-customer-story p:not(.button-wrapper) a:visited,
+        &.slide-reference-description p:not(.button-wrapper) a,
+        &.slide-reference-description p:not(.button-wrapper) a:link,
+        &.slide-reference-description p:not(.button-wrapper) a:visited {
+          color: #666;
+          text-decoration: none;
+          text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
+          box-shadow: inset 0 -1px 0 0 #fff, inset 0 -3px 0 0 #ccc;
+          transition: all .55s;
+
+          &:hover {
+            color: #000;
+            box-shadow: inset 0 -1px 0 0 #fff, inset 0 -4px 0 0 $color-links;
+          }
+        }
+
         &.slide-video {
           video {
             width: 100%;
