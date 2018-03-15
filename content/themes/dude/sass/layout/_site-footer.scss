@@ -96,12 +96,16 @@ body {
         text-align: center;
 
         .container {
-          padding-top: 2.5rem;
-          padding-bottom: 2.5rem;
+          padding-top: 8rem;
+          padding-bottom: 8rem;
+
+          @media(max-width: $container-ipad) {
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
+          }
         }
 
         h2 {
-          text-transform: uppercase;
           margin-bottom: 5px;
         }
 

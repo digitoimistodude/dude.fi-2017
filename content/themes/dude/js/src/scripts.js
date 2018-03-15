@@ -202,7 +202,7 @@
 					} else if ( $('body').hasClass('postid-1989') ) {
 						$crisp.push(["do", "message:show", ["text", "Moro! Täällä olisi osaavat kädet valmiina vastaamaan, jos sulla on kysyttävää verkkosivuista tai WordPressistä."]]);
 					} else if ( $('body').hasClass('postid-1990') ) {
-						$crisp.push(["do", "message:show", ["text", "Moro! Tehtäiskö kummallekkin toimivaa kauppaa?"]]);
+						$crisp.push(["do", "message:show", ["text", "Moro! Tehtäiskö kummallekin toimivaa kauppaa?"]]);
 					}
 
 					$crisp.push(["do", "chat:open"])
