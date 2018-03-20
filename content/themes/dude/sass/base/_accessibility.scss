@@ -2,8 +2,13 @@
 // Accessibility
 //
 // A hidden screen reader for readers, focus elements for
-// vision impaired and other useful a11y CSS hacks.
+// vision impbonskyed and other useful a11y CSS hacks.
 // ---------------------------------------------------------
+
+// Variables
+$focus-background-color: #f9bf47;
+$focus-outline-color: #f9bf47;
+$focus-text-color: #000;
 
 // Text meant only for screen readers.
 .screen-reader-text {
@@ -24,13 +29,13 @@
 
   &:focus {
     background-color: #f1f1f1;
-    border-radius: 3px;
+    border-radius: 0;
     box-shadow: 0 0 2px 2px rgba(#000, .6);
     clip: auto !important;
     clip-path: none;
     color: #21759b;
     display: block;
-    font-size: .875rem;
+    font-size: 1.7rem;
     font-weight: bold;
     height: auto;
     left: 5px;
@@ -48,12 +53,52 @@
   outline: 0;
 }
 
-// Override focus outline only where needed
-input,
-button,
-select,
-textarea {
-  &:focus {
-    outline: thin solid $color_links;
+// Suppress focus ring on for mouse users for visual reasons
+[data-whatinput="mouse"] *:focus {
+  outline: none;
+}
+
+// Visually distinct focus color on keyboard
+[data-whatinput="keyboard"] {
+  body {
+    input,
+    button,
+    select,
+    textarea {
+      &:focus {
+        outline: 4px solid $focus-outline-color;
+        opacity: 1;
+      }
+    }
+
+    #nav ul li a:focus {
+      background-color: $focus-background-color;
+      color: $focus-text-color;
+    }
+
+    a:focus {
+      outline: 2px solid $focus-outline-color;
+      background-color: $focus-background-color;
+      opacity: 1;
+    }
+
+    a.permalink:focus {
+      box-shadow: inset 0 0 0 4px $color-links;
+    }
+
+    a.link-to-post:focus {
+      background-color: transparent;
+      outline: 4px solid $focus-outline-color;
+      z-index: 5;
+    }
+
+    #page .site-content .slide.slide-blogposts .blogposts .blogpost {
+      overflow: visible;
+    }
   }
+}
+
+// Make theme keyboard accessible with no Javascript enabled
+body.no-js *:focus {
+  outline: 4px solid $focus-outline-color;
 }

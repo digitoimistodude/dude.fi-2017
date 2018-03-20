@@ -54,8 +54,6 @@ body {
           }
 
           &:focus {
-            outline: 0;
-
             .burger-icon {
               @include burger(28px, 4px, 4px, $color-links);
             }

@@ -23,10 +23,6 @@ $opacity-default: .2;
   margin: 0;
   padding: 0;
 
-  &:focus {
-    outline: none;
-  }
-
   .slick-loading & {
     // background: #fff slick-image-url('../images/loading.gif') center center no-repeat;
   }
