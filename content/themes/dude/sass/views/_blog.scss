@@ -81,8 +81,12 @@ body {
               padding: 30px;
 
               .entry-title {
-                @extend %h3;
+                font-size: 26px;
                 color: #fff;
+
+                @media(max-width: $container-mobile) {
+                  font-size: 20px;
+                }
 
                 a {
                   color: #fff;
