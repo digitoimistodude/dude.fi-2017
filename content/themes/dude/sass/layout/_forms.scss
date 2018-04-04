@@ -1,7 +1,7 @@
 // Overrides for blog
 body #page .site-content .slide.slide-single-blog-post .container .entry-content {
-  a.btn,
-  a.button {
+  p a.btn,
+  p a.button {
     text-shadow: none;
     box-shadow: 0 0 0 $color-body inset;
     color: $color-body;
