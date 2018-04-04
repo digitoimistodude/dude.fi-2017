@@ -1,48 +1,42 @@
+// Overrides for blog
+body #page .site-content .slide.slide-single-blog-post .container .entry-content {
+  a.btn,
+  a.button {
+    text-shadow: none;
+    box-shadow: 0 0 0 $color-body inset;
+    color: $color-body;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+      border-color: $color-body;
+      box-shadow: 0 -65px 0 $color-body inset;
+      background: $color-body;
+    }
+  }
+
+  a[style="border: 0 !important;"],
+  a.remove-linkstyle {
+    text-shadow: none;
+    box-shadow: none;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+
 body {
 
   #page {
     .site-content,
     .site-footer {
 
-      // Overrides for blog
-      .slide {
-        &.slide-single-blog-post {
-          .container {
-            .entry-content {
-              a {
-                &.btn,
-                &.button {
-                  text-shadow: none;
-                  box-shadow: 0 0 0 $color-body inset;
-                  color: $color-body;
 
-                  &:hover,
-                  &:focus,
-                  &:active {
-                    color: #fff;
-                    border-color: $color-body;
-                    box-shadow: 0 -65px 0 $color-body inset;
-                    background: $color-body;
-                  }
-                }
-
-                &[style="border: 0 !important;"],
-                &.remove-linkstyle {
-                  text-shadow: none;
-                  box-shadow: none;
-
-                  &:hover,
-                  &:focus,
-                  &:active {
-                    text-shadow: none;
-                    box-shadow: none;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
 
       // Buttons
       button:not(.nav-toggle),

@@ -52,7 +52,7 @@ We have some stuff in [`.gitignore`](https://github.com/digitoimistodude/dude.fi
 **Dude.fi is based on:**
 
 * [air](https://github.com/digitoimistodude/air) (WordPress starter theme)
-  * Sass (SCSS), vanilla JS, jQuery in front end
+  * Sass (SCSS), vanilla JS, jQuery in front end (3.0)
   * PHP and WordPress in back end
 * [dudestack](https://github.com/digitoimistodude/dudestack) (WordPress and composer stack)
  * Composer handling PHP dependencies
@@ -86,3 +86,7 @@ Dude.fi is a personal view of the digital agency Dude, but if for some reason yo
 3. Run `npm install`
 4. Run `gulp watch`
 5. Make changes and send a pull request
+
+## Notes
+
+Too many nesting with current scss-lint rules, refer to [.scss-lint.yml](https://github.com/digitoimistodude/air-light/blob/master/.scss-lint.yml). This note means, something is already deprecated.

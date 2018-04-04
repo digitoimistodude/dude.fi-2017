@@ -41,8 +41,8 @@ body {
 
         &.container-blog-main,
         &.container-related-posts {
-            padding-top: 20px;
-            padding-bottom: 0;
+          padding-top: 20px;
+          padding-bottom: 0;
 
           @media(max-width: $container-ipad) {
             padding: 20px 20px 0;
@@ -215,18 +215,26 @@ body {
             margin-bottom: 5px;
             font-weight: 600;
             font-size: 19px;
-          }
-
-          .posts-navigation {
-            display: block;
-            clear: both;
-
-            a {
-              @extend .button;
-            }
-          }
+          }          
         } // .container-blog-main
       } // .container
+
+      .posts-navigation {
+        display: block;
+        clear: both;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .nav-links a {
+          @extend .button;
+
+          @media(max-width: $container-mobile) {
+            display: block !important;
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+        }
+      }
 
       .slide {
 
