@@ -147,6 +147,16 @@ function dude_parse_request_for_service_slug( $query ) {
 add_action( 'pre_get_posts', 'dude_parse_request_for_service_slug' );
 
 /**
+ * reference archive posts_per_page
+ */
+function dude_pre_get_posts_for_reference( $query ) {
+  if( $query->is_main_query() && $query->is_post_type_archive( 'reference' ) ) {
+    $query->set( 'posts_per_page', 100 );
+  }
+}
+add_action( 'pre_get_posts', 'dude_pre_get_posts_for_reference' );
+
+/**
  * Remove archive title prefixes from references
  */
 function dude_use_archive_prefix( $output, $object ) {
