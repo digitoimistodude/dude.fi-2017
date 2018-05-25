@@ -131,13 +131,6 @@
     // Auto expanding textarea
     autosize( $('textarea') );
 
-    window.CRISP_READY_TRIGGER = function() {
-      $crisp.on('message:received', function(message) {
-        $crisp.do('chat:open');
-      });
-    };
-
-
     // On click to scroll down arrow
     $(".scroll-down a").click(function(e) {
     	e.preventDefault();
@@ -198,7 +191,7 @@
 			TimeMe.callAfterTimeElapsedInSeconds(30, function() {
 				if( ! $crisp.is("session:ongoing") && $(window).width() > 560 ) {
 					if( $('body').hasClass('home') ) {
-						$crisp.push(["do", "message:show", ["text", "Moro! Etsitkö vähän erilaista digitoimistoa seuraavaan projektiisi? Heitä viestiä jos voidaan auttaa :)"]]);
+						// $crisp.push(["do", "message:show", ["text", "Moro! Etsitkö vähän erilaista digitoimistoa seuraavaan projektiisi? Heitä viestiä jos voidaan auttaa :)"]]);
 					} else if ( $('body').hasClass('postid-1989') ) {
 						$crisp.push(["do", "message:show", ["text", "Moro! Täällä olisi osaavat kädet valmiina vastaamaan, jos sulla on kysyttävää verkkosivuista tai WordPressistä."]]);
 					} else if ( $('body').hasClass('postid-1990') ) {
