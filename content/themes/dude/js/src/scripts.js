@@ -198,7 +198,7 @@
 						$crisp.push(["do", "message:show", ["text", "Moro! Tehtäiskö kummallekin toimivaa kauppaa?"]]);
 					}
 
-					$crisp.push(["do", "chat:open"])
+					// $crisp.push(["do", "chat:open"])
 					Cookies.set( 'crisp_greeting_sent', 'true', { expires: 3650 } );
 				}
 			});
