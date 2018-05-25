@@ -109,9 +109,8 @@ add_filter( 'menu_order', 'dude_menu_order' );
  * Append stuff to menu.
  */
 function dude_add_cta_button( $items, $args ) {
-	if( 'primary' === $args->theme_location ) {
+	if ( 'primary' === $args->theme_location ) {
   	$items .= '<li class="menu-item menu-code menu-item-type-post_type menu-item-object-page"><a href="' . get_page_link(1972) . '"><span class="screen-reader-text">'.__( 'Koodit', 'dude' ).'</span>'.file_get_contents( esc_url( get_stylesheet_directory().'/svg/code-2.svg' ) ).'</a></li>';
-    $items .= '<li class="menu-item-button"><a href="#" class="button-nav start-chat" data-hover="'.__( 'Moro!', 'dude' ).'"><span>'.__( 'Avaa chat', 'dude' ).'</span></a></li>';
   }
 
  return $items;
