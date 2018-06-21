@@ -739,6 +739,10 @@ body {
             @include background-cover();
             height: 430px;
             margin-bottom: 39px;
+
+            @media(max-width: $container-ipad) {
+              @include stack();
+            }
           }
 
           .container {
