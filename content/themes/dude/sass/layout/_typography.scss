@@ -1,491 +1,435 @@
-// Viewport sized typography with minimum and maximum values
-// Inspiration: https://css-tricks.com/molten-leading-css/
-// More inspiration: https://www.smashingmagazine.com/2016/05/fluid-typography/
-//
-// Source: https://codepen.io/eduardoboucas/pen/YXxmwv
-//
-// @author Eduardo Boucas (@eduardoboucas)
-//
-// @param {Number}   $responsive  - Viewport-based size
-// @param {Number}   $min         - Minimum font size (px)
-// @param {Number}   $max         - Maximum font size (px)
-//                                  (optional)
-// @param {Number}   $fallback    - Fallback for viewport-
-//                                  based units (optional)
-//
-// @example scss - 5vw font size (with 50px fallback),
-//                 minumum of 35px and maximum of 150px
-//  @include responsive-font(5vw, 35px, 150px, 50px);
-//
-@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
-  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
-  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
-  $min-breakpoint: $min / $responsive-unitless * 100;
-  font-size: $responsive;
-
-  @media (max-#{$dimension}: #{$min-breakpoint}) {
-    font-size: $min;
-  }
-
-  @if $max {
-    $max-breakpoint: $max / $responsive-unitless * 100;
-
-    @media (min-#{$dimension}: #{$max-breakpoint}) {
-      font-size: $max;
-    }
-  }
-
-  @if $fallback {
-    font-size: $fallback;
-  }
-}
-
-// Import presets
-@import 'typography-presets';
-
 // Start typography settings
 body {
   line-height: 2rem;
   font-size: 1rem;
   font-family: $font-base;
+}
 
-  .site-content,
-  .site-footer {
-    p,
-    dd,
-    dt,
-    figcaption,
-    hr,
-    small,
-    span,
-    ol,
-    ul,
-    li,
-    blockquote,
-    kbd,
-    pre,
-    samp,
-    code,
-    th,
-    td,
-    table,
-    tr,
-    .default {
-      @include responsive-font(3vw, $font-min-size, $font-max-size, $font-max-size);
-      letter-spacing: -.003em;
-      line-height: $font-base-line-height-elements;
-    }
+p,
+dd,
+dt,
+figcaption,
+hr,
+small,
+span,
+ol,
+ul,
+li,
+blockquote,
+kbd,
+pre,
+samp,
+code,
+th,
+td,
+table,
+tr,
+.default {
+  @include responsive-font(3vw, $font-min-size, $font-max-size, $font-max-size);
+  letter-spacing: -.003em;
+  line-height: $font-base-line-height-elements;
+}
+
+p {
+  margin-top: 29px;
+  margin-bottom: 29px;
+  line-height: $font-base-line-height;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
+p,
+dd,
+dt,
+figcaption {
+  font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  font-family: $font-base;
+}
+
+// Heading defaults
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  color: $color-headings;
+  font-family: $font-headings;
+  font-weight: $headings-weight;
+}
+
+// Define heading scales
+@if $headings-scale == large {
+  h1,
+  %h1 {
+    @include responsive-font(4vw, 38px, 80px);
+  }
+
+  h2,
+  %h2 {
+    @include responsive-font(3.2vw, 32px, 68px);
+  }
+
+  h3,
+  %h3,
+  .gform_wrapper h3.gform_title {
+    @include responsive-font(2.4vw, 24px, 46px);
+  }
+
+  h4,
+  %h4 {
+    @include responsive-font(1.6vw, 21px, 34px);
+  }
+
+  h5,
+  %h5 {
+    @include responsive-font(1.4vw, 18px, 21px);
+  }
+
+  h6,
+  %h6 {
+    @include responsive-font(1.2vw, 14px, 18px);
+  }
+} @else if $headings-scale == medium {
+  h1,
+  %h1 {
+    @include responsive-font(3.2vw, 32px, 68px);
+  }
+
+  h2,
+  %h2 {
+    @include responsive-font(2.4vw, 24px, 46px);
+  }
+
+  h3,
+  %h3,
+  .gform_wrapper h3.gform_title {
+    @include responsive-font(1.6vw, 21px, 34px);
+  }
+
+  h4,
+  %h4 {
+    @include responsive-font(1.4vw, 18px, 21px);
+  }
+
+  h5,
+  %h5 {
+    @include responsive-font(1.2vw, 14px, 18px);
+  }
+
+  h6,
+  %h6 {
+    @include responsive-font(1.2vw, 14px, 18px);
+  }
+} @else if $headings-scale == small {
+  h1,
+  %h1 {
+    @include responsive-font(2.4vw, 24px, 46px);
+  }
+
+  h2,
+  %h2 {
+    @include responsive-font(1.6vw, 21px, 34px);
+  }
+
+  h3,
+  %h3,
+  .gform_wrapper h3.gform_title {
+    @include responsive-font(1.4vw, 18px, 21px);
+  }
+
+  h4,
+  %h4 {
+    @include responsive-font(1.2vw, 14px, 18px);
+  }
+
+  h5,
+  %h5 {
+    @include responsive-font(1.2vw, 14px, 18px);
+  }
+
+  h6,
+  %h6 {
+    @include responsive-font(1.2vw, 14px, 18px);
+  }
+}
+
+h1,
+%h1 {
+  letter-spacing: -.02em;
+
+  @if $headings-line-height-setup == flexible {
+    line-height: 3.8rem;
+  } @else {
+    line-height: $headings-line-height-forced;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h2,
+%h2 {
+  letter-spacing: -.02em;
+
+  @if $headings-line-height-setup == flexible {
+    line-height: 3.2rem;
+  } @else {
+    line-height: $headings-line-height-forced;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h3,
+%h3,
+.gform_wrapper h3.gform_title {
+  letter-spacing: -.02em;
+
+  @if $headings-line-height-setup == flexible {
+    line-height: 2.2rem;
+  } @else {
+    line-height: $headings-line-height-forced;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h4,
+%h4 {
+  @if $headings-line-height-setup == flexible {
+    line-height: 1.4rem;
+  } @else {
+    line-height: $headings-line-height-forced;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h5,
+%h5 {
+  @if $headings-line-height-setup == flexible {
+    line-height: 1.2rem;
+  } @else {
+    line-height: $headings-line-height-forced;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h6,
+%h6 {
+  @if $headings-line-height-setup == flexible {
+    line-height: 1rem;
+  } @else {
+    line-height: $headings-line-height-forced;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+// Lists
+ul {
+  list-style: disc outside;
+  padding-left: 1.375rem;
+
+  li {
+    padding-left: .35rem;
+  }
+}
+
+ol {
+  padding-left: 1.75rem;
+}
+
+ol,
+ul {
+  padding-bottom: 1rem;
+}
+
+li {
+  font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  font-family: $font-base;
+}
+
+// Bold.
+b,
+strong {
+  font-weight: 700;
+}
+
+// Italic.
+em,
+i {
+  font-style: italic;
+}
+
+// Inline small text.
+small {
+  line-height: 1;
+  font-size: .875em;
+}
+
+// images
+img {
+  -ms-interpolation-mode: bicubic;
+  height: auto;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+// Figures and captions
+figure {
+  position: relative;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+
+  > img {
+    width: 100%;
+  }
+}
+
+// Figcaption.
+figcaption {
+  margin-top: 0;
+  font-family: $font-base;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.entry-content {
+  blockquote {
+    clear: both;
+    border: 0 none;
+    position: relative;
+    margin: 2.2rem 0 1.875rem -2.2rem;
+    border-left: 4px solid $color-body;
+    padding: 0 0 0 2.2rem;
 
     p {
-      margin-top: 29px;
-      margin-bottom: 29px;
-      line-height: $font-base-line-height;
-
-      &:first-child {
-        margin-top: 0;
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    // Paragraphs. OpenType ligatures and oldstyle figures enabled if available.
-    p,
-    dd,
-    dt,
-    figcaption {
-      font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-      font-family: $font-base;
-    }
-
-    // Heading defaults
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-      color: $color-headings;
-      font-family: $font-headings;
-      font-weight: $headings-weight;
-    }
-
-    // Define heading scales
-    @if $headings-scale == large {
-
-      h1,
-      %h1 {
-        @include responsive-font(4vw, 38px, 80px);
-      }
-
-      h2,
-      %h2 {
-        @include responsive-font(3.2vw, 32px, 68px);
-      }
-
-      h3,
-      %h3,
-      .gform_wrapper h3.gform_title {
-        @include responsive-font(2.4vw, 24px, 46px);
-      }
-
-      h4,
-      %h4 {
-        @include responsive-font(1.6vw, 21px, 34px);
-      }
-
-      h5,
-      %h5 {
-        @include responsive-font(1.4vw, 18px, 21px);
-      }
-
-      h6,
-      %h6 {
-        @include responsive-font(1.2vw, 14px, 18px);
-      }
-
-    } @else if $headings-scale == medium {
-
-      h1,
-      %h1 {
-        @include responsive-font(3.2vw, 32px, 68px);
-      }
-
-      h2,
-      %h2 {
-        @include responsive-font(2.4vw, 24px, 46px);
-      }
-
-      h3,
-      %h3,
-      .gform_wrapper h3.gform_title {
-        @include responsive-font(1.6vw, 21px, 34px);
-      }
-
-      h4,
-      %h4 {
-        @include responsive-font(1.4vw, 18px, 21px);
-      }
-
-      h5,
-      %h5 {
-        @include responsive-font(1.2vw, 14px, 18px);
-      }
-
-      h6,
-      %h6 {
-        @include responsive-font(1.2vw, 14px, 18px);
-      }
-
-    } @else if $headings-scale == small {
-
-      h1,
-      %h1 {
-        @include responsive-font(2.4vw, 24px, 46px);
-      }
-
-      h2,
-      %h2 {
-        @include responsive-font(1.6vw, 21px, 34px);
-      }
-
-      h3,
-      %h3,
-      .gform_wrapper h3.gform_title {
-        @include responsive-font(1.4vw, 18px, 21px);
-      }
-
-      h4,
-      %h4 {
-        @include responsive-font(1.2vw, 14px, 18px);
-      }
-
-      h5,
-      %h5 {
-        @include responsive-font(1.2vw, 14px, 18px);
-      }
-
-      h6,
-      %h6 {
-        @include responsive-font(1.2vw, 14px, 18px);
-      }
-
-    }
-
-    h1,
-    %h1 {
-      letter-spacing: -.02em;
-
-      @if $headings-line-height-setup == flexible {
-        line-height: 3.8rem;
-      } @else {
-        line-height: $headings-line-height-forced;
-      }
-
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-
-    h2,
-    %h2 {
-      letter-spacing: -.02em;
-
-      @if $headings-line-height-setup == flexible {
-        line-height: 3.2rem;
-      } @else {
-        line-height: $headings-line-height-forced;
-      }
-
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-
-    h3,
-    %h3,
-    .gform_wrapper h3.gform_title {
-      letter-spacing: -.02em;
-
-      @if $headings-line-height-setup == flexible {
-        line-height: 2.2rem;
-      } @else {
-        line-height: $headings-line-height-forced;
-      }
-
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-
-    h4,
-    %h4 {
-      @if $headings-line-height-setup == flexible {
-        line-height: 1.4rem;
-      } @else {
-        line-height: $headings-line-height-forced;
-      }
-
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-
-    h5,
-    %h5 {
-      @if $headings-line-height-setup == flexible {
-        line-height: 1.2rem;
-      } @else {
-        line-height: $headings-line-height-forced;
-      }
-
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-
-    h6,
-    %h6 {
-      @if $headings-line-height-setup == flexible {
-        line-height: 1rem;
-      } @else {
-        line-height: $headings-line-height-forced;
-      }
-
-      &:first-child {
-        margin-top: 0;
-      }
-    }
-
-    // Lists
-    ul {
-      list-style: disc outside;
-      padding-left: 1.375rem;
-
-      li {
-        padding-left: .35rem;
-      }
-    }
-
-    ol {
-      padding-left: 1.75rem;
-    }
-
-    ol,
-    ul {
-      padding-bottom: 1rem;
-    }
-
-    li {
-      font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-      font-family: $font-base;
-
-
-    }
-
-    // Bold.
-    b,
-    strong {
-      font-weight: 700;
-    }
-
-    // Italic.
-    em,
-    i {
+      @include responsive-font(2vw, 17px, 25px, 25px);
       font-style: italic;
-    }
-
-    // Inline small text.
-    small {
-      line-height: 1;
-      font-size: .875em;
-    }
-
-    // images
-    img {
-      -ms-interpolation-mode: bicubic;
-      height: auto;
-      vertical-align: middle;
-      max-width: 100%;
-    }
-
-    // Figures and captions
-    figure {
+      font-family: $font-base;
+      margin-bottom: 0;
       position: relative;
-      margin-bottom: 1rem;
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 0;
-
-      > img {
-        width: 100%;
-      }
-    }
-
-    // Figcaption.
-    figcaption {
-      margin-top: 0;
-      font-family: $font-base;
-      font-style: normal;
-      font-weight: 400;
-    }
-
-    .entry-content {
-      blockquote {
-        clear: both;
-        border: 0 none;
-        position: relative;
-        margin: 2.2rem 0 1.875rem -2.2rem;
-        border-left: 4px solid $color-body;
-        padding: 0 0 0 2.2rem;
-
-        p {
-          @include responsive-font(2vw, 17px, 25px, 25px);
-          font-style: italic;
-          font-family: $font-base;
-          margin-bottom: 0;
-          position: relative;
-          overflow: visible;
-        }
-      }
-    }
-
-    // Quotes.
-    blockquote {
-      clear: both;
-      border: 0 none;
-      position: relative;
-      margin-top: 3rem;
-      padding-bottom: 3rem;
-      margin: 0;
-
-      p {
-        @include responsive-font(2vw, 17px, 25px, 25px);
-        font-style: italic;
-        font-family: $font-base;
-        margin-bottom: 0;
-        position: relative;
-        overflow: visible;
-      }
-    }
-
-    cite {
-      font-family: $font-base;
-      display: block;
-      font-style: italic;
-    }
-
-    // Horizontal rule.
-    hr {
-      background-image: linear-gradient(to bottom, rgba(#000, 0) 50%, #000 50%);
-      background-repeat: repeat-x;
-      background-size: 2px 2px;
-      background-position: 0 50%;
-      border: 0;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      margin: 0;
-      height: 0;
-    }
-
-    kbd,
-    pre,
-    samp {
-      font-family: $font-monospace;
-    }
-
-    // Code block.
-    code {
-      color: #c7254e;
-      background-color: #f9f2f4;
-      font-family: $font-monospace;
-      line-height: 1;
-      padding: .375rem .5rem;
-      border-radius: .3rem;
-      font-size: inherit; // normalize.css sets this as 1em by default
-
-      pre & {
-        display: inline-block;
-        padding: 1.15rem 1rem .85rem;
-      }
-    }
-
-    // Preformatted text.
-    pre {
-      border-radius: .3rem;
-      display: block;
-      white-space: pre-wrap;
-      word-break: break-all;
-      word-wrap: break-word;
-      margin-bottom: 2rem;
-    }
-
-    // Tables
-    th,
-    td {
-      font-family: $font-base;
-      height: 3rem;
-      padding: 1rem;
-    }
-
-    // Table heading cells
-    th {
-      font-weight: 700;
-    }
-
-    // Text font stack
-    p,
-    ul,
-    ol,
-    dl,
-    small,
-    blockquote {
-      font-family: $font-base;
-      color: $color-body;
+      overflow: visible;
     }
   }
+}
+
+// Quotes.
+blockquote {
+  clear: both;
+  border: 0 none;
+  position: relative;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  margin: 0;
+
+  p {
+    @include responsive-font(2vw, 17px, 25px, 25px);
+    font-style: italic;
+    font-family: $font-base;
+    margin-bottom: 0;
+    position: relative;
+    overflow: visible;
+  }
+}
+
+cite {
+  font-family: $font-base;
+  display: block;
+  font-style: italic;
+}
+
+// Horizontal rule.
+hr {
+  background-image: linear-gradient(to bottom, rgba(#000, 0) 50%, #000 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 50%;
+  border: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  height: 0;
+}
+
+kbd,
+pre,
+samp {
+  font-family: $font-monospace;
+}
+
+// Code block.
+code {
+  color: #c7254e;
+  background-color: #f9f2f4;
+  font-family: $font-monospace;
+  line-height: 1;
+  padding: .375rem .5rem;
+  border-radius: .3rem;
+  font-size: inherit; // normalize.css sets this as 1em by default
+
+  pre & {
+    display: inline-block;
+    padding: 1.15rem 1rem .85rem;
+  }
+}
+
+// Preformatted text.
+pre {
+  border-radius: .3rem;
+  display: block;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  margin-bottom: 2rem;
+}
+
+// Tables
+th,
+td {
+  font-family: $font-base;
+  height: 3rem;
+  padding: 1rem;
+}
+
+// Table heading cells
+th {
+  font-weight: 700;
+}
+
+// Text font stack
+p,
+ul,
+ol,
+dl,
+small,
+blockquote {
+  font-family: $font-base;
+  color: $color-body;
 }
 
 // Font smoothing options
