@@ -1,372 +1,352 @@
-body {
+body.single-service #page .site-content .slide.slide-service-references .mosaic:nth-child(even) {
+  margin-right: 0;
+}
 
-  &.single-service {
-    #page {
-      .site-content {
-        .slide {
-          &.slide-service-references {
-            .mosaic {
-              &:nth-child(even) {
-                margin-right: 0;
-              }
+.slide {
+  &.slide-hero {
+    &.slide-verkkokaupat,
+    &.slide-verkkosivut {
+      .shade-extra {
+        background: linear-gradient(to bottom, rgba(#111, 0) 0%, rgba(#363f49, .5) 70%, rgba(#363f49, .4) 100%);
+
+        @media (max-width: $container-mobile) {
+          background: linear-gradient(to bottom, rgba(#111, 0) 0%, rgba(#363f49, .7) 70%, rgba(#363f49, .4) 100%);
+        }
+      }
+    }
+
+    &.slide-verkkokaupat {
+      @media (min-width: 1600px) {
+        .shade-extra {
+          background: linear-gradient(to bottom, rgba(#111, .2) 0%, rgba(#363f49, .5) 70%, rgba(#363f49, .4) 100%);
+        }
+      }
+    }
+  }
+
+  &.slide-wordpress,
+  &.slide-verkkosivut,
+  &.slide-hero.slide-wordpress {
+    background-color: $color-wordpress;
+  }
+
+  &.slide-woocommerce,
+  &.slide-verkkokaupat,
+  &.slide-hero.slide-woocommerce {
+    background-color: $color-woocommerce;
+  }
+
+  &.slide-service-info {
+    .container {
+      max-width: 1100px;
+    }
+  }
+
+  &.slide-service-info,
+  &.slide-hosting-info {
+    text-align: center;
+
+    .service-description {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+
+      p {
+        color: $color-servicedescriptions;
+      }
+    }
+
+    h2 {
+      @extend %h5;
+      color: $color-lightgrey-alt;
+      font-family: $font-headings;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      span {
+        @extend %h5;
+        font-family: $font-headings;
+        font-weight: 700;
+
+        &.order-number {
+          color: $color-body-darker;
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            width: 70%;
+            left: 5px;
+            height: 2px;
+            background: #484848;
+          }
+        }
+      }
+    }
+
+    .hosting {
+      margin-top: 90px;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          position: relative;
+          padding: 0;
+          margin: 0;
+
+          span {
+            border-bottom: 1px solid #e4e4e4;
+            padding: 10px;
+            display: inline-block;
+          }
+        }
+      }
+    } // .hosting
+
+    .pricing {
+      @extend %h5;
+      margin-top: 70px;
+      color: #142030;
+      text-transform: uppercase;
+      font-family: $font-headings;
+
+      p,
+      span {
+        color: #18252e;
+        font-weight: 700;
+        font-family: $font-headings;
+
+        &.pricing-label {
+          color: #c4c4c4;
+          display: block;
+          font-size: 16px;
+          font-weight: 700;
+        }
+      }
+
+      .price {
+        font-size: 42px;
+      }
+    } // .pricing
+  } // .slide-service-info, .slide-hosting-info
+
+  &.slide-service-references {
+    h2 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .container {
+      &.container-service-quote {
+        margin-top: 0;
+        padding-top: 0;
+
+        .general-description {
+          max-width: 900px;
+        }
+
+        blockquote {
+          margin-bottom: 0;
+          text-align: center;
+          max-width: 900px;
+          margin-left: auto;
+          margin-right: auto;
+          position: relative;
+          padding-left: 60px;
+          padding-right: 60px;
+
+          @media (max-width: $container-mobile) {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
+          &:before {
+            top: 0;
+            left: 0;
+            content: '\201C';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            font-size: 120px;
+            line-height: 1;
+            z-index: 50;
+            font-family: $font-headings;
+            color: #fff;
+            opacity: .5;
+
+            @media (max-width: $container-mobile) {
+              display: none;
             }
+          }
+
+          p {
+            font-style: normal;
+            font-size: 21px;
+            font-weight: 700;
+            opacity: 1;
+            color: #fff;
+          }
+        }
+
+        .customer {
+          overflow: visible;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: left;
+          display: inline-block;
+          width: auto;
+          white-space: normal;
+
+          // Offset
+          @media (min-width: $container-mobile) {
+            position: relative;
+            left: -40px;
+          }
+
+          h4 {
+            font-size: 16px;
+            margin: 20px 0 0;
+            display: inline-block;
+            color: #fff;
+
+            // iPhone SE
+            @media (max-width: 320px) {
+              font-size: 12px;
+            }
+          }
+
+          h5 {
+            font-size: 16px;
+            color: #fff;
+            margin: 0;
+            opacity: .5;
+
+            @media (min-width: $container-mobile) {
+              white-space: nowrap;
+              line-height: 1.1;
+            }
+
+            // iPhone SE
+            @media (max-width: 320px) {
+              font-size: 12px;
+            }
+          }
+
+          .avatar {
+            @include background-cover();
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            float: left;
+            margin-right: 25px;
           }
         }
       }
     }
   }
 
-  #page {
-    .site-content {
-      .slide {
+  .steps {
+    ol {
+      overflow: hidden;
+      margin: 0;
+      padding: 130px 40px 0;
 
-        &.slide-hero {
-          &.slide-verkkokaupat,
-          &.slide-verkkosivut {
-            .shade-extra {
-              background: linear-gradient(to bottom, rgba(#111, 0) 0%, rgba(#363f49, .5) 70%, rgba(#363f49, .4) 100%);
+      @media (max-width: 540px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
 
-              @media(max-width: $container-mobile) {
-                background: linear-gradient(to bottom, rgba(#111, 0) 0%, rgba(#363f49, .7) 70%, rgba(#363f49, .4) 100%);
-              }
-            }
-          }
+      li {
+        @include span(1/3, $cycle: 3);
+        counter-increment: stepnumbers;
+        list-style: none;
+        position: relative;
+        padding: 30px;
+        margin-bottom: 50px;
+        transition: all 1s;
+        text-align: center;
 
-          &.slide-verkkokaupat {
-            @media(min-width: 1600px) {
-              .shade-extra {
-                background: linear-gradient(to bottom, rgba(#111, .2) 0%, rgba(#363f49, .5) 70%, rgba(#363f49, .4) 100%);
-              }
-            }
-          }
+        @media (max-width: 800px) {
+          @include span(1/2, $cycle: 2);
+          border: 0;
         }
 
-        &.slide-wordpress,
-        &.slide-verkkosivut,
-        &.slide-hero.slide-wordpress {
-          background-color: $color-wordpress;
-        }
-
-        &.slide-woocommerce,
-        &.slide-verkkokaupat,
-        &.slide-hero.slide-woocommerce {
-          background-color: $color-woocommerce;
-        }
-
-        &.slide-service-info {
-          .container {
-            max-width: 1100px;
-          }
-        }
-
-        &.slide-service-info,
-        &.slide-hosting-info {
+        @media (max-width: 540px) {
+          @include stack();
+          overflow: hidden;
+          margin-bottom: 10px;
+          display: block;
+          top: 0;
           text-align: center;
+          padding-left: 0;
+          padding-right: 0;
+        }
 
-          .service-description {
-            max-width: 720px;
-            margin-left: auto;
-            margin-right: auto;
+        p {
+          position: relative;
+          z-index: 4;
+          color: $color-servicedescriptions;
+          font-size: 17px;
+        }
 
-            p {
-              color: $color-servicedescriptions;
-            }
-          }
+        h4 {
+          @extend %h6;
+          text-transform: uppercase;
+        }
 
-          h2 {
-            @extend %h5;
-            color: $color-lightgrey-alt;
-            font-family: $font-headings;
-            text-transform: uppercase;
-            font-weight: 700;
+        &:before {
+          @include responsive-font(12vw, 150px, 220px);
+          content: counter(stepnumbers) ' ';
+          font-weight: bold;
+          position: absolute;
+          top: -50px;
+          left: 20px;
+          line-height: 1;
+          z-index: 0;
+          transition: all 1s;
+          opacity: .1;
+          color: $color-wordpress;
+          font-family: $font-headings;
 
-            span {
-              @extend %h5;
-              font-family: $font-headings;
-              font-weight: 700;
-
-              &.order-number {
-                color: $color-body-darker;
-                position: relative;
-
-                &:after {
-                  content: '';
-                  position: absolute;
-                  bottom: -5px;
-                  width: 70%;
-                  left: 5px;
-                  height: 2px;
-                  background: #484848;
-                }
-              }
-            }
-          }
-
-          .hosting {
-            margin-top: 90px;
-
-            ul {
-              list-style: none;
-              padding: 0;
-              margin: 0;
-
-              li {
-                position: relative;
-                padding: 0;
-                margin: 0;
-
-                span {
-                  border-bottom: 1px solid #e4e4e4;
-                  padding: 10px;
-                  display: inline-block;
-                }
-              }
-            }
-          } // .hosting
-
-          .pricing {
-            @extend %h5;
-            margin-top: 70px;
-            color: #142030;
-            text-transform: uppercase;
-            font-family: $font-headings;
-
-            p,
-            span {
-              color: #18252e;
-              font-weight: 700;
-              font-family: $font-headings;
-
-              &.pricing-label {
-                color: #c4c4c4;
-                display: block;
-                font-size: 16px;
-                font-weight: 700;
-              }
-            }
-
-            .price {
-              font-size: 42px;
-            }
-          } // .pricing
-        } // .slide-service-info, .slide-hosting-info
-
-        &.slide-service-references {
-          h2 {
-            color: #fff;
-            text-align: center;
-            margin-bottom: 2rem;
-          }
-
-          .container {
-            &.container-service-quote {
-              margin-top: 0;
-              padding-top: 0;
-
-              .general-description {
-                max-width: 900px;
-              }
-
-              blockquote {
-                margin-bottom: 0;
-                text-align: center;
-                max-width: 900px;
-                margin-left: auto;
-                margin-right: auto;
-                position: relative;
-                padding-left: 60px;
-                padding-right: 60px;
-
-                @media(max-width: $container-mobile) {
-                  padding-left: 0;
-                  padding-right: 0;
-                }
-
-                &:before {
-                  top: 0;
-                  left: 0;
-                  content: '\201C';
-                  position: absolute;
-                  width: 60px;
-                  height: 60px;
-                  font-size: 120px;
-                  line-height: 1;
-                  z-index: 50;
-                  font-family: $font-headings;
-                  color: #fff;
-                  opacity: .5;
-
-                  @media(max-width: $container-mobile) {
-                    display: none;
-                  }
-                }
-
-                p {
-                  font-style: normal;
-                  font-size: 21px;
-                  font-weight: 700;
-                  opacity: 1;
-                  color: #fff;
-                }
-              }
-
-              .customer {
-                overflow: visible;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: left;
-                display: inline-block;
-                width: auto;
-                white-space: normal;
-
-                // Offset
-                @media(min-width: $container-mobile) {
-                  position: relative;
-                  left: -40px;
-                }
-
-                h4 {
-                  font-size: 16px;
-                  margin: 20px 0 0;
-                  display: inline-block;
-                  color: #fff;
-
-                  // iPhone SE
-                  @media(max-width: 320px) {
-                    font-size: 12px;
-                  }
-                }
-
-                h5 {
-                  font-size: 16px;
-                  color: #fff;
-                  margin: 0;
-                  opacity: .5;
-
-                  @media(min-width: $container-mobile) {
-                    white-space: nowrap;
-                    line-height: 1.1;
-                  }
-
-                  // iPhone SE
-                  @media(max-width: 320px) {
-                    font-size: 12px;
-                  }
-                }
-
-                .avatar {
-                  @include background-cover();
-                  width: 72px;
-                  height: 72px;
-                  border-radius: 50%;
-                  float: left;
-                  margin-right: 25px;
-                }
-              }
-            }
+          @media (max-width: 540px) {
+            top: 0;
+            left: 0;
+            position: relative;
           }
         }
 
-        .steps {
-          ol {
-            overflow: hidden;
-            margin: 0;
-            padding: 130px 40px 0;
+        &:hover {
+          &:before {
+            opacity: .3;
+            color: $color-wordpress;
+          }
+        }
 
-            @media(max-width: 540px) {
-              padding-left: 0;
-              padding-right: 0;
-            }
+        &:first-child {
+          counter-reset: stepnumbers;
+        }
+      }
+    }
 
-            li {
-              @include span(1/3, $cycle: 3);
-              counter-increment: stepnumbers;
-              list-style: none;
-              position: relative;
-              padding: 30px;
-              margin-bottom: 50px;
-              transition: all 1s;
-              text-align: center;
-
-              @media(max-width: 800px) {
-                @include span(1/2, $cycle: 2);
-                border: 0;
-              }
-
-              @media(max-width: 540px) {
-                @include stack();
-                overflow: hidden;
-                margin-bottom: 10px;
-                display: block;
-                top: 0;
-                text-align: center;
-                padding-left: 0;
-                padding-right: 0;
-              }
-
-              p {
-                position: relative;
-                z-index: 4;
-                color: $color-servicedescriptions;
-                font-size: 17px;
-              }
-
-              h4 {
-                @extend %h6;
-                text-transform: uppercase;
-              }
-
-              &:before {
-                @include responsive-font(12vw, 150px, 220px);
-                content: counter(stepnumbers) ' ';
-                font-weight: bold;
-                position: absolute;
-                top: -50px;
-                left: 20px;
-                line-height: 1;
-                z-index: 0;
-                transition: all 1s;
-                opacity: .1;
-                color: $color-wordpress;
-                font-family: $font-headings;
-
-                @media(max-width: 540px) {
-                  top: 0;
-                  left: 0;
-                  position: relative;
-                }
-              }
-
-              &:hover {
-                &:before {
-                  opacity: .3;
-                  color: $color-wordpress;
-                }
-              }
-
-              &:first-child {
-                counter-reset: stepnumbers;
-              }
-            }
+    &.steps-verkkokaupat {
+      ol {
+        li {
+          &:before {
+            color: $color-woocommerce;
           }
 
-          &.steps-verkkokaupat {
-            ol {
-              li {
-                &:before {
-                  color: $color-woocommerce;
-                }
-
-                &:hover {
-                  &:before {
-                    color: $color-woocommerce;
-                  }
-                }
-              }
+          &:hover {
+            &:before {
+              color: $color-woocommerce;
             }
           }
-        } // .steps
-      } // .slide
-    } // .site-content
-  } // #page
-} // body
+        }
+      }
+    }
+  } // .steps
+} // .slide

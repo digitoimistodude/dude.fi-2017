@@ -1,5 +1,5 @@
 // Overrides for blog
-body #page .site-content .slide.slide-single-blog-post .container .entry-content {
+.slide.slide-single-blog-post .container .entry-content {
   p a.btn,
   p a.button {
     text-shadow: none;
@@ -30,316 +30,305 @@ body #page .site-content .slide.slide-single-blog-post .container .entry-content
   }
 }
 
-body {
+// Buttons
+button:not(.nav-toggle),
+input[type="reset"]:not(.nav-toggle),
+input[type="submit"]:not(.nav-toggle),
+input[type="button"]:not(.nav-toggle),
+.button:not(.nav-toggle),
+button:not(.slick-arrow),
+button:not(.slick-next),
+button:not(.slick-prev),
+.entry-content .btn,
+input[type="submit"],
+button[type="submit"] {
+  @extend .default;
+  background: transparent;
+  color: $color-body;
+  width: auto;
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  border-radius: 0;
+  appearance: none;
+  transition: all .5s;
+  font-family: $font-headings;
+  border: 2px solid $color-body;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 0 0 $color-body inset;
+  text-shadow: none;
 
-  #page {
-    .site-content,
-    .site-footer {
+  &.button-with-arrow {
+    box-shadow: none;
 
+    svg {
+      position: absolute;
+      fill: $color-body;
+      width: 50px;
+      height: 20px;
+      right: -30px;
+      transition: all .5s;
+      top: 11.5px;
 
+      path {
+        fill: $color-body;
+      }
+    }
 
-      // Buttons
-      button:not(.nav-toggle),
-      input[type="reset"]:not(.nav-toggle),
-      input[type="submit"]:not(.nav-toggle),
-      input[type="button"]:not(.nav-toggle),
-      .button:not(.nav-toggle),
-      button:not(.slick-arrow),
-      button:not(.slick-next),
-      button:not(.slick-prev),
-      .entry-content .btn,
-      input[type="submit"],
-      button[type="submit"] {
-        @extend .default;
-        background: transparent;
-        color: $color-body;
-        width: auto;
-        display: inline-block;
-        padding: 10px 30px;
-        text-decoration: none;
-        position: relative;
-        cursor: pointer;
-        border-radius: 0;
-        appearance: none;
+    &:after {
+      width: 0%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: $color-body;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      transition: all .5s;
+    }
+
+    span {
+      color: $color-body;
+      position: relative;
+      z-index: 2;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 700;
+      transition: all .5s;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+      border-color: $color-body;
+      box-shadow: none;
+      background: $color-body;
+      transition-delay: .45s;
+
+      span {
+        color: #fff;
+      }
+
+      &:after {
+        width: 100%;
+      }
+
+      svg {
+        transition-delay: .3s;
+        transform: translateX(20px);
+      }
+    }
+  }
+
+  &.button-white {
+    box-shadow: 0 0 0 #fff inset;
+    border-color: #fff;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      color: $color-body;
+      border-color: #fff;
+      box-shadow: 0 -65px 0 #fff inset;
+      background: #fff;
+    }
+
+    &.button-with-arrow {
+      box-shadow: none;
+
+      svg {
+        position: absolute;
+        fill: #fff;
+        width: 50px;
+        height: 20px;
+        right: -30px;
         transition: all .5s;
-        font-family: $font-headings;
-        border: 2px solid $color-body;
+        top: 11.5px;
+
+        path {
+          fill: #fff;
+        }
+      }
+
+      &:after {
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #fff;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        transition: all .5s;
+      }
+
+      span {
+        color: #fff;
+        position: relative;
+        z-index: 2;
         text-transform: uppercase;
         font-size: 16px;
         font-weight: 700;
-        box-shadow: 0 0 0 $color-body inset;
-        text-shadow: none;
+        transition: all .5s;
+      }
 
-        &.button-with-arrow {
-          box-shadow: none;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $color-body;
+        border-color: #fff;
+        box-shadow: none;
+        background: #fff;
+        transition-delay: .45s;
 
-          svg {
-            position: absolute;
-            fill: $color-body;
-            width: 50px;
-            height: 20px;
-            right: -30px;
-            transition: all .5s;
-            top: 11.5px;
-
-            path {
-              fill: $color-body;
-            }
-          }
-
-          &:after {
-            width: 0%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background: $color-body;
-            content: '';
-            position: absolute;
-            z-index: -1;
-            transition: all .5s;
-          }
-
-          span {
-            color: $color-body;
-            position: relative;
-            z-index: 2;
-            text-transform: uppercase;
-            font-size: 16px;
-            font-weight: 700;
-            transition: all .5s;
-          }
-
-          &:hover,
-          &:focus,
-          &:active {
-            color: #fff;
-            border-color: $color-body;
-            box-shadow: none;
-            background: $color-body;
-            transition-delay: .45s;
-
-            span {
-              color: #fff;
-            }
-
-            &:after {
-              width: 100%;
-            }
-
-            svg {
-              transition-delay: .3s;
-              transform: translateX(20px);
-            }
-          }
+        span {
+          color: $color-body;
         }
 
-        &.button-white {
-          box-shadow: 0 0 0 #fff inset;
-          border-color: #fff;
-          color: #fff;
-
-          &:hover,
-          &:focus {
-            color: $color-body;
-            border-color: #fff;
-            box-shadow: 0 -65px 0 #fff inset;
-            background: #fff;
-          }
-
-          &.button-with-arrow {
-            box-shadow: none;
-
-            svg {
-              position: absolute;
-              fill: #fff;
-              width: 50px;
-              height: 20px;
-              right: -30px;
-              transition: all .5s;
-              top: 11.5px;
-
-              path {
-                fill: #fff;
-              }
-            }
-
-            &:after {
-              width: 0%;
-              height: 100%;
-              top: 0;
-              left: 0;
-              background: #fff;
-              content: '';
-              position: absolute;
-              z-index: -1;
-              transition: all .5s;
-            }
-
-            span {
-              color: #fff;
-              position: relative;
-              z-index: 2;
-              text-transform: uppercase;
-              font-size: 16px;
-              font-weight: 700;
-              transition: all .5s;
-            }
-
-            &:hover,
-            &:focus,
-            &:active {
-              color: $color-body;
-              border-color: #fff;
-              box-shadow: none;
-              background: #fff;
-              transition-delay: .45s;
-
-              span {
-                color: $color-body;
-              }
-
-              &:after {
-                width: 100%;
-              }
-
-              svg {
-                transition-delay: .3s;
-                transform: translateX(20px);
-              }
-            }
-          }
+        &:after {
+          width: 100%;
         }
 
-        &:hover,
-        &:focus,
-        &:active {
-          color: #fff;
-          border-color: $color-body;
-          box-shadow: 0 -65px 0 $color-body inset;
-          background: $color-body;
+        svg {
+          transition-delay: .3s;
+          transform: translateX(20px);
+        }
+      }
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    border-color: $color-body;
+    box-shadow: 0 -65px 0 $color-body inset;
+    background: $color-body;
+  }
+}
+
+a,
+button,
+input,
+.button:not(.nav-toggle) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+// Fields
+body {
+  .site {
+    textarea,
+    select,
+    input[type="text"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="password"],
+    input[type="number"],
+    input[type="month"],
+    input[type="week"],
+    input[type="email"],
+    input[type="search"] {
+      font-family: $font-base;
+      color: $color-forms-text;
+      border: 1px solid $color-forms;
+      background: $color-forms-bg;
+      border-radius: $forms-border-radius;
+      padding: 16px;
+      text-decoration: none;
+      position: relative;
+      transition: 150ms linear all;
+      appearance: none;
+      margin-bottom: 0;
+
+      &:focus {
+        outline: 0;
+        border: 1px solid $forms-border-focus;
+      }
+    }
+
+    select {
+      background-color: $color-forms-bg;
+      background-image: url('../svg/select.svg');
+      background-repeat: no-repeat;
+      background-position: right center;
+      color: $color-forms-text;
+      padding-right: 40px;
+      transition: none;
+      border: 1px solid $color-forms;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border: 1px solid #222;
+      }
+    }
+  }
+
+  // General
+  form {
+    p {
+      margin-bottom: 20px;
+
+      &.form-submit {
+        margin-bottom: 0;
+      }
+    }
+
+    // Search form
+    &.search-form {
+      .search-field {
+        float: left;
+        margin-right: 5px;
+      }
+
+      .search-submit {
+        padding: 16px 1.75em;
+      }
+    }
+  }
+
+  // Gravity Forms
+  .gform_wrapper {
+    margin: 0;
+
+    form {
+      .ginput_container,
+      .top_label {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .gfield {
+        margin-top: 10px;
+        margin-bottom: 0;
+        padding-left: 0;
+      }
+
+      .ginput_container {
+        select,
+        input,
+        input.medium {
+          width: 100% !important; // Gravity forms uses !important here, so no choice
+          margin-right: 0;
         }
       }
 
-      a,
-      button,
-      input,
-      .button:not(.nav-toggle) {
-        -webkit-tap-highlight-color: transparent;
-      }
+      textarea,
+      textarea.medium {
+        margin-bottom: 0;
 
-      // Fields
-      body {
-        .site {
-          textarea,
-          select,
-          input[type="text"],
-          input[type="tel"],
-          input[type="url"],
-          input[type="password"],
-          input[type="number"],
-          input[type="month"],
-          input[type="week"],
-          input[type="email"],
-          input[type="search"] {
-            font-family: $font-base;
-            color: $color-forms-text;
-            border: 1px solid $color-forms;
-            background: $color-forms-bg;
-            border-radius: $forms-border-radius;
-            padding: 16px;
-            text-decoration: none;
-            position: relative;
-            transition: 150ms linear all;
-            appearance: none;
-            margin-bottom: 0;
-
-            &:focus {
-              outline: 0;
-              border: 1px solid $forms-border-focus;
-            }
-          }
-
-          select {
-            background-color: $color-forms-bg;
-            background-image: url('../svg/select.svg');
-            background-repeat: no-repeat;
-            background-position: right center;
-            color: $color-forms-text;
-            padding-right: 40px;
-            transition: none;
-            border: 1px solid $color-forms;
-            width: 100%;
-            max-width: 100%;
-            min-width: 0;
-
-            &:hover,
-            &:focus,
-            &:active {
-              border: 1px solid #222;
-            }
-          }
-        }
-
-        // General
-        form {
-          p {
-            margin-bottom: 20px;
-
-            &.form-submit {
-              margin-bottom: 0;
-            }
-          }
-
-          // Search form
-          &.search-form {
-            .search-field {
-              float: left;
-              margin-right: 5px;
-            }
-
-            .search-submit {
-              padding: 16px 1.75em;
-            }
-          }
-        }
-
-        // Gravity Forms
-        .gform_wrapper {
-          margin: 0;
-
-          form {
-            .ginput_container,
-            .top_label {
-              margin-top: 0;
-              margin-bottom: 0;
-              padding-top: 0;
-              padding-bottom: 0;
-            }
-
-            .gfield {
-              margin-top: 10px;
-              margin-bottom: 0;
-              padding-left: 0;
-            }
-
-            .ginput_container {
-              select,
-              input,
-              input.medium {
-                width: 100% !important; // Gravity forms uses !important here, so no choice
-                margin-right: 0;
-              }
-            }
-
-            textarea,
-            textarea.medium {
-              margin-bottom: 0;
-
-              @media (max-width: $container-mobile) {
-                width: 100%;
-              }
-            }
-          }
+        @media (max-width: $container-mobile) {
+          width: 100%;
         }
       }
     }
