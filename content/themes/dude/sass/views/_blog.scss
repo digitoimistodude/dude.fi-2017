@@ -1,9 +1,10 @@
 .container {
   &.container-posts-navigation {
-    padding: 0;
     text-align: center;
     margin-bottom: 20px;
     background: #fff;
+    padding-top: 0;
+    padding-bottom: 4rem;
 
     h2.screen-reader-text {
       margin: 0;
@@ -30,15 +31,13 @@
   }
 
   &.container-blog-main {
-    background: #fff;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    background: #fff;    
   }
 
   &.container-blog-main,
   &.container-related-posts {
-    padding-top: 20px;
-    padding-bottom: 0;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 
     @media (max-width: $container-ipad) {
       padding: 20px 20px 0;
