@@ -83,7 +83,7 @@ article.entry-content a {
   }
 }
 
-.slide .shade {
+.shade {
   @include background-cover();
   background-color: transparent;
   background-image: url('../images/shade-gradient.png');
@@ -96,7 +96,7 @@ article.entry-content a {
   z-index: 0;
 }
 
-.slide .shade-extra {
+.shade-extra {
   background: linear-gradient(to bottom, rgba(#111, 0) 0%, rgba(#111, 0) 60%, rgba(#363f49, .4) 100%);
   opacity: 1;
 }
