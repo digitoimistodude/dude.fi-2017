@@ -15,7 +15,7 @@ get_header(); ?>
 
     <div id="primary" class="content-area" style="background-image:url('<?php echo get_theme_file_uri( 'images/404.gif' ) ?>')">
 
-      <div class="slide slide-notfound">
+      <div class="block block-notfound">
 
         <div class="shade"></div>
         <div class="shade shade-extra"></div>
@@ -29,7 +29,7 @@ get_header(); ?>
 
         </div><!-- .container -->
 
-      </div><!-- .slide -->
+      </div><!-- .block -->
 
   	</div><!-- #primary -->
 

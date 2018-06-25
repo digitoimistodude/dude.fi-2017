@@ -2,19 +2,19 @@
   if( !empty( $part['content_color'] ) ): ?>
 
     <style>
-      .slide-reference-description .container span,
-      .slide-reference-description .container h2,
-      .slide-reference-description .container p {
+      .block-reference-description .container span,
+      .block-reference-description .container h2,
+      .block-reference-description .container p {
         color: <?php echo $part['content_color'] ?> !important;
       }
 
-      .slide-reference-description .container span:after {
+      .block-reference-description .container span:after {
         background: <?php echo $part['content_color'] ?> !important;
       }
     </style>
   <?php endif; ?>
 
-  <div class="slide slide-reference-description" style="background-image: url('<?php echo wp_get_attachment_image_src( $part['image'], 'full' )[0] ?>');">
+  <div class="block block-reference-description" style="background-image: url('<?php echo wp_get_attachment_image_src( $part['image'], 'full' )[0] ?>');">
 
     <div class="container numbered">
 
@@ -28,5 +28,5 @@
 
     </div><!-- .container -->
 
-  </div><!-- .slide -->
+  </div><!-- .block -->
 <?php endif; ?>

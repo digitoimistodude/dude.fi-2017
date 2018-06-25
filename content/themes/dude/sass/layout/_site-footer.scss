@@ -89,13 +89,13 @@
     }
   }
 
-  .slide {
-    &.slide-footer {
+  .block {
+    &.block-footer {
       text-align: center;
       background: transparent;
     }
 
-    &.slide-end {
+    &.block-end {
       background: transparent;
 
       .container {

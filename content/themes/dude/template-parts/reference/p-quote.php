@@ -5,7 +5,7 @@ $quote_name = get_post_meta( get_the_id(), '_quote_name', true );
 $quote_title = get_post_meta( get_the_id(), '_quote_title', true );
 $quote_image = get_post_meta( get_the_id(), '_quote_image', true ); ?>
 
-<div class="slide slide-customer-story <?php if( empty( $part['sub_title'] ) ): ?>no-top-padding<?php endif; ?>">
+<div class="block block-customer-story <?php if( empty( $part['sub_title'] ) ): ?>no-top-padding<?php endif; ?>">
 
   <div class="container">
 
@@ -28,4 +28,4 @@ $quote_image = get_post_meta( get_the_id(), '_quote_image', true ); ?>
 
   </div><!-- .container -->
 
-</div><!-- .slide -->
+</div><!-- .block -->

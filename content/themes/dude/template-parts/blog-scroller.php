@@ -11,14 +11,14 @@ else:
   $title = get_post_meta( get_the_id(), '_fp_blog_title', true );
 endif; ?>
 
-<div id="blog-scroller" class="slide slide-blogposts">
+<div id="blog-scroller" class="block block-blogposts">
   <div class="shade"></div>
 
   <?php if( !empty( $title ) ): ?>
     <h2><?php echo $title ?></h2>
   <?php endif; ?>
 
-  <div class="blogposts slider" data-rest-paged="2" data-rest-cat="<?php echo $cat ?>">
+  <div class="blogposts blockr" data-rest-paged="2" data-rest-cat="<?php echo $cat ?>">
 
     <?php $the_query = new WP_Query( array(
       'post_type'       => 'post',
@@ -97,4 +97,4 @@ endif; ?>
     </div>
   </div>
 
-</div><!-- .slide-blogposts -->
+</div><!-- .block-blogposts -->

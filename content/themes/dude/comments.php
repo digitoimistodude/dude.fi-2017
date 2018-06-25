@@ -20,7 +20,7 @@ if( post_password_required() ) {
 }
 ?>
 
-<div class="slide slide-comments">
+<div class="block block-comments">
 
   <div class="container" id="kommentoi">
 
@@ -91,4 +91,4 @@ if( post_password_required() ) {
 
   </div><!-- .container -->
 
-</div><!-- .slide -->
+</div><!-- .block -->

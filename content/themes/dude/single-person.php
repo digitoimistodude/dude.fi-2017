@@ -63,17 +63,17 @@ get_template_part( 'template-parts/hero', 'person' ); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-      <div class="slide slide-person-introduction">
+      <div class="block block-person-introduction">
 
         <div class="container">
           <?php the_content(); ?>
         </div><!-- .container -->
 
-      </div><!-- .slide -->
+      </div><!-- .block -->
 
 
       <?php if( !empty( $project_upsell ) && !empty( $instagram['data'][0] ) && $user_posts ): ?>
-        <div class="slide slide-person-top-things">
+        <div class="block block-person-top-things">
 
           <div class="container">
 
@@ -125,11 +125,11 @@ get_template_part( 'template-parts/hero', 'person' ); ?>
 
           </div><!-- .container -->
 
-        </div><!-- .slide -->
+        </div><!-- .block -->
       <?php endif; ?>
 
       <?php if( !empty( $cols_title ) ): ?>
-        <div class="slide slide-person-more">
+        <div class="block block-person-more">
 
           <div class="container">
 
@@ -156,11 +156,11 @@ get_template_part( 'template-parts/hero', 'person' ); ?>
 
           </div><!-- .container -->
 
-        </div><!-- .slide -->
+        </div><!-- .block -->
       <?php endif;
 
       if( !empty( $numbers_title ) && !empty( $numbers_bg ) && !empty( $numbers ) ): ?>
-        <div class="slide slide-stats" style="background-image: url('<?php echo esc_url( wp_get_attachment_url( $numbers_bg ) ); ?>');";>
+        <div class="block block-stats" style="background-image: url('<?php echo esc_url( wp_get_attachment_url( $numbers_bg ) ); ?>');";>
           <div class="shade"></div>
 
           <div class="container">
@@ -188,12 +188,12 @@ get_template_part( 'template-parts/hero', 'person' ); ?>
 
           </div><!-- .container -->
 
-        </div><!-- .slide -->
+        </div><!-- .block -->
       <?php endif;
 
       set_query_var( 'persons_title', $persons_title );
       set_query_var( 'persons_query', $persons_query );
-      get_template_part( 'template-parts/staff', 'slider' ); ?>
+      get_template_part( 'template-parts/staff', 'blockr' ); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

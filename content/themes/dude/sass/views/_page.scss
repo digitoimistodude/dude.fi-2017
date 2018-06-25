@@ -1,10 +1,10 @@
 body.page {
   #page {
     .site-content {
-      .slide {
+      .block {
 
-        // Default hero slide on empty page
-        &.slide-hero {
+        // Default hero block on empty page
+        &.block-hero {
           height: 80vh;
           max-height: 700px;
 
@@ -22,7 +22,7 @@ body.page {
   }
 }
 
-.slide.slide-hero {
+.block.block-hero {
   position: relative;
   background-color: #333;
   background-image: none;

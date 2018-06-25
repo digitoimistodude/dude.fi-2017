@@ -1,4 +1,4 @@
-.slide {
+.block {
   .scroll-down {
     @include horizontal-align();
     position: absolute;
@@ -45,7 +45,7 @@
     }
   }
 
-  &.slide-front-page {
+  &.block-front-page {
     height: 100.1vh;
     background-image: url('../images/dude-2016.jpg');
     max-height: 1200px;
@@ -124,7 +124,7 @@
     }
   }
 
-  &.slide-content {
+  &.block-content {
     background: #fff;
 
     h2 {
@@ -226,10 +226,10 @@
         }
       }
     }
-  } // .slide-content
+  } // .block-content
 
   // References
-  &.slide-feed {
+  &.block-feed {
     background: #222427;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -612,7 +612,7 @@
     } // .mosaic-section
   } // .cols-references
 
-  &.slide-blogposts {
+  &.block-blogposts {
     padding-top: 100px;
     padding-bottom: 60px;
     position: relative;

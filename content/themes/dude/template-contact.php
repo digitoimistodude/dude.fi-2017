@@ -35,7 +35,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-      <div class="slide slide-contact-form">
+      <div class="block block-contact-form">
 
         <div class="container">
           <?php the_content(); ?>
@@ -43,9 +43,9 @@ get_header(); ?>
           <?php echo do_shortcode( '[libre-form id="2048"]' ); ?>
         </div><!-- .container -->
 
-      </div><!-- .slide -->
+      </div><!-- .block -->
 
-      <div class="slide slide-dude-contact-info">
+      <div class="block block-dude-contact-info">
 
         <div class="dudes">
           <?php if( $persons_query->have_posts() ):
@@ -95,9 +95,9 @@ get_header(); ?>
 
         </div><!-- .company-info -->
 
-      </div><!-- .slide -->
+      </div><!-- .block -->
 
-      <div class="slide slide-location">
+      <div class="block block-location">
         <div class="col col-map" id="map"></div>
         <div class="col col-office"></div>
       </div>

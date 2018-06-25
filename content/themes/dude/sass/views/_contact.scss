@@ -1,5 +1,5 @@
-.slide {
-  &.slide-contact-form {
+.block {
+  &.block-contact-form {
     background: rgba(#18191d, .95);
 
     .container {
@@ -276,11 +276,11 @@
     }
   }
 
-  &.slide-contact-details {
+  &.block-contact-details {
     display: none;
   }
 
-  &.slide-dude-contact-info {
+  &.block-dude-contact-info {
     overflow: hidden;
     text-align: center;
 
@@ -408,7 +408,7 @@
     }
   }
 
-  &.slide-location {
+  &.block-location {
     background-color: #ccc;
     height: 50vh;
 

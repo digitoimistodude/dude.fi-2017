@@ -1,5 +1,5 @@
 <?php if( !empty( $persons_title ) && $persons_query->have_posts() ): ?>
-  <div class="slide slide-staff<?php if( is_singular( 'person' ) ): echo ' slide-staff-single-person'; endif; ?>">
+  <div class="block block-staff<?php if( is_singular( 'person' ) ): echo ' block-staff-single-person'; endif; ?>">
 
     <div class="container <?php if( is_singular( 'person' ) ): echo ' dudet-3'; endif; ?>">
 
@@ -29,5 +29,5 @@
       </div>
     </div><!-- .container -->
 
-  </div><!-- .slide-staff -->
+  </div><!-- .block-staff -->
 <?php endif; ?>

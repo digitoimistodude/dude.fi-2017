@@ -12,8 +12,8 @@ body.page-template-template-contributions {
     }
 
     .site-content {
-      .slide {
-        &.slide-hero.slide-hero-contributions {
+      .block {
+        &.block-hero.block-hero-contributions {
           background-image: none;
           background-color: transparent;
           height: 100vh;
@@ -34,7 +34,7 @@ body.page-template-template-contributions {
           }
         }
 
-        &.slide-contributions-introduction {
+        &.block-contributions-introduction {
           background: #fff;
 
           .container {
@@ -58,7 +58,7 @@ body.page-template-template-contributions {
           }
         }
 
-        &.slide-techniques {
+        &.block-techniques {
           background: $color-almostblack;
 
           @media(max-width: $container-mobile) {
@@ -254,7 +254,7 @@ body.page-template-template-contributions {
           } // .logos-tech
         }
 
-        &.slide-contributions {
+        &.block-contributions {
           background: #fff;
 
           h2 {

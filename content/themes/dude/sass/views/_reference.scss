@@ -1,15 +1,15 @@
-.slide {
+.block {
 
   // Reference links
-  &.slide-reference p:not(.button-wrapper) a,
-  &.slide-reference p:not(.button-wrapper) a:link,
-  &.slide-reference p:not(.button-wrapper) a:visited,
-  &.slide-customer-story p:not(.button-wrapper) a,
-  &.slide-customer-story p:not(.button-wrapper) a:link,
-  &.slide-customer-story p:not(.button-wrapper) a:visited,
-  &.slide-reference-description p:not(.button-wrapper) a,
-  &.slide-reference-description p:not(.button-wrapper) a:link,
-  &.slide-reference-description p:not(.button-wrapper) a:visited {
+  &.block-reference p:not(.button-wrapper) a,
+  &.block-reference p:not(.button-wrapper) a:link,
+  &.block-reference p:not(.button-wrapper) a:visited,
+  &.block-customer-story p:not(.button-wrapper) a,
+  &.block-customer-story p:not(.button-wrapper) a:link,
+  &.block-customer-story p:not(.button-wrapper) a:visited,
+  &.block-reference-description p:not(.button-wrapper) a,
+  &.block-reference-description p:not(.button-wrapper) a:link,
+  &.block-reference-description p:not(.button-wrapper) a:visited {
     color: $color-blog-links;
     text-decoration: none;
     text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
@@ -22,7 +22,7 @@
     }
   }
 
-  &.slide-video {
+  &.block-video {
     video {
       width: 100%;
       height: auto;
@@ -50,7 +50,7 @@
   }
 
   // archive-reference.php
-  &.slide-references {
+  &.block-references {
     text-align: center;
     padding-top: 150px;
     padding-bottom: 0;
@@ -75,14 +75,14 @@
     }
   }
 
-  &.slide-feed {
-    &.slide-feed-reference-page {
+  &.block-feed {
+    &.block-feed-reference-page {
       background: #fff;
       padding-top: 0;
     }
   }
 
-  &.slide-call-to-action {
+  &.block-call-to-action {
     background: $color-dark-blueish;
     text-align: center;
 
@@ -123,7 +123,7 @@
     }
   }
 
-  &.slide-reference {
+  &.block-reference {
     .container {
       max-width: 840px;
       overflow: visible;
@@ -230,7 +230,7 @@
     }
   }
 
-  &.slide-before-after {
+  &.block-before-after {
     // Default background-color if none set:
     background-color: #ececec;
 
@@ -288,7 +288,7 @@
     }
   }
 
-  &.slide-visit-site {
+  &.block-visit-site {
     margin-top: -6rem;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -306,7 +306,7 @@
     }
   }
 
-  &.slide-customer-story {
+  &.block-customer-story {
     background-color: #fff;
 
     .twitter-tweet {
@@ -334,7 +334,7 @@
       }
     }
 
-    &.slide-dark-with-images {
+    &.block-dark-with-images {
       background-color: #222;
 
       h1,
@@ -362,7 +362,7 @@
       }
     }
 
-    &.slide-customer-story-columns-onlytext {
+    &.block-customer-story-columns-onlytext {
       .column-text {
         text-align: center;
 
@@ -396,7 +396,7 @@
       }
     }
 
-    &.slide-customer-story-columns {
+    &.block-customer-story-columns {
       text-align: left;
 
       .container,
@@ -583,7 +583,7 @@
     }
   }
 
-  &.slide-single-centered-image {
+  &.block-single-centered-image {
     padding-top: 0;
     padding-bottom: 0;
 
@@ -598,7 +598,7 @@
     }
   }
 
-  &.slide-images-with-padding {
+  &.block-images-with-padding {
     .container {
       padding-top: 4rem;
       padding-bottom: 4rem;
@@ -618,7 +618,7 @@
     }
   }
 
-  &.slide-reference-description {
+  &.block-reference-description {
     @include background-auto();
     background-position: bottom center;
     background-color: transparent;
@@ -650,7 +650,7 @@
     }
   }
 
-  &.slide-reference-images {
+  &.block-reference-images {
     background: transparent;
     margin-top: -280px;
     padding: 0;
@@ -669,7 +669,7 @@
     }
   }
 
-  &.slide-reference-image {
+  &.block-reference-image {
     text-align: center;
 
     .reference-image {
@@ -678,7 +678,7 @@
     }
   }
 
-  &.slide-next-reference {
+  &.block-next-reference {
     &:hover {
       cursor: pointer;
 
@@ -724,7 +724,7 @@
     }
   }
 
-  &.slide-three-showcase {
+  &.block-three-showcase {
     .col {
       @include column(1/3, $cycle: 3);
       @include background-cover();
@@ -742,7 +742,7 @@
     }
   }
 
-  &.slide-no-bottom-padding {
+  &.block-no-bottom-padding {
     padding-bottom: 0;
 
     .container {

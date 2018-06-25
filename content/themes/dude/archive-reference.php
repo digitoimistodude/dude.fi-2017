@@ -16,7 +16,7 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 
-    <div class="slide slide-references">
+    <div class="block block-references">
 
       <div class="container">
 
@@ -29,7 +29,7 @@ get_header(); ?>
     </div>
 
     <?php if( have_posts() ): ?>
-      <div class="slide slide-feed slide-feed-reference-page slide-content">
+      <div class="block block-feed block-feed-reference-page block-content">
         <div class="container">
 
           <div class="cols cols-references">
@@ -48,11 +48,11 @@ get_header(); ?>
 
         </div><!-- .container -->
 
-      </div><!-- .slide-feed -->
+      </div><!-- .block-feed -->
     <?php endif;
 
     if( !empty( $cta ) ): ?>
-      <div class="slide slide-call-to-action">
+      <div class="block block-call-to-action">
         <div class="container">
           <?php echo wpautop( $cta ) ?>
         </div>

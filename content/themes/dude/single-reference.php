@@ -26,7 +26,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-      <div class="slide slide-reference">
+      <div class="block block-reference">
 
         <div class="container">
 
@@ -53,10 +53,10 @@ get_header();
 
         </div><!-- .container -->
 
-      </div><!-- .slide -->
+      </div><!-- .block -->
 
       <?php if( $show_general ): ?>
-        <div class="slide slide-customer-story">
+        <div class="block block-customer-story">
 
           <div class="container no-bottom-padding">
 
@@ -77,7 +77,7 @@ get_header();
 
           </div><!-- .container -->
 
-        </div><!-- .slide -->
+        </div><!-- .block -->
       <?php endif;
 
       if( !empty( $parts ) ):
@@ -88,7 +88,7 @@ get_header();
 
       $prev_post = get_previous_post();
       if( !empty( $prev_post ) ): ?>
-        <div class="slide slide-next-reference" style="background-image: url('<?php echo get_the_post_thumbnail_url( $prev_post->ID, 'large' ) ?>');">
+        <div class="block block-next-reference" style="background-image: url('<?php echo get_the_post_thumbnail_url( $prev_post->ID, 'large' ) ?>');">
           <a href="<?php the_permalink( $prev_post ) ?>">
             <div class="shade"></div>
 
@@ -104,7 +104,7 @@ get_header();
           'posts_per_page'  => 1,
           'fields'          => 'ids'
         ) ); ?>
-        <div class="slide slide-next-reference" style="background-image: url('<?php echo get_the_post_thumbnail_url( $newest_reference[0], 'large' ) ?>');">
+        <div class="block block-next-reference" style="background-image: url('<?php echo get_the_post_thumbnail_url( $newest_reference[0], 'large' ) ?>');">
           <a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">
             <div class="shade"></div>
 

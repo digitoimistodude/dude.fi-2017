@@ -51,7 +51,7 @@ $coffee = dude_get_coffee_drunk(); ?>
       </div>
     <?php endif; ?>
 
-    <div class="slide slide-footer">
+    <div class="block block-footer">
       <div class="container">
 
         <?php if( !empty( $contact_person_title ) && !empty( $contact_person_name ) && ( !empty( $contact_person_email ) || !empty( $contact_person_phone ) ) ): ?>
@@ -93,9 +93,9 @@ $coffee = dude_get_coffee_drunk(); ?>
         <?php endif; ?>
 
       </div><!-- .container -->
-    </div><!-- .slide -->
+    </div><!-- .block -->
 
-    <div class="slide slide-end">
+    <div class="block block-end">
 
       <div class="container">
 
@@ -180,7 +180,7 @@ $coffee = dude_get_coffee_drunk(); ?>
         </div><!-- .col -->
 
       </div><!-- .container -->
-    </div><!-- .slide -->
+    </div><!-- .block -->
 
 	</footer><!-- #colophon -->
 

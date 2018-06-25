@@ -6,7 +6,7 @@ get_template_part( 'template-parts/hero', 'page' ); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-      <div class="slide slide-single-blog-post">
+      <div class="block block-single-blog-post">
 
         <div class="container" style="padding-bottom:8rem;">
 

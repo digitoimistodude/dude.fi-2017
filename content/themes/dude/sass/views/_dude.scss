@@ -1,5 +1,5 @@
-.slide {
-  &.slide-dude {
+.block {
+  &.block-dude {
     height: 100vh;
     max-height: 1600px;
     background-image: url('../images/dudet-2016.jpg');
@@ -58,7 +58,7 @@
     }
   }
 
-  &.slide-dude-content {
+  &.block-dude-content {
     .container {
       max-width: $container-desktop;
       padding-bottom: 0;
@@ -216,7 +216,7 @@
     }
   }
 
-  &.slide-staff {
+  &.block-staff {
     overflow: hidden;
     white-space: nowrap;
 
@@ -373,9 +373,9 @@
         }
       }
     }
-  } // .slide-staff
+  } // .block-staff
 
-  &.slide-values {
+  &.block-values {
     background: #252525;
 
     .container {

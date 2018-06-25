@@ -14,7 +14,7 @@ get_template_part( 'template-parts/hero', 'blog' ); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-      <div class="slide slide-single-blog-post">
+      <div class="block block-single-blog-post">
 
         <div class="container">
 
@@ -93,11 +93,11 @@ get_template_part( 'template-parts/hero', 'blog' ); ?>
 
           </div><!-- .container -->
 
-  			</div><!-- .slide -->
+  			</div><!-- .block -->
 
         <?php if( function_exists( 'related_entries' ) ): ?>
 
-          <div class="slide slide-related-posts ">
+          <div class="block block-related-posts ">
               <div class="container">
                 <h2 class="related-title"><?php _e( 'Lue seuraavaksi', 'dude' ) ?></h2>
               </div>

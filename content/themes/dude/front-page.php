@@ -21,7 +21,7 @@ get_header(); ?>
 	<div class="content-area">
 		<main id="main" class="site-main">
 
-      <div class="slide slide-first slide-front-page" <?php if ( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url(wp_get_attachment_url( get_post_thumbnail_id() ) ); ?>');"<?php endif; ?>>
+      <div class="block block-first block-front-page" <?php if ( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url(wp_get_attachment_url( get_post_thumbnail_id() ) ); ?>');"<?php endif; ?>>
         <div class="shade"></div>
         <div class="shade shade-extra"></div>
 
@@ -46,10 +46,10 @@ get_header(); ?>
             <p><?php echo file_get_contents( get_theme_file_path( 'svg/angle-down.svg' ) ); ?></p>          
         </div>
 
-      </div><!-- .slide -->
+      </div><!-- .block -->
 
 
-      <div id="primary" class="slide slide-content slide-content-services scroll-down-anchor">
+      <div id="primary" class="block block-content block-content-services scroll-down-anchor">
 
         <div class="container">
 
@@ -89,11 +89,11 @@ get_header(); ?>
 
         </div><!-- .container -->
 
-      </div><!-- .slide-content-services -->
+      </div><!-- .block-content-services -->
 
 
       <?php if( !empty( $references_title ) || !empty( $clients_title ) ): ?>
-        <div class="slide slide-feed slide-content">
+        <div class="block block-feed block-content">
 
           <?php if( !empty( $references_title ) ): ?>
             <div class="container">
@@ -239,7 +239,7 @@ get_header(); ?>
             </div>
           <?php endif; ?>
 
-        </div><!-- .slide-feed -->
+        </div><!-- .block-feed -->
       <?php endif; ?>
 
       <?php if( !empty( $blog_title ) ) :

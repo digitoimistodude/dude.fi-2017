@@ -33,8 +33,8 @@ function load_posts() {
 
       jQuery('.blogposts').attr('data-rest-paged', parseInt( paged )+1);
     } else if( response == false ) {
-      jQuery('.blogposts').slick( 'slickAdd', jQuery('.slide-blogposts .last-card-holder').html() );
-      jQuery('.slide-blogposts .last-card-holder').remove();
+      jQuery('.blogposts').slick( 'slickAdd', jQuery('.block-blogposts .last-card-holder').html() );
+      jQuery('.block-blogposts .last-card-holder').remove();
     }
   });
 }
@@ -43,35 +43,35 @@ function load_posts() {
 
   // On slick init, set blog area bg
   jQuery('.blogposts').on('init', function(event, slick) {
-    var shade = jQuery('.slide-blogposts .shade');
+    var shade = jQuery('.block-blogposts .shade');
     var featured_bg =  jQuery('.blogpost').get( 0 );
 
     shade.css( 'background-image', 'url(' + jQuery( featured_bg ).attr( 'data-background' ) + ')' );
   });
 
-  // Blog "slider"
+  // Blog "blockr"
   jQuery('.blogposts').slick({
     dots: false,
     arrows: true,
     infinite: false,
     speed: 100,
-    slidesToShow: 3,
-    slidesToScroll: 1,
+    blocksToShow: 3,
+    blocksToScroll: 1,
     centerMode: false,
     variableWidth: true,
     draggable: false,
-    swipeToSlide: true,
-    appendArrows: jQuery('.slide-blogposts')
+    swipeToblock: true,
+    appendArrows: jQuery('.block-blogposts')
   });
 
-  // On slider change, set bg and maybe load more posts
-  jQuery('.blogposts').on('afterChange', function(event, slick, currentSlide) {
-    var shade = jQuery('.slide-blogposts .shade');
-    var featured_bg =  jQuery('.blogpost').get( currentSlide );
+  // On blockr change, set bg and maybe load more posts
+  jQuery('.blogposts').on('afterChange', function(event, slick, currentblock) {
+    var shade = jQuery('.block-blogposts .shade');
+    var featured_bg =  jQuery('.blogpost').get( currentblock );
 
     shade.css( 'background-image', 'url(' + jQuery( featured_bg ).attr( 'data-background' ) + ')' );
 
-    if( currentSlide === jQuery('.blogpost').length-12 ) {
+    if( currentblock === jQuery('.blogpost').length-12 ) {
       load_posts();
     }
   });

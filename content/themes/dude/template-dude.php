@@ -54,7 +54,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-      <div class="slide slide-first slide-dude"<?php if( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url( wp_get_attachment_url( get_post_thumbnail_id() ) ); ?>');"<?php endif; ?>>
+      <div class="block block-first block-dude"<?php if( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url( wp_get_attachment_url( get_post_thumbnail_id() ) ); ?>');"<?php endif; ?>>
         <div class="shade"></div>
         <div class="shade shade-extra"></div>
 
@@ -68,9 +68,9 @@ get_header(); ?>
 
         </div><!-- .container -->
 
-      </div><!-- .slide -->
+      </div><!-- .block -->
 
-      <div class="slide slide-dude-content">
+      <div class="block block-dude-content">
 
         <div class="container">
 
@@ -113,14 +113,14 @@ get_header(); ?>
           </div><!-- .cols -->
 
         </div><!-- .container -->
-      </div><!-- .slide -->
+      </div><!-- .block -->
 
       <?php set_query_var( 'persons_title', $persons_title );
       set_query_var( 'persons_query', $persons_query );
-      get_template_part( 'template-parts/staff', 'slider' );
+      get_template_part( 'template-parts/staff', 'blockr' );
 
       if( !empty( $values_title ) && !empty( $values ) ): ?>
-        <div class="slide slide-values">
+        <div class="block block-values">
 
           <div class="container">
 
@@ -153,7 +153,7 @@ get_header(); ?>
 
           </div>
 
-        </div><!-- .slide -->
+        </div><!-- .block -->
       <?php endif; ?>
 
       <?php get_template_part( 'template-parts/blog-scroller' ); ?>
