@@ -1,5 +1,5 @@
 <?php if( !empty( $part['number1_value'] ) && !empty( $part['number1_format'] ) && !empty( $part['number1_label'] ) ): ?>
-  <div class="slide slide-customer-story no-bottom-padding">
+  <div class="block block-customer-story no-bottom-padding">
 
     <div class="container">
 

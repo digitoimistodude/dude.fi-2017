@@ -3,14 +3,14 @@
  * Default hero template file.
  *
  * This is the default hero image for page templates, called
- * 'slide'. Strictly dude specific.
+ * 'block'. Strictly dude specific.
  *
  * @package dude
  */
 
 ?>
 
-<div class="slide slide-hero" <?php if ( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url(wp_get_attachment_url( get_post_thumbnail_id() ) ); ?>');"<?php endif; ?>>
+<div class="block block-hero" <?php if ( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url(wp_get_attachment_url( get_post_thumbnail_id() ) ); ?>');"<?php endif; ?>>
   <div class="shade"></div>
 
   <div class="container container-centered">

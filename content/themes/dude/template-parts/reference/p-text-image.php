@@ -1,5 +1,5 @@
 <?php if( !empty( $part['content'] ) && !empty( $part['image'] ) ): ?>
-  <div class="slide slide-customer-story slide-customer-story-columns">
+  <div class="block block-customer-story block-customer-story-columns">
 
     <div class="container">
 
@@ -23,5 +23,5 @@
 
     </div><!-- .container -->
 
-  </div><!-- .slide -->
+  </div><!-- .block -->
 <?php endif; ?>

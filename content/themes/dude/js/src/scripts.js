@@ -61,7 +61,7 @@
 
   $(function() {
 
-    // Prevent 100vh slides from "jumping" when browsing on mobile and address bar goes hidden
+    // Prevent 100vh blocks from "jumping" when browsing on mobile and address bar goes hidden
     function greedyJumbotron() {
         var HEIGHT_CHANGE_TOLERANCE = 100; // Approximately URL bar height in Chrome on tablet
 
@@ -82,7 +82,7 @@
         update();
     }
 
-    $('.slide-front-page, .slide-hero-contributions').each(greedyJumbotron);
+    $('.block-front-page, .block-hero-contributions').each(greedyJumbotron);
 
     var dude_cookie_status = Cookies.get( 'dude_cookie_status' );
     if( dude_cookie_status === 'dismiss' ) {

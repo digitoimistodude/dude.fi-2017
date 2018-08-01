@@ -3,7 +3,7 @@
  * Blog hero template file.
  *
  * This is the default hero image for page templates, called
- * 'slide'. Strictly dude specific.
+ * 'block'. Strictly dude specific.
  *
  * @package dude
  */
@@ -14,7 +14,7 @@ if( is_archive() && !empty( term_description() ) ) {
 }
 ?>
 
-<div class="slide slide-hero slide-hero-main-blog" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/typewriter-1.jpg');">
+<div class="block block-hero block-hero-main-blog" style="background-image:url('<?php echo get_template_directory_uri(); ?>/images/typewriter-1.jpg');">
   <div class="shade"></div>
   <div class="shade shade-extra"></div>
 

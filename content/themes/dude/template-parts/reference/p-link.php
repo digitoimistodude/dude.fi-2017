@@ -1,5 +1,5 @@
 <?php if( !empty( $site_url ) ): ?>
-  <div class="slide slide-visit-site">
+  <div class="block block-visit-site">
 
     <div class="container no-top-padding">
 
@@ -11,5 +11,5 @@
 
     </div><!-- .container -->
 
-  </div><!-- .slide -->
+  </div><!-- .block -->
 <?php endif; ?>

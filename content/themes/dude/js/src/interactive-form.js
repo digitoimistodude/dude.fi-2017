@@ -19,8 +19,8 @@
 
     // Wplf submit callback
     window.wplf.successCallbacks.push( function( response ) {
-      $('.slide-contact-form h1').html( 'Kohta tanssitaan!' )
-      $('.slide-contact-form .container > p:first-of-type').hide()
+      $('.block-contact-form h1').html( 'Kohta tanssitaan!' )
+      $('.block-contact-form .container > p:first-of-type').hide()
       fitvids();
 
       var position = $('.wplf-success').offset();

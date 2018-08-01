@@ -76,7 +76,7 @@ get_template_part( 'template-parts/hero', 'service' ); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-      <div class="slide slide-service-info">
+      <div class="block block-service-info">
 
         <div class="container">
 
@@ -105,10 +105,10 @@ get_template_part( 'template-parts/hero', 'service' ); ?>
 
         </div><!-- .container -->
 
-      </div><!-- .slide -->
+      </div><!-- .block -->
 
       <?php if( !empty( $references_title ) && !empty( $references_service ) ): ?>
-        <div class="slide slide-service-references slide-<?php echo get_post_field( 'post_name' ) ?>">
+        <div class="block block-service-references block-<?php echo get_post_field( 'post_name' ) ?>">
 
           <div class="container">
 
@@ -169,7 +169,7 @@ get_template_part( 'template-parts/hero', 'service' ); ?>
             </div><!-- .container -->
           <?php endif; ?>
 
-        </div><!-- .slide -->
+        </div><!-- .block -->
       <?php endif;
 
       if( !empty( $blog_title ) && !empty( $blog_cat ) ) {
@@ -177,7 +177,7 @@ get_template_part( 'template-parts/hero', 'service' ); ?>
       }
 
       if( !empty( $area_02_title ) && !empty( $area_02_content ) ): ?>
-        <div class="slide slide-hosting-info">
+        <div class="block block-hosting-info">
 
           <div class="container">
             <div class="service-description">
@@ -213,7 +213,7 @@ get_template_part( 'template-parts/hero', 'service' ); ?>
             <?php endif; ?>
           </div><!-- .container -->
 
-        </div><!-- .slide -->
+        </div><!-- .block -->
       <?php endif; ?>
 
 		</main><!-- #main -->

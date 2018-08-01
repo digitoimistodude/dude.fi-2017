@@ -6,8 +6,8 @@ $slick-dot-character: '\2022' !default;
 $slick-dot-size: 6px !default;
 $opacity-default: .2;
 
-// Slider
-.slick-slider {
+// blockr
+.slick-blockr {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -32,8 +32,8 @@ $opacity-default: .2;
   }
 }
 
-.slick-slider .slick-track,
-.slick-slider .slick-list {
+.slick-blockr .slick-track,
+.slick-blockr .slick-list {
   transform: translate3d(0, 0, 0);
 }
 
@@ -60,7 +60,7 @@ $opacity-default: .2;
   }
 }
 
-.slick-slide {
+.slick-block {
   float: left;
   height: 100%;
   min-height: 1px;
@@ -152,9 +152,9 @@ body {
 body {
   #page {
     .site-content {
-      .slide {
+      .block {
 
-        &.slide-front {
+        &.block-front {
           background-color: #222;
           height: 100vh;
           max-height: 1200px;
@@ -217,8 +217,8 @@ body {
           }
         }
 
-        // Slider
-        &.slide-blogposts {
+        // blockr
+        &.block-blogposts {
 
           // Arrows
           .slick-arrow {

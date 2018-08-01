@@ -1,6 +1,6 @@
 <?php if( !empty( $part['video'] ) ):
   $video = $part['video']; ?>
-  <div class="slide slide-video">
+  <div class="block block-video">
     <div class="container browser">
       <div class="browser-bar"></div>
       <video autoplay loop preload>
@@ -9,5 +9,5 @@
         <source src="<?php echo get_theme_file_uri( "videos/{$video}.ogv" ) ?>" type="video/ogv" />
       </video>
     </div>
-  </div><!-- .slide -->
+  </div><!-- .block -->
 <?php endif; ?>

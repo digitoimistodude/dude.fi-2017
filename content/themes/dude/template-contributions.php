@@ -20,7 +20,7 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 
-    <div class="slide slide-hero slide-hero-contributions"<?php if( has_post_thumbnail() ): ?>  style="background-image:url('<?php echo esc_url( wp_get_attachment_url( get_post_thumbnail_id() ) ); ?>');"<?php endif; ?>>
+    <div class="block block-hero block-hero-contributions"<?php if( has_post_thumbnail() ): ?>  style="background-image:url('<?php echo esc_url( wp_get_attachment_url( get_post_thumbnail_id() ) ); ?>');"<?php endif; ?>>
       <div class="shade"></div>
 
       <div class="container">
@@ -33,18 +33,18 @@ get_header(); ?>
         <p><a href="#kontribuutiot" class="button button-white"><?php _e( 'Katso julkaisumme', 'dude' ) ?></a></p>
 
       </div>
-    </div><!-- .slide -->
+    </div><!-- .block -->
 
-    <div class="slide slide-contributions-introduction">
+    <div class="block block-contributions-introduction">
 
       <div class="container">
         <?php the_content(); ?>
       </div><!-- .container -->
 
-    </div><!-- .slide -->
+    </div><!-- .block -->
 
     <?php if( !empty( $techniques_title ) ): ?>
-      <div class="slide slide-techniques">
+      <div class="block block-techniques">
 
         <div class="container">
           <h2><?php echo $techniques_title ?></h2>
@@ -120,11 +120,11 @@ get_header(); ?>
             </div><!-- .logos -->
           </div>
         </div>
-      </div><!-- .slide -->
+      </div><!-- .block -->
     <?php endif;
 
     if( !empty( $contributions_title ) ): ?>
-      <div class="slide slide-contributions" id="kontribuutiot">
+      <div class="block block-contributions" id="kontribuutiot">
 
         <div class="container">
           <h2><?php echo $contributions_title ?></h2>
