@@ -93,7 +93,6 @@ a {
       text-shadow: none;
       font-size: 15px;
       font-weight: 700;
-      text-transform: uppercase;
       transition: all .5s;
       z-index: 90;
 
@@ -138,10 +137,9 @@ a {
 
       a {
         color: rgba(#fff, .9);
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 700;
-        font-family: $font-headings;
-        text-transform: uppercase;
+        font-family: $font-base;
         transition: .5s all;
         bottom: 0;
         margin: 0;

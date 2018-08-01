@@ -79,7 +79,7 @@
       h1 {
         @include responsive-font(5vw, 30px, 60px);
         color: #fff;
-        text-transform: uppercase;
+        text-transform: none;
         line-height: 1.1;
         font-weight: 700;
         width: 40%;
@@ -478,7 +478,7 @@
 
     p {
       font-size: 16px;
-      text-transform: uppercase;
+      text-transform: none;
       font-weight: 600;
       opacity: .9;
       color: #fff;
