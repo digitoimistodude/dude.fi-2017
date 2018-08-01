@@ -4,7 +4,7 @@
 @import 'webfonts';
 
 // Reset & grid
-@import 'normalize.css/normalize';
+@import 'normalize';
 @import 'jeet/scss/index';
 
 // Theme options
@@ -13,7 +13,6 @@
 // Helpers
 @import 'helpers';
 @import 'accessibility';
-// @import 'burger';
 @import 'animations';
 
 // Structure

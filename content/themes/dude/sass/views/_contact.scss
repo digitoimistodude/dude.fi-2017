@@ -1,433 +1,427 @@
-body {
-  #page {
-    .site-content {
-      .slide {
-        &.slide-contact-form {
-          background: rgba(#18191d, .95);
+body #page .site-content .block {
+  &.block-contact-form {
+    background: rgba(#18191d, .95);
 
-          .container {
-            padding-top: 17rem;
-            padding-bottom: 15rem;
-            max-width: 700px;
+    .container {
+      padding-top: 17rem;
+      padding-bottom: 15rem;
+      max-width: 700px;
 
-            @media(max-width: $container-mobile) {
-              padding-top: 10rem;
-              padding-bottom: 8rem;
-            }
-          }
+      @media (max-width: $container-mobile) {
+        padding-top: 10rem;
+        padding-bottom: 8rem;
+      }
+    }
 
-          .wplf-success {
-            p:first-child {
-              margin-bottom: 30px;
-            }
-          }
+    .wplf-success {
+      p:first-child {
+        margin-bottom: 30px;
+      }
+    }
 
-          h1,
-          p {
-            color: #fff;
-            margin: 0;
+    h1,
+    p {
+      color: #fff;
+      margin: 0;
 
-            a {
-              color: #aaa;
-              text-decoration: none;
-              text-shadow: 1px 1px 0 #212327, -1px 1px 0 #212327, 2px 0 0 #212327, -2px 0 0 #212327;
-              box-shadow: inset 0 -1px 0 0 #212327, inset 0 -3px 0 0 #444;
-              transition: all .55s;
+      a {
+        color: #aaa;
+        text-decoration: none;
+        text-shadow: 1px 1px 0 #212327, -1px 1px 0 #212327, 2px 0 0 #212327, -2px 0 0 #212327;
+        box-shadow: inset 0 -1px 0 0 #212327, inset 0 -3px 0 0 #444;
+        transition: all .55s;
 
-              &:hover {
-                color: #fff;
-                box-shadow: inset 0 -1px 0 0 #212327, inset 0 -4px 0 0 $color-links;
-              }
-            }
-          }
+        &:hover {
+          color: #fff;
+          box-shadow: inset 0 -1px 0 0 #212327, inset 0 -4px 0 0 $color-links;
+        }
+      }
+    }
 
-          h1 {
-            text-transform: uppercase;
-            margin-bottom: 20px;
-          }
+    h1 {
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
 
-          form {
-            display: block;
-            margin-top: 30px;
-            text-align: left;
+    form {
+      display: block;
+      margin-top: 30px;
+      text-align: left;
 
-            // Field styles
-            textarea {
-              min-height: 100px;
-            }
+      // Field styles
+      textarea {
+        min-height: 100px;
+      }
 
-            input,
-            textarea {
-              background: transparent;
-              border-top: 0;
-              border-left: 0;
-              border-right: 0;
-              border-bottom: 1px solid rgba(#fff, .3);
-              padding: 20px;
-              font-family: $font-base;
-              font-size: 22px;
-              width: 100%;
-              display: block;
-              text-align: left;
-              outline: 0;
-              color: rgba(#fff, .3);
+      input,
+      textarea {
+        background: transparent;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid rgba(#fff, .3);
+        padding: 20px;
+        font-family: $font-base;
+        font-size: 22px;
+        width: 100%;
+        display: block;
+        text-align: left;
+        outline: 0;
+        color: rgba(#fff, .3);
 
-              &::placeholder {
-                color: rgba(#fff, .3);
-                opacity: 1;
-              }
+        &::placeholder {
+          color: rgba(#fff, .3);
+          opacity: 1;
+        }
 
-              &:focus {
-                border-bottom: 1px solid rgba(#fff, .8);
-                color: rgba(#fff, .8);
+        &:focus {
+          border-bottom: 1px solid rgba(#fff, .8);
+          color: rgba(#fff, .8);
 
-                &::placeholder {
-                  color: rgba(#fff, .8);
-                  opacity: 1;
-                }
-              }
-
-              @media(max-width: $container-mobile) {
-                padding-left: 0;
-              }
-            }
-
-            button {
-              overflow: hidden;
-              margin-top: 20px;
-            }
-
-            // Step styles
-            .phase {
-              position: absolute;
-              right: 20px;
-              color: #fff;
-              opacity: .15;
-              margin-top: -50px;
-
-              @media(max-width: 800px) {
-                right: 30px;
-              }
-            }
-
-            // Typing animation
-            .typer {
-              position: relative;
-              animation: blink 1s infinite;
-              top: -12px;
-              left: 2px;
-              white-space: nowrap;
-              color: $color-links;
-              opacity: 0;
-
-              &.visible {
-                opacity: 1;
-              }
-            }
-
-            .say-wrapper {
-              width: 100%;
-              overflow: hidden;
-              white-space: nowrap;
-              clear: both;
-              display: block;
-              line-height: 0;
-              height: 0;
-
-              @media(max-width: 800px) {
-                display: none;
-              }
-
-              &.visible {
-                height: 40px;
-                margin: 10px 0 10px 20px;
-              }
-            }
-
-            p {
-              margin: 0;
-
-              &.sayatme {
-                text-align: left;
-                font-size: 20px;
-                white-space: nowrap;
-                overflow: hidden;
-                display: inline-block;
-                width: 0;
-                color: $color-links;
-                font-style: italic;
-
-                &.type {
-                  animation: type 2s steps(60, end);
-                  width: 100%;
-                }
-              }
-            }
-
-            .form-wrapper {
-              transition: none;
-
-              label {
-                @extend .screen-reader-text;
-              }
-
-              input,
-              textarea,
-              button {
-                transition: none;
-
-                &::placeholder {
-                  transition: none;
-                }
-              }
-
-              .phase {
-                transition: none;
-
-                // Hidden by default
-                &.second,
-                &.third {
-                  opacity: 0;
-
-                  &.active {
-                    opacity: .15;
-                  }
-                }
-              }
-
-              &.animated {
-                input,
-                textarea,
-                button {
-                  transition: all .55s;
-
-                  &::placeholder {
-                    transition: all .55s;
-                  }
-                }
-
-                .phase {
-                  transition: all .55s;
-                }
-              }
-
-              .cols {
-                @include clearfix;
-
-                .col {
-                  @include column(1/3);
-
-                  &:first-of-type {
-                    @include column(2/3);
-                  }
-                }
-              }
-
-              // Fields
-              input,
-              textarea {
-                // Hidden by default
-                &#message,
-                &#email,
-                &#phone {
-                  height: 0;
-                  padding-top: 0;
-                  padding-bottom: 0;
-                  min-height: 0;
-                  border: 0;
-
-                  &.active {
-                    height: auto;
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                    border-bottom: 1px solid rgba(#fff, .3);
-                  }
-                }
-              }
-
-              textarea#message {
-                // Because of auto-expanding js
-                &.force-hidden {
-                  height: 0 !important;
-                }
-
-                &.active {
-                  min-height: 100px;
-                }
-              }
-
-              button {
-                // Hidden by default
-                height: 0;
-                padding-top: 0;
-                padding-bottom: 0;
-                min-height: 0;
-                border-top-width: 0;
-                border-bottom-width: 0;
-                margin-top: 0;
-
-                &.active {
-                  height: inherit;
-                  border-top-width: 2px;
-                  border-bottom-width: 2px;
-                  padding-top: 10px;
-                  padding-bottom: 10px;
-                  margin-top: 20px;
-                }
-              }
-            }
+          &::placeholder {
+            color: rgba(#fff, .8);
+            opacity: 1;
           }
         }
 
-        &.slide-contact-details {
+        @media (max-width: $container-mobile) {
+          padding-left: 0;
+        }
+      }
+
+      button {
+        overflow: hidden;
+        margin-top: 20px;
+      }
+
+      // Step styles
+      .phase {
+        position: absolute;
+        right: 20px;
+        color: #fff;
+        opacity: .15;
+        margin-top: -50px;
+
+        @media (max-width: 800px) {
+          right: 30px;
+        }
+      }
+
+      // Typing animation
+      .typer {
+        position: relative;
+        animation: blink 1s infinite;
+        top: -12px;
+        left: 2px;
+        white-space: nowrap;
+        color: $color-links;
+        opacity: 0;
+
+        &.visible {
+          opacity: 1;
+        }
+      }
+
+      .say-wrapper {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        clear: both;
+        display: block;
+        line-height: 0;
+        height: 0;
+
+        @media (max-width: 800px) {
           display: none;
         }
 
-        &.slide-dude-contact-info {
+        &.visible {
+          height: 40px;
+          margin: 10px 0 10px 20px;
+        }
+      }
+
+      p {
+        margin: 0;
+
+        &.sayatme {
+          text-align: left;
+          font-size: 20px;
+          white-space: nowrap;
           overflow: hidden;
-          text-align: center;
+          display: inline-block;
+          width: 0;
+          color: $color-links;
+          font-style: italic;
 
-          .dudes {
-            @include span(4/7);
-            background-color: #161513;
-            overflow: hidden;
+          &.type {
+            animation: type 2s steps(60, end);
+            width: 100%;
+          }
+        }
+      }
 
-            @media(max-width: 900px) {
-              @include stack();
-            }
+      .form-wrapper {
+        transition: none;
 
-            .dude {
-              @include span(1/2, $cycle: 2);
-              @include background-cover();
-              position: relative;
-              padding: 90px;
-              color: #fff;
-              filter: grayscale(100%);
-              transition: all .7s;
-              height: 400px;
+        label {
+          @extend .screen-reader-text;
+        }
 
-              @media(max-width: 1000px) {
-                padding: 20px;
-              }
+        input,
+        textarea,
+        button {
+          transition: none;
 
-              a.permalink {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                background: transparent;
-                z-index: 22;
-              }
+          &::placeholder {
+            transition: none;
+          }
+        }
 
-              .shade {
-                background-color: #151515;
-                opacity: .6;
-                transition: all .7s;
-              }
+        .phase {
+          transition: none;
 
-              &:hover {
-                filter: grayscale(0%);
+          // Hidden by default
+          &.second,
+          &.third {
+            opacity: 0;
 
-                .shade {
-                  opacity: .4;
-                }
-              }
-
-              .dude-content {
-                @include centered();
-                z-index: 12;
-                position: relative;
-                width: 100%;
-
-                * {
-                  color: #fff;
-                }
-
-                h4,
-                h5,
-                .dude-title {
-                  @include responsive-font(1.6vw, 16px, 19px);
-                  font-family: $font-headings;
-                  font-weight: 700;
-
-                  @media(max-width: $container-ipad-landscape) {
-                    @include responsive-font(1.2vw, 16px, 18px);
-                  }
-                }
-
-                h2 {
-                  margin-bottom: 10px;
-                }
-
-                p {
-                  &.dude-title {
-                    margin-top: 0;
-                    opacity: .7;
-                  }
-
-                  &.contact-info {
-                    opacity: .7;
-                  }
-                }
-              }
+            &.active {
+              opacity: .15;
             }
           }
+        }
 
-          .company-info {
-            @include span(3/7);
-            height: 800px;
-            position: relative;
-            padding: 90px;
+        &.animated {
+          input,
+          textarea,
+          button {
+            transition: all .55s;
 
-            @media(max-width: 900px) {
-              @include stack();
-              width: 100%;
-              padding: 0;
-              height: 500px;
-            }
-
-            .company-content {
-              @include vertical-align();
-            }
-
-            h2 {
-              @extend %h1;
-              text-transform: uppercase;
-            }
-
-            a {
-              color: #666;
-              text-decoration: none;
-              text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
-              box-shadow: inset 0 -1px 0 0 #fff, inset 0 -3px 0 0 #ccc;
+            &::placeholder {
               transition: all .55s;
+            }
+          }
 
-              &:hover {
-                color: #000;
-                box-shadow: inset 0 -1px 0 0 #fff, inset 0 -4px 0 0 $color-links;
-              }
+          .phase {
+            transition: all .55s;
+          }
+        }
+
+        .cols {
+          @include clearfix;
+
+          .col {
+            @include column(1/3);
+
+            &:first-of-type {
+              @include column(2/3);
             }
           }
         }
 
-        &.slide-location {
-          background-color: #ccc;
-          height: 50vh;
+        // Fields
+        input,
+        textarea {
+          // Hidden by default
+          &#message,
+          &#email,
+          &#phone {
+            height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            min-height: 0;
+            border: 0;
 
-          .col-map {
-            @include span(4/7);
-            height: 50vh;
-          }
-
-          .col-office {
-            @include span(3/7);
-            @include background-cover();
-            height: 50vh;
-            background-image: url('../images/dude-paja.jpg');
+            &.active {
+              height: auto;
+              padding-top: 20px;
+              padding-bottom: 20px;
+              border-bottom: 1px solid rgba(#fff, .3);
+            }
           }
         }
-      } // .slide
-    } // .site-content
-  } // #page
-} // body
+
+        textarea#message {
+          // Because of auto-expanding js
+          &.force-hidden {
+            height: 0 !important;
+          }
+
+          &.active {
+            min-height: 100px;
+          }
+        }
+
+        button {
+          // Hidden by default
+          height: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+          min-height: 0;
+          border-top-width: 0;
+          border-bottom-width: 0;
+          margin-top: 0;
+
+          &.active {
+            height: inherit;
+            border-top-width: 2px;
+            border-bottom-width: 2px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  &.block-contact-details {
+    display: none;
+  }
+
+  &.block-dude-contact-info {
+    overflow: hidden;
+    text-align: center;
+
+    .dudes {
+      @include span(4/7);
+      background-color: #161513;
+      overflow: hidden;
+
+      @media (max-width: 900px) {
+        @include stack();
+      }
+
+      .dude {
+        @include span(1/2, $cycle: 2);
+        @include background-cover();
+        position: relative;
+        padding: 90px;
+        color: #fff;
+        filter: grayscale(100%);
+        transition: all .7s;
+        height: 400px;
+
+        @media (max-width: 1000px) {
+          padding: 20px;
+        }
+
+        a.permalink {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: transparent;
+          z-index: 22;
+        }
+
+        .shade {
+          background-color: #151515;
+          opacity: .6;
+          transition: all .7s;
+        }
+
+        &:hover {
+          filter: grayscale(0%);
+
+          .shade {
+            opacity: .4;
+          }
+        }
+
+        .dude-content {
+          @include centered();
+          z-index: 12;
+          position: relative;
+          width: 100%;
+
+          * {
+            color: #fff;
+          }
+
+          h4,
+          h5,
+          .dude-title {
+            @include responsive-font(1.6vw, 16px, 19px);
+            font-family: $font-headings;
+            font-weight: 700;
+
+            @media (max-width: $container-ipad-landscape) {
+              @include responsive-font(1.2vw, 16px, 18px);
+            }
+          }
+
+          h2 {
+            margin-bottom: 10px;
+          }
+
+          p {
+            &.dude-title {
+              margin-top: 0;
+              opacity: .7;
+            }
+
+            &.contact-info {
+              opacity: .7;
+            }
+          }
+        }
+      }
+    }
+
+    .company-info {
+      @include span(3/7);
+      height: 800px;
+      position: relative;
+      padding: 90px;
+
+      @media (max-width: 900px) {
+        @include stack();
+        width: 100%;
+        padding: 0;
+        height: 500px;
+      }
+
+      .company-content {
+        @include vertical-align();
+      }
+
+      h2 {
+        @extend %h1;
+        text-transform: uppercase;
+      }
+
+      a {
+        color: $color-blog-links;
+        text-decoration: none;
+        text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
+        box-shadow: inset 0 -1px 0 0 #fff, inset 0 -3px 0 0 #ccc;
+        transition: all .55s;
+
+        &:hover {
+          color: #000;
+          box-shadow: inset 0 -1px 0 0 #fff, inset 0 -4px 0 0 $color-links;
+        }
+      }
+    }
+  }
+
+  &.block-location {
+    background-color: #ccc;
+    height: 50vh;
+
+    .col-map {
+      @include span(4/7);
+      height: 50vh;
+    }
+
+    .col-office {
+      @include span(3/7);
+      @include background-cover();
+      height: 50vh;
+      background-image: url('../images/dude-paja.jpg');
+    }
+  }
+}

@@ -1,13 +1,15 @@
 <?php $image_id = get_post_thumbnail_id();
 $image = wp_get_attachment_url( $image_id );
-$services = wp_get_post_terms( get_the_id(), 'service', array( 'fields' => 'id=>name' ) ); ?>
+//$services = wp_get_post_terms( get_the_id(), 'service', array( 'fields' => 'id=>name' ) );
+$alt_title = get_post_meta( get_the_id(), '_alt_title', true ); ?>
   <div class="mosaic mosaic-main" style="background-image: url('<?php echo $image ?>');">
     <a href="<?php the_permalink() ?>" class="permalink" aria-label="<?php echo esc_html_e('Linkki kohteeseen ', 'dude'); the_title(); ?>"></a>
     <div class="shade"></div>
 
     <div class="reference-meta">
       <h2 class="reference-meta-title"><?php the_title(); ?></h2>
-      <?php if( !is_wp_error( $services ) && !empty( $services ) ):
+      <p><?php echo $alt_title; ?></p>
+      <?php /* if( !is_wp_error( $services ) && !empty( $services ) ):
         $services_count = count( $services );
         $i = 1; ?>
         <p>
@@ -26,6 +28,6 @@ $services = wp_get_post_terms( get_the_id(), 'service', array( 'fields' => 'id=>
               echo ' & ';
           $i++; endforeach; ?>
         </p>
-      <?php endif; ?>
+      <?php endif; */ ?>
     </div>
   </div>

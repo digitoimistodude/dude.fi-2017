@@ -12,8 +12,8 @@ body.page-template-template-contributions {
     }
 
     .site-content {
-      .slide {
-        &.slide-hero.slide-hero-contributions {
+      .block {
+        &.block-hero.block-hero-contributions {
           background-image: none;
           background-color: transparent;
           height: 100vh;
@@ -34,7 +34,7 @@ body.page-template-template-contributions {
           }
         }
 
-        &.slide-contributions-introduction {
+        &.block-contributions-introduction {
           background: #fff;
 
           .container {
@@ -44,7 +44,7 @@ body.page-template-template-contributions {
             text-align: center;
 
             a {
-              color: #666;
+              color: $color-blog-links;
               text-decoration: none;
               text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
               box-shadow: inset 0 -1px 0 0 #fff, inset 0 -3px 0 0 #ccc;
@@ -58,7 +58,7 @@ body.page-template-template-contributions {
           }
         }
 
-        &.slide-techniques {
+        &.block-techniques {
           background: $color-almostblack;
 
           @media(max-width: $container-mobile) {
@@ -254,7 +254,7 @@ body.page-template-template-contributions {
           } // .logos-tech
         }
 
-        &.slide-contributions {
+        &.block-contributions {
           background: #fff;
 
           h2 {
@@ -277,7 +277,7 @@ body.page-template-template-contributions {
               overflow: hidden;
 
               a {
-                color: #666;
+                color: $color-blog-links;
                 text-decoration: none;
                 text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
                 transition: all .55s;
@@ -326,7 +326,7 @@ body.page-template-template-contributions {
                 font-family: $font-headings;
                 font-weight: 400;
                 margin-top: 5px;
-                color: #666;
+                color: $color-blog-links;
                 margin-bottom: 0;
                 opacity: .7;
               }
@@ -337,7 +337,7 @@ body.page-template-template-contributions {
                 color: #767676;
 
                 a {
-                  color: #666;
+                  color: $color-blog-links;
                   text-decoration: none;
                   text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
                   box-shadow: inset 0 -1px 0 0 #fff, inset 0 -3px 0 0 #ccc;

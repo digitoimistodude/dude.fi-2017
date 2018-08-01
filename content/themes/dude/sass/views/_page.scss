@@ -1,107 +1,98 @@
-body {
-  &.page {
-    #page {
-      .site-content {
-        .slide {
+body.page {
+  #page {
+    .site-content {
+      .block {
 
-          // Default hero slide on empty page
-          &.slide-hero {
-            height: 80vh;
-            max-height: 700px;
+        // Default hero block on empty page
+        &.block-hero {
+          height: 80vh;
+          max-height: 700px;
 
-            @media(max-height: 830px) and (min-width: $container-ipad) {
-              height: 100vh;
-              max-height: 1000px;
-            }
+          @media (max-height: 830px) and (min-width: $container-ipad) {
+            height: 100vh;
+            max-height: 1000px;
+          }
 
-            @media(max-width: $container-ipad) {
-              height: 550px;
-            }
+          @media (max-width: $container-ipad) {
+            height: 550px;
           }
         }
       }
     }
   }
+}
 
-  #page {
+.block.block-hero {
+  position: relative;
+  background-color: #333;
+  background-image: none;
 
-    .site-content {
-      .slide {
-        &.slide-hero {
-          position: relative;
-          background-color: #333;
-          background-image: none;
+  @media (max-height: 830px) and (min-width: $container-ipad) {
+    height: 100vh;
+    max-height: 1600px;
+  }
 
-          @media(max-height: 830px) and (min-width: $container-ipad) {
-            height: 100vh;
-            max-height: 1600px;
-          }
+  @media (max-height: 580px) and (min-width: $container-ipad) {
+    height: auto;
+    min-height: 400px;
+  }
 
-          @media(max-height: 580px) and (min-width: $container-ipad) {
-            height: auto;
-            min-height: 400px;
-          }
+  h1,
+  h2,
+  p {
+    color: #fff;
+    width: 100%;
+  }
 
-          h1,
-          h2,
-          p {
-            color: #fff;
-            width: 100%;
-          }
+  .shade {
+    @include background-cover();
+    background-color: transparent;
+    background-image: url('../images/shade-gradient.png');
+    opacity: 1;
+  }
 
-          .shade {
-            @include background-cover();
-            background-color: transparent;
-            background-image: url('../images/shade-gradient.png');
-            opacity: 1;
-          }
+  .container {
+    padding-top: 170px;
+    padding-bottom: 135px;
+    max-width: $container-desktop;
 
-          .container {
-            padding-top: 170px;
-            padding-bottom: 135px;
-            max-width: $container-desktop;
+    @media (min-width: $container-ipad) {
+      padding-top: 300px;
+    }
 
-            @media(min-width: $container-ipad) {
-              padding-top: 300px;
-            }
+    @media (max-height: 830px) and (min-width: $container-ipad) {
+      @include vertical-align();
+      max-width: $container-desktop;
+      transform: translateY(-40%);
+    }
 
-            @media(max-height: 830px) and (min-width: $container-ipad) {
-              @include vertical-align();
-              max-width: $container-desktop;
-              transform: translateY(-40%);
-            }
+    @media (max-height: 580px) and (min-width: $container-ipad) {
+      padding-top: 100px;
+      transform: none;
+    }
 
-            @media(max-height: 580px) and (min-width: $container-ipad) {
-              padding-top: 100px;
-              transform: none;
-            }
+    h1 {
+      @include responsive-font(5vw, 30px, 60px);
+      color: #fff;
+      text-transform: uppercase;
+      line-height: 1.1;
+      font-weight: 700;
+      width: 40%;
+      margin-bottom: 0;
 
-            h1 {
-              @include responsive-font(5vw, 30px, 60px);
-              color: #fff;
-              text-transform: uppercase;
-              line-height: 1.1;
-              font-weight: 700;
-              width: 40%;
-              margin-bottom: 0;
+      @media (max-width: $container-ipad) {
+        width: 100%;
+        text-align: center;
+      }
+    }
 
-              @media(max-width: $container-ipad) {
-                width: 100%;
-                text-align: center;
-              }
-            }
+    p {
+      color: #fff;
+      width: 50%;
 
-            p {
-              color: #fff;
-              width: 50%;
-
-              @media(max-width: $container-ipad) {
-                width: 100%;
-                text-align: center;
-              }
-            }
-          }
-        }
+      @media (max-width: $container-ipad) {
+        width: 100%;
+        text-align: center;
       }
     }
   }

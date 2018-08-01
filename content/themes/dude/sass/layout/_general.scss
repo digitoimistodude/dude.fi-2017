@@ -1,117 +1,102 @@
 body {
   // Color hack to fix nav transition white border in webkit
-  @media(max-width: $responsivenav) {
+  @media (max-width: $responsivenav) {
     background-color: $color-dark-blueish;
   }
+}
 
-  &.page-template-template-contributions {
-    #page {
-      .site-content {
-        background: transparent;
-      }
-    }
+body.page-template-template-contributions #page .site-content {
+  background: transparent;
+}
+
+body #page .site-content {
+  background: #fff;
+}
+
+article.entry-content a {
+  color: $color-blog-links;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
+  box-shadow: inset 0 -1px 0 0 #fff, inset 0 -3px 0 0 #ccc;
+  transition: all .55s;
+
+  &:hover {
+    color: #000;
+    box-shadow: inset 0 -1px 0 0 #fff, inset 0 -4px 0 0 $color-links;
+  }
+}
+
+.block {
+  @include background-cover();
+  background-position: center;
+  background-color: #fff;
+  position: relative;
+}
+
+.block h2 {
+  @include responsive-font(3vw, 21px, 30px);
+}
+
+.block .container {
+  z-index: 2;
+  position: relative;
+}
+
+.block .general-description {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.block .general-description,
+.block .numbered {
+  p {
+    color: $color-servicedescriptions;
   }
 
-  #page {
-    .site-content {
-      background: #fff;
-    }
+  h2 {
+    @extend %h5;
+    color: $color-lightgrey-alt;
+    font-family: $font-headings;
+    text-transform: uppercase;
+  }
 
-    .site-content,
-    .site-footer {
+  h2 span {
+    @extend %h5;
+    font-family: $font-headings;
 
-      article {
-        .entry-content {
-          a {
-            color: #666;
-            text-decoration: none;
-            text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
-            box-shadow: inset 0 -1px 0 0 #fff, inset 0 -3px 0 0 #ccc;
-            transition: all .55s;
+    &.order-number {
+      color: $color-body-darker;
+      position: relative;
 
-            &:hover {
-              color: #000;
-              box-shadow: inset 0 -1px 0 0 #fff, inset 0 -4px 0 0 $color-links;
-            }
-          }
-        }
-      }
-
-      .slide {
-        @include background-cover();
-        background-position: center;
-        background-color: #fff;
-        position: relative;
-
-        h2 {
-          @include responsive-font(3vw, 21px, 30px);
-        }
-
-        .container {
-          z-index: 2;
-          position: relative;
-        }
-
-        .general-description {
-          max-width: 720px;
-          margin-left: auto;
-          margin-right: auto;
-          text-align: center;
-        }
-
-        .general-description,
-        .numbered {
-
-          p {
-            color: $color-servicedescriptions;
-          }
-
-          h2 {
-            @extend %h5;
-            color: $color-lightgrey-alt;
-            font-family: $font-headings;
-            text-transform: uppercase;
-
-            span {
-              @extend %h5;
-              font-family: $font-headings;
-
-              &.order-number {
-                color: $color-body-darker;
-                position: relative;
-
-                &:after {
-                  content: '';
-                  position: absolute;
-                  bottom: -5px;
-                  width: 70%;
-                  left: 5px;
-                  height: 2px;
-                  background: #484848;
-                }
-              }
-            }
-          }
-        }
-      } // .slide
-
-      .shade {
-        @include background-cover();
-        background-color: transparent;
-        background-image: url('../images/shade-gradient.png');
-        opacity: 1;
+      &:after {
+        content: '';
         position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 0;
-      }
-
-      .shade-extra {
-        background: linear-gradient(to bottom, rgba(#111, 0) 0%, rgba(#111, 0) 60%, rgba(#363f49, .4) 100%);
-        opacity: 1;
+        bottom: -5px;
+        width: 70%;
+        left: 5px;
+        height: 2px;
+        background: #484848;
       }
     }
   }
+}
+
+.shade {
+  @include background-cover();
+  background-color: transparent;
+  background-image: url('../images/shade-gradient.png');
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.shade-extra {
+  background: linear-gradient(to bottom, rgba(#111, 0) 0%, rgba(#111, 0) 60%, rgba(#363f49, .4) 100%);
+  opacity: 1;
 }

@@ -1,6 +1,7 @@
 <?php $image_id = get_post_thumbnail_id();
 $image = wp_get_attachment_url( $image_id );
-$services = wp_get_post_terms( get_the_id(), 'service', array( 'fields' => 'id=>name' ) );
+//$services = wp_get_post_terms( get_the_id(), 'service', array( 'fields' => 'id=>name' ) );
+$alt_title = get_post_meta( get_the_id(), '_alt_title', true );
 
 if( $i % 2 != 0 ) {
   if( $y % 2 != 0 ) {
@@ -25,7 +26,8 @@ $i++; ?>
   <a class="permalink" href="<?php the_permalink(); ?>" aria-label="Linkki kohteeseen <?php the_title(); ?>"></a>
   <div class="reference-meta">
     <h2 class="reference-meta-title"><?php the_title(); ?></h2>
-    <?php if( !is_wp_error( $services ) && !empty( $services ) ):
+    <p><?php echo $alt_title; ?></p>
+    <?php /* if( !is_wp_error( $services ) && !empty( $services ) ):
       $services_count = count( $services );
       $x = 1; ?>
       <p>
@@ -44,6 +46,6 @@ $i++; ?>
             echo ' & ';
         $x++; endforeach; ?>
       </p>
-    <?php endif; ?>
+    <?php endif; */ ?>
   </div>
 </div>
