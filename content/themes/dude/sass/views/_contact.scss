@@ -39,7 +39,6 @@ body #page .site-content .block {
     }
 
     h1 {
-      text-transform: uppercase;
       margin-bottom: 20px;
     }
 
@@ -390,7 +389,6 @@ body #page .site-content .block {
 
       h2 {
         @extend %h1;
-        text-transform: uppercase;
       }
 
       a {

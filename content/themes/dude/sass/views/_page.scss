@@ -74,7 +74,6 @@ body.page {
     h1 {
       @include responsive-font(5vw, 30px, 60px);
       color: #fff;
-      text-transform: uppercase;
       line-height: 1.1;
       font-weight: 700;
       width: 40%;

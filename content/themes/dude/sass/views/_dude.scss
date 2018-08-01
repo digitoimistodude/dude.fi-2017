@@ -26,10 +26,9 @@
       h1 {
         @include responsive-font(4.5vw, 30px, 50px);
         color: #fff;
-        text-transform: uppercase;
         line-height: 1.1;
         font-weight: 700;
-        width: 70%;
+        width: 60%;
         margin-bottom: 0;
 
         @media (max-width: $container-ipad) {
@@ -390,7 +389,6 @@
 
     h3 {
       color: $color-alt;
-      text-transform: uppercase;
 
       svg {
         width: 30px;
