@@ -55,12 +55,12 @@ body {
 
           &:focus {
             .burger-icon {
-              @include burger(28px, 4px, 4px, $color-links);
+              @include burger(30px, 2px, 7px, $color-links);
             }
           }
 
           .burger-icon {
-            @include burger(28px, 4px, 4px, #fff);
+            @include burger(30px, 2px, 7px, #fff);
             margin: 0;
             padding: 0;
           }
@@ -145,7 +145,7 @@ a {
         margin: 0;
         text-align: center;
         display: inline-block;
-        padding: 0 16px;
+        padding: 0 10px;
         position: relative;
         overflow: visible;
         outline: 0;
@@ -227,7 +227,6 @@ a {
 
 // Mobile styles
 @media(max-width: $responsivenav) {
-
   a {
     &.button {
       &.call-me-maybe {
