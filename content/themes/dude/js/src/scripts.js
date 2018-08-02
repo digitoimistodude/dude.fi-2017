@@ -46,17 +46,6 @@
       }
 
     }
-
-    // if( $('body').hasClass('single-post')  && $(window).width() > 560 ) {
-    // 	if ( isScrolledIntoView('.entry-footer') && Cookies.get( 'crisp_greeting_sent' ) == null ) {
-    // 		if( ! $crisp.is("session:ongoing") ) {
-				// 	$crisp.push(["do", "message:show", ["text", "Moro! Kiva että jaksoit lukea loppuun, toivottavasti tykkäsit :) Tutustu heppuihin blogin takana https://www.dude.fi/dude"]]);
-				// 	$crisp.push(["do", "chat:open"])
-				// 	Cookies.set( 'crisp_greeting_sent', 'true', { expires: 3650 } );
-				// }
-    // 	}
-    // }
-
 	});
 
   $(function() {
@@ -83,41 +72,6 @@
     }
 
     $('.block-front-page, .block-hero-contributions').each(greedyJumbotron);
-
-    var dude_cookie_status = Cookies.get( 'dude_cookie_status' );
-    if( dude_cookie_status === 'dismiss' ) {
-      $('.cookie-notification-wrapper').remove();
-    } else {
-      $('.cookie-notification-wrapper').show();
-    }
-
-    // Make cookie notification clickable on iOS/iPhone SE
-    var ua = navigator.userAgent,
-    event = (ua.match(/iPad/i) || ua.match(/iPhone/)) ? 'touchstart' : 'click';
-
-    $('body').on(event, '.cookie-notification-wrapper a.button', function(e) {
-      $('.cookie-notification-wrapper').addClass('fadeout');
-
-      Cookies.set( 'dude_cookie_status', 'dismiss', { expires: 3650 } );
-
-      $('.cookie-notification-wrapper').addClass('fadeout');
-
-      setTimeout( function(){
-        $('.cookie-notification-wrapper').remove();
-      }, 1000 );
-    });
-
-    $('.cookie-notification-wrapper a.button').on('click', function(e) {
-      e.preventDefault();
-
-      Cookies.set( 'dude_cookie_status', 'dismiss', { expires: 3650 } );
-
-      $('.cookie-notification-wrapper').addClass('fadeout');
-
-      setTimeout( function(){
-        $('.cookie-notification-wrapper').remove();
-      }, 1000 );
-    });
 
     // Allow adding regular url in comment form without having to type http
     if( $('input#url').length ) {

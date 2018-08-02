@@ -193,14 +193,5 @@ $coffee = dude_get_coffee_drunk(); ?>
 <script>CRISP_WEBSITE_ID = "-K90vfAnyk27kD-pZAep"</script>
 <script async src="https://client.crisp.im/l.js"></script>
 
-<div class="cookie-notification-wrapper">
-  <div class="content">
-    <div class="content-text">
-      <p><b>Me seurataan sua!</b> ...eli sivusto käyttää evästeitä. <a href="https://www.dude.fi/evasteet">Mitä ihmettä?</a></p>
-    </div>
-
-    <p class="button-wrapper"><a href="#" class="button">Asia kunnossa</a></p>
-  </div>
-</div>
 </body>
 </html>
