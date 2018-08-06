@@ -117,7 +117,7 @@ get_header(); ?>
 
       <?php set_query_var( 'persons_title', $persons_title );
       set_query_var( 'persons_query', $persons_query );
-      get_template_part( 'template-parts/staff', 'blockr' );
+      get_template_part( 'template-parts/staff', 'slider' );
 
       if( !empty( $values_title ) && !empty( $values ) ): ?>
         <div class="block block-values">

@@ -49,7 +49,7 @@ function load_posts() {
     shade.css( 'background-image', 'url(' + jQuery( featured_bg ).attr( 'data-background' ) + ')' );
   });
 
-  // Blog "blockr"
+  // Blog "slider"
   jQuery('.blogposts').slick({
     dots: false,
     arrows: true,
@@ -64,7 +64,7 @@ function load_posts() {
     appendArrows: jQuery('.block-blogposts')
   });
 
-  // On blockr change, set bg and maybe load more posts
+  // On slider change, set bg and maybe load more posts
   jQuery('.blogposts').on('afterChange', function(event, slick, currentblock) {
     var shade = jQuery('.block-blogposts .shade');
     var featured_bg =  jQuery('.blogpost').get( currentblock );

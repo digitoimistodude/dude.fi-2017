@@ -6,8 +6,8 @@ $slick-dot-character: '\2022' !default;
 $slick-dot-size: 6px !default;
 $opacity-default: .2;
 
-// blockr
-.slick-blockr {
+// Slider
+.slick-slider {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -32,8 +32,8 @@ $opacity-default: .2;
   }
 }
 
-.slick-blockr .slick-track,
-.slick-blockr .slick-list {
+.slick-slider .slick-track,
+.slick-slider .slick-list {
   transform: translate3d(0, 0, 0);
 }
 
@@ -217,7 +217,7 @@ body {
           }
         }
 
-        // blockr
+        // slider
         &.block-blogposts {
 
           // Arrows

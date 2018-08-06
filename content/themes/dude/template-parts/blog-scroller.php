@@ -18,7 +18,7 @@ endif; ?>
     <h2><?php echo $title ?></h2>
   <?php endif; ?>
 
-  <div class="blogposts blockr" data-rest-paged="2" data-rest-cat="<?php echo $cat ?>">
+  <div class="blogposts slider" data-rest-paged="2" data-rest-cat="<?php echo $cat ?>">
 
     <?php $the_query = new WP_Query( array(
       'post_type'       => 'post',
