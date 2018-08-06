@@ -98,7 +98,7 @@ get_header(); ?>
           <?php if( !empty( $references_title ) ): ?>
             <div class="container">
 
-              <h2><?php echo $references_title ?></h2>
+              <h2 class="block-title"><?php echo $references_title ?></h2>
 
             </div>
 
@@ -187,7 +187,7 @@ get_header(); ?>
 
           if( !empty( $clients_title ) ): ?>
             <div class="container clients">
-              <h2><?php echo $clients_title ?></h2>
+              <h2 class="block-title"><?php echo $clients_title ?></h2>
 
               <div class="logos">
 

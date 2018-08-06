@@ -230,7 +230,7 @@
 
   // References
   &.block-feed {
-    background: #222427;
+    background: #f7f7f7;
     padding-top: 100px;
     padding-bottom: 100px;
 
@@ -242,6 +242,10 @@
     h2 {
       color: #fff;
       margin-bottom: 0;
+    }
+
+    .block-title {
+      color: #232426;
     }
 
     .col {
@@ -341,7 +345,7 @@
 
           &.logo-sohwi {
             margin-bottom: 10px;
-            overflow: visible;
+            overflow: visible;            
 
             @media (max-width: $container-ipad) {
               margin-bottom: 30px;
@@ -353,6 +357,11 @@
             }
 
             svg {
+
+              .logo-bg {
+                fill: #f7f7f7;
+              }
+
               @media (min-width: $container-ipad) {
                 height: 70px;
                 top: 15px;
@@ -428,12 +437,12 @@
       }
 
       path {
-        fill: #fff;
+        fill: #888;
       }
 
       svg {
         height: 100px;
-        fill: #fff;
+        fill: #888;
 
         @media (max-width: $container-ipad) {
           height: 30px;
