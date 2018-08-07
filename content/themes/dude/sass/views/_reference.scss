@@ -618,16 +618,12 @@
   }
 
   &.block-reference-description {
-    @include background-auto();
+    @include background-cover();
     background-position: bottom center;
     background-color: transparent;
     padding-bottom: 220px;
     padding-top: 50px;
     overflow: hidden;
-
-    @media (max-width: 960px) {
-      @include background-cover();
-    }
 
     .container {
       margin-left: auto;
