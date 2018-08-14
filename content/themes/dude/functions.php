@@ -242,7 +242,7 @@ function dude_scripts() {
     wp_enqueue_script( 'wplf-form-js' );
     wp_localize_script( 'wplf-form-js', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
-    wp_enqueue_script( 'fitvids', get_theme_file_uri( 'js/src/fitvids.min.js' ), array(), filemtime( get_theme_file_path( 'js/src/fitvids.min.js' ) ), true );
+    wp_enqueue_script( 'fitvids', get_theme_file_uri( 'js/src/fitvids.min.js' ), array(), filemtime( get_theme_file_path( 'js/src/fitvids.min.js' ) ), true );    
     wp_enqueue_script( 'interactive-form', get_theme_file_uri( 'js/src/interactive-form.js' ), array(), filemtime( get_theme_file_path( 'js/interactive-form.js' ) ), true );
     wp_localize_script( 'interactive-form', 'dudeinteractiveform', array(
       'sayatmemessage'  => get_post_meta( '2048', '_sayatme_message', true ),

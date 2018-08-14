@@ -167,19 +167,50 @@
       crossDomain: true,
       dataType: 'jsonp',
     }).done( function( response ) {
-      if( response.length !== 0 && response !== false ) {
+
+      if( response.length !== 0 && response !== false ) {        
+
         if( response.details.latest_entry ) {
           var timeago = moment( response.details.latest_entry ).fromNow();
           $('.coffee-text span').html( response.details.count );
-          $('.coffee-time span').html( timeago );
+          $('.coffee-time span').html( timeago );                 
+
+          // Define current time
+          var currentdate = new Date(); 
+          var datetime = 
+          currentdate.getFullYear() + "-"
+          + (currentdate.getMonth()+1)  + "-" 
+          + currentdate.getDate() + " "  
+          + currentdate.getHours() + ":"  
+          + currentdate.getMinutes() + ":" 
+          + currentdate.getSeconds();
+
+          // Convert to unix time
+          var timestamp = ( moment(datetime).unix() );
+          var entrytime = ( moment(response.details.latest_entry).unix() );
+
+          var datediff = timestamp - entrytime;
+
+          if( datediff < 7 ) {
+
+              // Send a notification if coffee drunk
+              var notif = $.notify_osd.create({
+                'text'         : '<span>Reaaliaikainen ilmoitus</span> Toimistolla juotiin juuri kupillinen kahvia! ' + response.details.count + ' kuppia juotu tällä viikolla.',
+                'sticky'       : false,
+                'timeout'      : 10,
+                'dismissable'  : true,
+                'visible_max'  : 1
+              });
+            }
+
         }
       }
     }).always( function() {
-      setTimeout( askForCoffee, 5000 );
+      setTimeout( askForCoffee, 7000 );
     });
   }
 
-  setTimeout( askForCoffee, 5000 );
+  setTimeout( askForCoffee, 7000 );
 
   var delay = (function(){
     var timer = 0;

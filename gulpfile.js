@@ -11,7 +11,7 @@ var sourcemaps  = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var notify      = require('gulp-notify');
 var prefix      = require('gulp-autoprefixer');
-var minifycss   = require('gulp-clean-css');
+var cleancss   = require('gulp-clean-css');
 var uglify      = require('gulp-uglify');
 var cache       = require('gulp-cache');
 var concat      = require('gulp-concat');
@@ -71,8 +71,13 @@ gulp.task('browsersync', function() {
   ];
 
   browserSync.init(files, {
-    proxy: "dude.test",
-    notify: true
+    proxy: "https://dude.test",
+    notify: true,
+    browser: "Chromium",
+    https: {
+      key: "/Users/rolle/Certificates/localhost.key",
+      cert: "/Users/rolle/Certificates/localhost.crt"
+    }
   });
 
 });
@@ -104,12 +109,20 @@ gulp.task('styles', function() {
     .on('error', handleError('styles'))
     .pipe(prefix('last 3 version', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4')) // Adds browser prefixes (eg. -webkit, -moz, etc.)
     .pipe(pixrem())
-    .pipe(minifycss({
-      advanced: true,
-      keepBreaks: false,
-      keepSpecialComments: 0,
-      mediaMerging: true,
-      sourceMap: true
+    .pipe(cleancss({
+      compatibility: 'ie11',
+      level: {
+        1: {
+          tidyAtRules: true,
+          cleanupCharsets: true,
+          specialComments: 0
+        }
+      }
+    }, function(details) {
+        console.log('[clean-css] Original size: ' + details.stats.originalSize + ' bytes');
+        console.log('[clean-css] Minified size: ' + details.stats.minifiedSize + ' bytes');
+        console.log('[clean-css] Time spent on minification: ' + details.stats.timeSpent + ' ms');
+        console.log('[clean-css] Compression efficiency: ' + details.stats.efficiency * 100 + ' %');
     }))
     .pipe(gulp.dest(cssDest))
     .pipe(browserSync.stream());
@@ -139,12 +152,17 @@ gulp.task('js', function() {
           themeDir + '/js/src/skip-link-focus-fix.js',
 					themeDir + '/js/src/frontpage-staff.js',
           themeDir + '/js/src/prism.js',
+          themeDir + '/js/src/notify-osd.js',
           themeDir + '/js/src/navigation.js',
           themeDir + '/js/src/scripts.js'
         ])
         .pipe(concat('all.js'))
-        .pipe(uglify({preserveComments: false, compress: true, mangle: true}).on('error',function(e){console.log('\x07',e.message);return this.end();}))
-        .pipe(header(banner, {pkg: pkg, currentDate: currentDate}))
+        .pipe(uglify({
+          compress: true,
+          mangle: true}).on('error', function(err) {
+            util.log(util.colors.red('[Error]'), err.toString());
+            this.emit('end');
+          }))
         .pipe(gulp.dest(jsDest));
 });
 

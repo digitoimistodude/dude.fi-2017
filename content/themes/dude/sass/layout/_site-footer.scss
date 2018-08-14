@@ -8,6 +8,22 @@
     padding-top: 5rem;
     padding-bottom: 5rem;
 
+    p {
+      color: #777;
+      line-height: 1.8;
+
+      a {
+        color: #888;
+        border-color: rgba(#888, .5);
+        padding-bottom: 2px;
+
+        &:hover {
+          color: #aaa;
+          border-color: rgba(#888, .3);
+        }
+      }
+    }
+
     .col {
       &.col-support,
       &.col-company,
@@ -213,163 +229,6 @@
             }
           }
         }
-
-        // Coffee cup
-        .coffee {
-          @media (max-width: $container-ipad) {
-            text-align: center;
-            overflow: visible;
-            margin-left: auto;
-            margin-right: auto;
-            display: inline-block;
-            white-space: nowrap;
-          }
-
-          @media (max-width: $container-mobile) {
-            overflow: hidden;
-          }
-
-          &:hover {
-            .coffee-cup-animation {
-              .a,
-              .b {
-                fill: #6d6d6d;
-              }
-
-              .steam-container {
-                .squiggle-container {
-                  .squiggle {
-                    path {
-                      stroke: #6d6d6d;
-                    }
-                  }
-                }
-              }
-            }
-          }
-
-          .coffee-cup-container {
-            .coffee-cup {
-              width: 20px;
-            }
-
-            .a,
-            .b {
-              transition: all .55s;
-              fill: #424242;
-            }
-          }
-
-          // Animated cup
-          .coffee-cup-animation {
-            float: left;
-
-            .steam-container {
-              width: 18px;
-              height: 20px;
-              margin-left: 0;
-
-              .squiggle-container {
-                width: 0;
-                height: 20px;
-                display: inline-block;
-
-                .squiggle {
-                  @include moveAndFadeAnimation(10px, 2.5s, .2s);
-                  width: 8px;
-                  stroke-dasharray: 100;
-
-                  path {
-                    transition: all .55s;
-                    stroke: #424242;
-                  }
-                }
-
-                &.squiggle-container-1 {
-                  transform: translate(0, 12px);
-                }
-
-                &.squiggle-container-2 {
-                  transform: translate(-1px, 13px) scale(.7);
-
-                  .squiggle {
-                    @include moveAndFadeAnimation(10px, 3s, 5s);
-                    width: 10px;
-                  }
-                }
-
-                &.squiggle-container-3 {
-                  transform: translate(-4px, 17px) scale(.8);
-
-                  .squiggle {
-                    @include moveAndFadeAnimation(15px, 2.5s, .1s);
-                    width: 10px;
-                  }
-                }
-              }
-            }
-          }
-        }
-
-        .coffee-text {
-          position: relative;
-          top: 23px;
-          left: 10px;
-          color: #777;
-          opacity: .6;
-          transition: all .55s;
-
-          @media (max-width: $container-ipad) {
-            text-align: left;
-            display: inline;
-            white-space: nowrap;
-            top: 18px;
-          }
-
-          @media (max-width: $container-mobile) {
-            padding-right: 10px;
-          }
-
-          &:hover {
-            opacity: .9;
-          }
-
-          span {
-            color: #777;
-          }
-
-          em.coffee-time {
-            font-size: 13px;
-            opacity: .75;
-            margin-left: 10px;
-            font-weight: 400;
-            font-style: normal;
-
-            span {
-              font-size: 13px;
-            }
-
-            @media (max-width: $container-mobile) {
-              display: none;
-            }
-          }
-        }
-
-        p {
-          color: #777;
-          line-height: 1.8;
-
-          a {
-            color: #888;
-            border-color: rgba(#888, .5);
-            padding-bottom: 2px;
-
-            &:hover {
-              color: #aaa;
-              border-color: rgba(#888, .3);
-            }
-          }
-        }
       }
     }
   }
@@ -504,5 +363,146 @@
     background: #44e676;
     margin-right: 8px;
     top: 12px;
+  }
+}
+
+// Coffee cup
+.coffee {
+  @media (max-width: $container-ipad) {
+    text-align: center;
+    overflow: visible;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  @media (max-width: $container-mobile) {
+    overflow: hidden;
+  }
+
+  &:hover {
+    .coffee-cup-animation {
+      .a,
+      .b {
+        fill: #6d6d6d;
+      }
+
+      .steam-container {
+        .squiggle-container {
+          .squiggle {
+            path {
+              stroke: #6d6d6d;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .coffee-cup-container {
+    .coffee-cup {
+      width: 20px;
+    }
+
+    .a,
+    .b {
+      transition: all .55s;
+      fill: #424242;
+    }
+  }
+
+  // Animated cup
+  .coffee-cup-animation {
+    float: left;
+
+    .steam-container {
+      width: 18px;
+      height: 20px;
+      margin-left: 0;
+
+      .squiggle-container {
+        width: 0;
+        height: 20px;
+        display: inline-block;
+
+        .squiggle {
+          @include moveAndFadeAnimation(10px, 2.5s, .2s);
+          width: 8px;
+          stroke-dasharray: 100;
+
+          path {
+            transition: all .55s;
+            stroke: #424242;
+          }
+        }
+
+        &.squiggle-container-1 {
+          transform: translate(0, 12px);
+        }
+
+        &.squiggle-container-2 {
+          transform: translate(-1px, 13px) scale(.7);
+
+          .squiggle {
+            @include moveAndFadeAnimation(10px, 3s, 5s);
+            width: 10px;
+          }
+        }
+
+        &.squiggle-container-3 {
+          transform: translate(-4px, 17px) scale(.8);
+
+          .squiggle {
+            @include moveAndFadeAnimation(15px, 2.5s, .1s);
+            width: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.coffee-text {
+  position: relative;
+  top: 23px;
+  left: 10px;
+  color: #777;
+  opacity: .6;
+  transition: all .55s;
+
+  @media (max-width: $container-ipad) {
+    text-align: left;
+    display: inline;
+    white-space: nowrap;
+    top: 18px;
+  }
+
+  @media (max-width: $container-mobile) {
+    padding-right: 10px;
+  }
+
+  &:hover {
+    opacity: .9;
+  }
+
+  span {
+    color: #777;
+  }
+
+  em.coffee-time {
+    font-size: 13px;
+    opacity: .75;
+    margin-left: 10px;
+    font-weight: 400;
+    font-style: normal;
+
+    span {
+      font-size: 13px;
+    }
+
+    @media (max-width: $container-mobile) {
+      display: none;
+    }
   }
 }
