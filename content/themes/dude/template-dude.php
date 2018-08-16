@@ -54,19 +54,21 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-      <div class="block block-first block-dude"<?php if( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url( wp_get_attachment_url( get_post_thumbnail_id() ) ); ?>');"<?php endif; ?>>
+      <div class="block block-first block-dude block-main-hero"<?php if( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url( wp_get_attachment_url( get_post_thumbnail_id() ) ); ?>');"<?php endif; ?>>
         <div class="shade"></div>
         <div class="shade shade-extra"></div>
 
-        <div class="container container-centered">
+        <div class="block-inner--centered">
+          <div class="container">
 
-          <h1><?php echo $hero_title ?></h1>
+            <h1><?php echo $hero_title ?></h1>
 
-          <?php if( !empty( $hero_desc ) ): ?>
-            <p><?php echo $hero_desc ?></p>
-          <?php endif; ?>
+            <?php if( !empty( $hero_desc ) ): ?>
+              <p><?php echo $hero_desc ?></p>
+            <?php endif; ?>
 
-        </div><!-- .container -->
+          </div><!-- .container -->
+        </div>
 
       </div><!-- .block -->
 

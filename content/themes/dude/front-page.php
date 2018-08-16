@@ -21,22 +21,24 @@ get_header(); ?>
 	<div class="content-area">
 		<main id="main" class="site-main">
 
-      <div class="block block-first block-front-page" <?php if ( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url(wp_get_attachment_url( get_post_thumbnail_id() ) ); ?>');"<?php endif; ?>>
+      <div class="block block-first block-front-page block-main-hero" <?php if ( has_post_thumbnail() ) : ?> style="background-image:url('<?php echo esc_url(wp_get_attachment_url( get_post_thumbnail_id() ) ); ?>');"<?php endif; ?>>
         <div class="shade"></div>
         <div class="shade shade-extra"></div>
 
-        <div class="container container-centered">
-          <?php if( !empty( $hero_title ) ): ?>
-            <h1><?php echo $hero_title ?></h1>
-          <?php endif;
+        <div class="block-inner--centered">
+          <div class="container">
+            <?php if( !empty( $hero_title ) ): ?>
+              <h1><?php echo $hero_title ?></h1>
+            <?php endif;
 
-          if( !empty( $hero_content ) ):
-            echo wpautop( $hero_content );
-          endif;
+            if( !empty( $hero_content ) ):
+              echo wpautop( $hero_content );
+            endif;
 
-          if( !empty( $hero_button ) && !empty( $hero_button_url ) ): ?>
-            <p><a href="<?php echo $hero_button_url ?>" class="button button-white button-with-arrow"><span><?php echo $hero_button ?></span><?php echo file_get_contents( get_theme_file_path( 'svg/large-cta-arrow.svg' ) ); ?></a></p>
+            if( !empty( $hero_button ) && !empty( $hero_button_url ) ): ?>
+              <p><a href="<?php echo $hero_button_url ?>" class="button button-white button-with-arrow"><span><?php echo $hero_button ?></span><?php echo file_get_contents( get_theme_file_path( 'svg/large-cta-arrow.svg' ) ); ?></a></p>
           <?php endif; ?>
+        </div>
 
         </div><!-- .container -->
 
