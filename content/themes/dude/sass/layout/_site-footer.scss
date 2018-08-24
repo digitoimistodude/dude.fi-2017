@@ -1,3 +1,6 @@
+$footer_texts: #999;
+$footer_links: #999;
+
 // Site footer
 .site-footer {
   background: #111;
@@ -9,17 +12,17 @@
     padding-bottom: 5rem;
 
     p {
-      color: #777;
+      color: $footer_texts;
       line-height: 1.8;
 
       a {
-        color: #888;
-        border-color: rgba(#888, .5);
+        color: $footer_links;
+        border-color: rgba($footer_links, .5);
         padding-bottom: 2px;
 
         &:hover {
           color: #aaa;
-          border-color: rgba(#888, .3);
+          border-color: rgba($footer_links, .3);
         }
       }
     }
@@ -392,7 +395,7 @@ body #page .newsletter {
   display: inline-block;
   clear: both;
   font-size: 14px;
-  color: #888;
+  color: $footer_links;
   padding-bottom: 2px;
   opacity: .7;
 
@@ -518,7 +521,7 @@ body #page .newsletter {
   position: relative;
   top: 23px;
   left: 10px;
-  color: #777;
+  color: $footer_texts;
   opacity: .6;
   transition: all .55s;
 
@@ -538,7 +541,7 @@ body #page .newsletter {
   }
 
   span {
-    color: #777;
+    color: $footer_texts;
   }
 
   em.coffee-time {
