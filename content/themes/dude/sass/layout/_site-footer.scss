@@ -278,9 +278,18 @@
 }
 
 $newsletter_texts: #16202a;
+$newsletter_bg: #fafafa;
+
+body.page-id-3 #page .newsletter {
+  background: #fff;
+
+  input {
+    background-color: #fff !important;
+  }
+}
 
 body #page .newsletter {
-  background: #fff;
+  background: $newsletter_bg;
   text-align: center;
 
   .container {
@@ -306,6 +315,8 @@ body #page .newsletter {
     color: $newsletter_texts;
 
     &.note {
+      font-size: 15px;
+      opacity: .5;
       margin-top: 15px;
       margin-bottom: 0;
     }
@@ -317,8 +328,8 @@ body #page .newsletter {
     max-width: 390px;
     width: 100%;
     line-height: 1.4rem;
-    background: #fff;
-    border-bottom: 1px solid #555;
+    background: $newsletter_bg;
+    border-bottom: 1px solid $newsletter_texts;
     border-left: 0;
     border-right: 0;
     border-top: 0;
@@ -338,8 +349,8 @@ body #page .newsletter {
     &.button {
       line-height: 1.75rem;
       margin-left: 2px;
-      background: #fff;
-      border: 1px solid #fff;
+      background: $newsletter_bg;
+      border: 1px solid $newsletter_bg;
       color: $newsletter_texts;
       width: auto;
       font-family: $font-base;
@@ -355,7 +366,7 @@ body #page .newsletter {
 
       &:focus,
       &:hover {
-        background: #fff;
+        background: $newsletter_bg;
         box-shadow: none;
 
         &:after,
