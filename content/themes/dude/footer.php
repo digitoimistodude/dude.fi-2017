@@ -49,7 +49,7 @@ $coffee = dude_get_coffee_drunk(); ?>
           </form>
         </div>
       </div>
-    <?php else if ( ! is_singular( 'reference' ) && ! is_page_template( 'template-contact.php' ) ) : ?>
+    <?php elseif ( ! is_singular( 'reference' ) && ! is_page_template( 'template-contact.php' ) ) : ?>
       <div class="footer-contact-lead newsletter">
         <div class="container">
             <h2><?php esc_attr_e( 'Tehdäänkö sivut?', 'dude' ) ?></h2>
