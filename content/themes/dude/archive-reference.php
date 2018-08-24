@@ -8,7 +8,7 @@ $description = apply_filters( 'the_content', $description );
 $description = str_replace( ']]>', ']]&gt;', $description );
 
 // Call to action content
-$cta = get_post_meta( $page_for_reference, '_cta_content', true );
+//$cta = get_post_meta( $page_for_reference, '_cta_content', true );
 
 // Start outputting the page
 get_header(); ?>
@@ -51,13 +51,13 @@ get_header(); ?>
       </div><!-- .block-feed -->
     <?php endif;
 
-    if( !empty( $cta ) ): ?>
+    /*if( !empty( $cta ) ): ?>
       <div class="block block-call-to-action">
         <div class="container">
           <?php echo wpautop( $cta ) ?>
         </div>
       </div>
-    <?php endif; ?>
+    <?php endif;*/ ?>
 	</main><!-- #main -->
 </div><!-- #primary -->
 

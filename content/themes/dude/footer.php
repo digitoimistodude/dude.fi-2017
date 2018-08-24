@@ -31,7 +31,7 @@ $coffee = dude_get_coffee_drunk(); ?>
 
 	<footer id="colophon" class="site-footer">
 
-    <?php if ( ! is_singular( 'reference' ) && ! is_post_type_archive( 'reference' ) && ! is_page_template( 'template-contact.php' ) ) : ?>
+    <?php if ( is_singular( 'post' ) || is_home() ) : ?>
       <div class="newsletter">
         <div class="container">
           <form action="https://dude.us8.list-manage.com/subscribe/post?u=bda4635b58bba8d9716eb90a6&amp;id=efe9db80e6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -47,6 +47,15 @@ $coffee = dude_get_coffee_drunk(); ?>
 
             <p class="note"><?php esc_attr_e( 'Spämmätään vain 3kk välein. Myö luvataan.', 'dude' ); ?></p>
           </form>
+        </div>
+      </div>
+    <?php else if ( ! is_singular( 'reference' ) && ! is_page_template( 'template-contact.php' ) ) : ?>
+      <div class="footer-contact-lead newsletter">
+        <div class="container">
+            <h2><?php esc_attr_e( 'Tehdäänkö sivut?', 'dude' ) ?></h2>
+            <p style="color:#fff;"><?php esc_attr_e( 'Nyt on juuri oikea hetki aloittaa keskustelu koskien tulevaa verkkoprojektiasi. Jätä yhteystietosi niin otamme yhteyttä pian!', 'dude' ) ?></p>
+
+            <?php echo do_shortcode( '[libre-form id="2622"]' ) ?>
         </div>
       </div>
     <?php endif; ?>
