@@ -277,8 +277,10 @@
   }
 }
 
-.newsletter {
-  background: #232527;
+$newsletter_texts: #16202a;
+
+body #page .newsletter {
+  background: #fff;
   text-align: center;
 
   .container {
@@ -292,27 +294,41 @@
   }
 
   h2 {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    color: $newsletter_texts;
   }
 
   p {
-    font-size: 15px;
-    color: #fff;
-    margin-bottom: 1.25rem;
+    @include responsive-font(3vw, $font-min-size, $font-max-size, $font-max-size);
+    max-width: 40rem;
+    margin: 0 auto 1.25em;
+    line-height: 1.55;
+    color: $newsletter_texts;
 
     &.note {
-      font-size: 14px;
       margin-top: 15px;
       margin-bottom: 0;
-      opacity: .5;
     }
   }
 
   input {
+    @include responsive-font(3vw, $font-min-size, $font-max-size, $font-max-size);
     padding: 12px 10px;
-    width: 50%;
-    font-size: 16px;
+    max-width: 390px;
+    width: 100%;
     line-height: 1.4rem;
+    background: #fff;
+    border-bottom: 1px solid #555;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-radius: 0;
+    color: $newsletter_texts;
+
+    &::placeholder {
+      color: $newsletter_texts;
+      opacity: 1;
+    }
 
     @media (max-width: $container-ipad) {
       display: block;
@@ -320,9 +336,33 @@
     }
 
     &.button {
-      @extend .button-white;
       line-height: 1.75rem;
       margin-left: 2px;
+      background: #fff;
+      border: 1px solid #fff;
+      color: $newsletter_texts;
+      width: auto;
+      font-family: $font-base;
+      text-transform: none;
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      &:after,
+      &:before {
+        display: none;
+        box-shadow: none;
+      }
+
+      &:focus,
+      &:hover {
+        background: #fff;
+        box-shadow: none;
+
+        &:after,
+        &:before {
+          display: none;
+        }
+      }
 
       @media (max-width: $container-ipad) {
         display: block;

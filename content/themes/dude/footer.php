@@ -53,7 +53,7 @@ $coffee = dude_get_coffee_drunk(); ?>
       <div class="footer-contact-lead newsletter">
         <div class="container">
             <h2><?php esc_attr_e( 'Tehdäänkö sivut?', 'dude' ) ?></h2>
-            <p style="color:#fff;"><?php esc_attr_e( 'Nyt on juuri oikea hetki aloittaa keskustelu koskien tulevaa verkkoprojektiasi. Jätä yhteystietosi niin otamme yhteyttä pian!', 'dude' ) ?></p>
+            <p><?php esc_attr_e( 'Nyt on juuri oikea hetki aloittaa keskustelu koskien tulevaa verkkoprojektiasi. Jätä yhteystietosi niin otamme yhteyttä pian!', 'dude' ) ?></p>
 
             <?php echo do_shortcode( '[libre-form id="2622"]' ) ?>
         </div>
