@@ -354,3 +354,12 @@ function dude_wplf_success_the_content( $content ) {
 	return apply_filters( 'the_content', $content );
 }
 add_filter( 'wplf_success_message', 'dude_wplf_success_the_content' );
+
+add_filter('wpseo_opengraph_image', 'dude_wpseo_default_og_image');
+function dude_wpseo_default_og_image($image) {
+  if ( empty( $image ) ) {
+    $image = get_template_file_uri( 'images/dude-default.jpg' );
+  }
+
+  return $image;
+}
