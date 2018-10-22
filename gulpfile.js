@@ -74,10 +74,6 @@ gulp.task('browsersync', function() {
     proxy: "https://dude.test",
     notify: true,
     browser: "Chromium",
-    https: {
-      key: "/Users/rolle/Certificates/localhost.key",
-      cert: "/Users/rolle/Certificates/localhost.crt"
-    }
   });
 
 });
@@ -152,7 +148,6 @@ gulp.task('js', function() {
           themeDir + '/js/src/skip-link-focus-fix.js',
 					themeDir + '/js/src/frontpage-staff.js',
           themeDir + '/js/src/prism.js',
-          themeDir + '/js/src/notify-osd.js',
           themeDir + '/js/src/navigation.js',
           themeDir + '/js/src/scripts.js'
         ])
