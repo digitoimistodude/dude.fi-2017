@@ -107,7 +107,7 @@ get_header(); ?>
 
 <script>
 function initMap() {
-  var dude = {lat: 62.2398595, lng: 25.7398647};
+  var dude = {lat: 62.2398000, lng: 25.742212};
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
     center: dude,
