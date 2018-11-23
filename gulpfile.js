@@ -71,9 +71,10 @@ gulp.task('browsersync', function() {
   ];
 
   browserSync.init(files, {
-    proxy: "https://dude.test",
+    proxy: "http://dude.test",
     notify: true,
     browser: "Chromium",
+    open: false
   });
 
 });
