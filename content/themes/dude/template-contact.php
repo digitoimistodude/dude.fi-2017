@@ -99,7 +99,7 @@ get_header(); ?>
 
       <div class="block block-location">
         <div class="col col-map" id="map"></div>
-        <div class="col col-office"></div>
+        <div class="col col-office"><a href="https://www.dude.fi/dude-nosti-tasoa-kerroksella-esittelyssa-uusi-kauppakadun-toimisto" class="global-link"><span class="screen-reader-text">Kirjoitus Kauppakatu 14 toimitilasta</span></a></div>
       </div>
 
 		</main><!-- #main -->

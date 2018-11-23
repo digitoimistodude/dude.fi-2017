@@ -418,8 +418,9 @@ body #page .site-content .block {
     .col-office {
       @include span(3/7);
       @include background-cover();
+      position: relative;
       height: 50vh;
-      background-image: url('../images/dude-paja.jpg');
+      background-image: url('../images/dude-paja-2018.jpg');
     }
   }
 }
