@@ -1,2 +1,2 @@
-/*! dude 22-10-2018 13:44 - Digitoimisto Dude Oy (moro@dude.fi) */
-!function(t){t(document).ready(function(){t(".number:not(.timefrom) .time span").each(function(){var m=moment(t(this).data("time")).fromNow();t(this).html(m)}),t(".number.timefrom .value").each(function(){var m=moment(t(this).data("time")).fromNow(!0);m=m.split(/(\s+)/),t(this).html(m[0]),t(this).parent().find(".label span").html(m[2]+" ")})})}(jQuery);
+/*! dude 28-02-2019 14:43 - Digitoimisto Dude Oy (moro@dude.fi) */
+!function(m){m(document).ready(function(){m(".number:not(.timefrom) .time span").each(function(){var t=moment(m(this).data("time")).fromNow();m(this).html(t)}),m(".number.timefrom .value").each(function(){var t=moment(m(this).data("time")).fromNow(!0);t=t.split(/(\s+)/),m(this).html(t[0]),m(this).parent().find(".label span").html(t[2]+" ")})})}(jQuery);

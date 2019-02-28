@@ -54,6 +54,8 @@ body {
           }
 
           &:focus {
+            outline: 0;
+
             .burger-icon {
               @include burger(30px, 2px, 7px, $color-links);
             }
@@ -196,7 +198,8 @@ a {
 
           // a11y
           &:focus {
-            border-color: $color-links;
+            border: 0;
+            outline: 0;
             opacity: 1;
 
             &:before,

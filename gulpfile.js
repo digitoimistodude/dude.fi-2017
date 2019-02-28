@@ -171,7 +171,12 @@ gulp.task('blog-wheel-js', function() {
           themeDir + '/js/src/blog-scroller.js'
         ])
         .pipe(concat('blog-scroller.js'))
-        .pipe(uglify({preserveComments: false, compress: true, mangle: true}).on('error',function(e){console.log('\x07',e.message);return this.end();}))
+        .pipe(uglify({
+          compress: true,
+          mangle: true}).on('error', function(err) {
+            util.log(util.colors.red('[Error]'), err.toString());
+            this.emit('end');
+          }))
         .pipe(header(banner, {pkg: pkg, currentDate: currentDate}))
         .pipe(gulp.dest(jsDest));
 });
@@ -184,7 +189,12 @@ gulp.task('contributions-js', function() {
           themeDir + '/js/src/contributions.js'
         ])
         .pipe(concat('contributions.js'))
-        .pipe(uglify({preserveComments: false, compress: true, mangle: true}).on('error',function(e){console.log('\x07',e.message);return this.end();}))
+        .pipe(uglify({
+          compress: true,
+          mangle: true}).on('error', function(err) {
+            util.log(util.colors.red('[Error]'), err.toString());
+            this.emit('end');
+          }))
         .pipe(header(banner, {pkg: pkg, currentDate: currentDate}))
         .pipe(gulp.dest(jsDest));
 });
@@ -196,7 +206,12 @@ gulp.task('interactive-form-js', function() {
           themeDir + '/js/src/interactive-form.js'
         ])
         .pipe(concat('interactive-form.js'))
-        .pipe(uglify({preserveComments: false, compress: true, mangle: true}).on('error',function(e){console.log('\x07',e.message);return this.end();}))
+        .pipe(uglify({
+          compress: true,
+          mangle: true}).on('error', function(err) {
+            util.log(util.colors.red('[Error]'), err.toString());
+            this.emit('end');
+          }))
         .pipe(header(banner, {pkg: pkg, currentDate: currentDate}))
         .pipe(gulp.dest(jsDest));
 });
@@ -208,7 +223,12 @@ gulp.task('person-js', function() {
           themeDir + '/js/src/person.js'
         ])
         .pipe(concat('person.js'))
-        .pipe(uglify({preserveComments: false, compress: true, mangle: true}).on('error',function(e){console.log('\x07',e.message);return this.end();}))
+        .pipe(uglify({
+          compress: true,
+          mangle: true}).on('error', function(err) {
+            util.log(util.colors.red('[Error]'), err.toString());
+            this.emit('end');
+          }))
         .pipe(header(banner, {pkg: pkg, currentDate: currentDate}))
         .pipe(gulp.dest(jsDest));
 });
@@ -220,7 +240,12 @@ gulp.task('blog-single-js', function() {
           themeDir + '/js/src/like.js'
         ])
         .pipe(concat('like.js'))
-        .pipe(uglify({preserveComments: false, compress: true, mangle: true}).on('error',function(e){console.log('\x07',e.message);return this.end();}))
+        .pipe(uglify({
+          compress: true,
+          mangle: true}).on('error', function(err) {
+            util.log(util.colors.red('[Error]'), err.toString());
+            this.emit('end');
+          }))
         .pipe(header(banner, {pkg: pkg, currentDate: currentDate}))
         .pipe(gulp.dest(jsDest));
 });
@@ -233,7 +258,12 @@ gulp.task('archive-js', function() {
           themeDir + '/js/src/archive.js'
         ])
         .pipe(concat('archive.js'))
-        .pipe(uglify({preserveComments: false, compress: true, mangle: true}).on('error',function(e){console.log('\x07',e.message);return this.end();}))
+        .pipe(uglify({
+          compress: true,
+          mangle: true}).on('error', function(err) {
+            util.log(util.colors.red('[Error]'), err.toString());
+            this.emit('end');
+          }))
         .pipe(header(banner, {pkg: pkg, currentDate: currentDate}))
         .pipe(gulp.dest(jsDest));
 });
