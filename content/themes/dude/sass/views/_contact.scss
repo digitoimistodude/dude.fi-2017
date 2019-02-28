@@ -379,16 +379,14 @@ body #page .site-content .block {
       height: 800px;
       position: relative;
       padding: 90px;
+      display: flex;
+      align-items: center;
 
       @media (max-width: 900px) {
         @include stack();
         width: 100%;
         padding: 0;
         height: 500px;
-      }
-
-      .company-content {
-        @include vertical-align();
       }
 
       h2 {

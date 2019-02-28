@@ -61,9 +61,7 @@ body.page {
     }
 
     @media (max-height: 830px) and (min-width: $container-ipad) {
-      @include vertical-align();
       max-width: $container-desktop;
-      transform: translateY(-40%);
     }
 
     @media (max-height: 580px) and (min-width: $container-ipad) {

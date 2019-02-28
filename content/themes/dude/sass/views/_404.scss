@@ -11,6 +11,8 @@ body.error404 {
         background-position: center;
         position: relative;
         filter: grayscale(100%);
+        display: flex;
+        align-items: center;
 
         .shade {
           @include background-cover();
@@ -33,7 +35,6 @@ body.error404 {
         }
 
         .container {
-          @include vertical-align();
           width: 100%;
           text-align: center;
           max-width: 900px;

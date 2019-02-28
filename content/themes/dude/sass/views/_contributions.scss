@@ -16,9 +16,10 @@ body.page-template-template-contributions {
         background-image: none;
         background-color: transparent;
         height: 100vh;
+        display: flex;
+        align-items: center;
 
         .container {
-          @include vertical-align();
           text-align: center;
           margin-left: auto;
           margin-right: auto;

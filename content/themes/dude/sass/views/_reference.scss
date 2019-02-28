@@ -177,9 +177,8 @@
           }
 
           @media (min-width: $container-mobile) {
-            h1 {
-              @include vertical-align();
-            }
+            display: flex;
+            align-items: center;
           }
 
           svg {
@@ -198,6 +197,8 @@
           padding-left: 50px;
           position: relative;
           height: 220px;
+          display: flex;
+          align-items: center;
 
           @media (max-width: $container-mobile) {
             @include stack();
@@ -206,8 +207,6 @@
           }
 
           .reference-header {
-            @include vertical-align();
-
             h2 {
               text-transform: uppercase;
               line-height: 1.4;

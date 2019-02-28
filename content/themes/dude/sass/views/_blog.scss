@@ -238,6 +238,8 @@
       max-height: 100%;
       min-height: 400px;
       height: 75vh;
+      display: flex;
+      align-items: center;
 
       @media (max-width: $container-ipad) {
         height: 550px;
@@ -252,7 +254,6 @@
       }
 
       .container {
-        @include vertical-align();
         padding-top: 0;
         padding-bottom: 0;
         max-width: 1000px;
@@ -306,6 +307,8 @@
       min-height: 400px;
       height: 500px;
       padding-top: 50px;
+      display: flex;
+      align-items: center;
 
       .shade {
         opacity: 1;
@@ -321,7 +324,6 @@
       }
 
       .container {
-        @include vertical-align();
         padding-top: 0;
         padding-bottom: 0;
         max-width: 1000px;
