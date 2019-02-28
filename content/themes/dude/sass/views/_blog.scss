@@ -232,6 +232,8 @@
 
   // Single blog post start
   &.block-hero {
+    display: flex;
+
     &.block-hero-single-blog {
       max-height: 100%;
       min-height: 400px;
