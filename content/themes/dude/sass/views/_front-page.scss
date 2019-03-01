@@ -51,6 +51,15 @@
     max-height: 1200px;
     position: relative;
 
+    .block-inner--centered {
+      text-align: left;
+
+      h1,
+      p {
+        text-align: left;
+      }
+    }
+
     .shade {
       @include background-cover();
       background-color: transparent;
