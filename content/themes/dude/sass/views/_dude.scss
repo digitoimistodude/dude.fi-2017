@@ -5,6 +5,15 @@
     background-image: url('../images/dudet-2016.jpg');
     background-position: bottom center;
 
+    .block-inner--centered {
+      text-align: left;
+
+      h1,
+      p {
+        text-align: left;
+      }
+    }
+
     @media(max-width: $container-ipad) {
       height: auto;
       max-height: 100%;
@@ -19,6 +28,8 @@
     .container {
       align-self: flex-end;
       max-width: 1270px;
+      padding-top: 8rem;
+      padding-bottom: 8rem;
 
       h1 {
         @include responsive-font(4.5vw, 30px, 50px);

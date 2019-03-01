@@ -34,10 +34,23 @@ article.entry-content a {
 }
 
 // Centered block with flexbox
+.block.block-hero .block-inner--centered,
 .block-inner--centered {
   display: flex;
   align-items: center;
   width: 100%;
+
+  .container {
+    max-width: 720px;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+
+    h1 {
+      width: 100%;
+    }
+  }
 }
 
 .block.block-main-hero {
