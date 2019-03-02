@@ -153,6 +153,10 @@
           position: relative;
           text-align: right;
 
+          h1 {
+            margin: 0;
+          }
+
           @media (max-width: $container-mobile) {
             @include stack();
             text-align: center;
