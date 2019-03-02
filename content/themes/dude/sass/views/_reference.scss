@@ -179,6 +179,7 @@
           @media (min-width: $container-mobile) {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
           }
 
           svg {
