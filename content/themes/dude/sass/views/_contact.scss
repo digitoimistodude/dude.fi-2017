@@ -387,6 +387,9 @@ body #page .site-content .block {
         width: 100%;
         padding: 0;
         height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       h2 {
@@ -415,6 +418,10 @@ body #page .site-content .block {
     .col-map {
       @include span(4/7);
       height: 50vh;
+
+      @media(max-width: 650px) {
+        @include stack();
+      }
     }
 
     .col-office {
@@ -423,6 +430,10 @@ body #page .site-content .block {
       position: relative;
       height: 50vh;
       background-image: url('../images/dude-paja-2018.jpg');
+
+      @media(max-width: 650px) {
+        @include stack();
+      }
     }
   }
 }
