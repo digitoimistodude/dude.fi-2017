@@ -414,6 +414,9 @@ body #page .site-content .block {
   &.block-location {
     background-color: #ccc;
     height: 50vh;
+    overflow: hidden;
+    display: block;
+    clear: both;
 
     .col-map {
       @include span(4/7);
