@@ -166,6 +166,7 @@
 
             svg {
               margin: 0 auto;
+              min-width: 0;
             }
 
             h1 {
@@ -188,6 +189,7 @@
 
           svg {
             width: 100%;
+            min-width: 150px;
             height: auto;
             max-width: 250px;
 
